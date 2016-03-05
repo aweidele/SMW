@@ -36,6 +36,7 @@
   background-repeat: no-repeat;
   color: $beige; 
   z-index: 0;
+  a { color: $beige; }
 }
 
 .servicesQuoteText,.servicesQuoteAttribute {
@@ -61,13 +62,6 @@
   text-align: center;
 }
 
-.leadershipPortrait {
-  img {
-    display: inline-block;
-    border-radius: 50%;
-  }
-}
-
 .servicesQuoteOverlay {
   background-color: rgba($purple,0.7);
   width: 100%;
@@ -76,5 +70,28 @@
   left: 0;
   top: 0;
   z-index: 0;
-  display: none;
+}
+
+////// MOVE THIS TO LEADERSHIP.SCSS
+.leadershipPortrait {
+  img {
+    display: inline-block;
+    border-radius: 50%;
+  }
+}
+
+.leadershipContact {
+  @extend %glyphs;
+  li {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    line-height: 19px;
+  }
+  span { @extend %positionOff; }
+  a {
+    @extend %blockA;
+  }
+  .email a:after { content: "M"; }
+  .linkedin a:after { content: "L"; }
 }

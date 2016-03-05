@@ -16,9 +16,15 @@ if($services->have_posts()) : while($services->have_posts()) : $services->the_po
 endwhile;endif;wp_reset_query();
 ?>
 <div id="servicesWrapper">
+<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
   <section id="services-intro">
-    This is the intro
+    <div class="servicesContent">
+      <div class="servicesCopy">
+        <?php the_content(); ?>
+      </div>
+    </div>
   </section>
+<?php endwhile;endif;wp_reset_query(); ?>
 <?php foreach($serviceArray as $key => $service) { 
   $quote_attribute = $service->post_quote_attribute;
 ?>
@@ -39,6 +45,10 @@ endwhile;endif;wp_reset_query();
           <p><strong><?php echo $quote_attribute->post_title; ?></strong></p>
           <p><?php echo get_field('title',$quote_attribute->ID); ?></p>
           <p>+<?php echo str_replace('-',' ',get_field('phone',$quote_attribute->ID)); ?></p>
+          <ul class="leadershipContact">
+            <li class="email"><a href="mailto:<?php echo get_field('email',$quote_attribute->ID); ?>"><span><?php echo get_field('email',$quote_attribute->ID); ?></span></a></li>
+            <li class="linkedin"><a href="<?php echo get_field('linkedin',$quote_attribute->ID); ?>" target="_blank"><span><?php echo get_field('linkedin',$quote_attribute->ID); ?></span></a></li>
+          </ul>
         </div>
         <div class="servicesQuoteOverlay"></div>
       </div>
@@ -46,7 +56,9 @@ endwhile;endif;wp_reset_query();
   </section>
 
 <?php } ?>
+<?php /*
 <pre><?php print_r($post); ?></pre>
 <pre><?php print_r($serviceArray); ?></pre>
+*/ ?>
 </div>
 <?php get_footer(); ?>

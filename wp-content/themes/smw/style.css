@@ -27,6 +27,13 @@ strong {
   font-weight: normal;
   font-style: normal;
 }
+/* line 13, ../../../SASS/_fonts.scss */
+.leadershipContact {
+  font-family: 'smw-icons';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* line 20, ../../../SASS/_fonts.scss */
 body, #homepageContact input[type='email'] {
   font-family: "freight-sans-pro",sans-serif;
@@ -50,7 +57,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 50, ../../../SASS/_common.scss */
-.social span, .slideshowControls span {
+.social span, .slideshowControls span, .leadershipContact span {
   position: absolute;
   left: -999999px;
 }
@@ -62,7 +69,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 56, ../../../SASS/_common.scss */
-#headerContent h1 a, #headerContent nav a {
+#headerContent h1 a, #headerContent nav a, .leadershipContact a {
   display: block;
   width: 100%;
   height: 100%;
@@ -665,47 +672,45 @@ footer a:hover {
   color: #fafafa;
   z-index: 0;
 }
+/* line 39, ../../../SASS/_services.scss */
+.servicesQuote a {
+  color: #fafafa;
+}
 
-/* line 41, ../../../SASS/_services.scss */
+/* line 42, ../../../SASS/_services.scss */
 .servicesQuoteText, .servicesQuoteAttribute {
   position: relative;
   z-index: 100;
   padding: 50px 0;
 }
 
-/* line 47, ../../../SASS/_services.scss */
+/* line 48, ../../../SASS/_services.scss */
 .servicesQuoteText {
   width: 66%;
   float: right;
 }
-/* line 50, ../../../SASS/_services.scss */
+/* line 51, ../../../SASS/_services.scss */
 .servicesQuoteText p {
   font-size: 2.25em;
   margin-right: 30px;
   margin-bottom: 0.5em;
   font-weight: 300;
 }
-/* line 55, ../../../SASS/_services.scss */
+/* line 56, ../../../SASS/_services.scss */
 .servicesQuoteText p:last-child {
   margin-bottom: 0;
 }
-/* line 57, ../../../SASS/_services.scss */
+/* line 58, ../../../SASS/_services.scss */
 .servicesQuoteText .viewProjects {
   font-size: 1.125em;
 }
 
-/* line 60, ../../../SASS/_services.scss */
+/* line 61, ../../../SASS/_services.scss */
 .servicesQuoteAttribute {
   text-align: center;
 }
 
 /* line 65, ../../../SASS/_services.scss */
-.leadershipPortrait img {
-  display: inline-block;
-  border-radius: 50%;
-}
-
-/* line 71, ../../../SASS/_services.scss */
 .servicesQuoteOverlay {
   background-color: rgba(38, 18, 140, 0.7);
   width: 100%;
@@ -714,5 +719,26 @@ footer a:hover {
   left: 0;
   top: 0;
   z-index: 0;
-  display: none;
+}
+
+/* line 77, ../../../SASS/_services.scss */
+.leadershipPortrait img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* line 85, ../../../SASS/_services.scss */
+.leadershipContact li {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  line-height: 19px;
+}
+/* line 95, ../../../SASS/_services.scss */
+.leadershipContact .email a:after {
+  content: "M";
+}
+/* line 96, ../../../SASS/_services.scss */
+.leadershipContact .linkedin a:after {
+  content: "L";
 }
