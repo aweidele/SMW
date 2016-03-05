@@ -1,0 +1,22 @@
+
+@font-face {
+	font-family: 'smw-icons';
+	src:url('#{$fontfolder}smw-icons.eot?lgvpie');
+	src:url('#{$fontfolder}smw-icons.eot?lgvpie#iefix') format('embedded-opentype'),
+		url('#{$fontfolder}smw-icons.ttf?lgvpie') format('truetype'),
+		url('#{$fontfolder}smw-icons.woff?lgvpie') format('woff'),
+		url('#{$fontfolder}smw-icons.svg?lgvpie#smw-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+%glyphs {
+  font-family: 'smw-icons';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+%sans { font-family: "freight-sans-pro",sans-serif; }
+$fsLight: 300;
+$fsBook: 400;

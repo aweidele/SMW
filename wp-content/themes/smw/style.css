@@ -1,0 +1,717 @@
+/*
+Theme Name: SMW
+*/
+/* line 1, ../../../SASS/_initialize.scss */
+html, body, header, footer, section, article, aside, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  font-weight: normal;
+}
+
+/* line 9, ../../../SASS/_initialize.scss */
+ul, ol {
+  list-style: none;
+}
+
+/* line 11, ../../../SASS/_initialize.scss */
+strong {
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'smw-icons';
+  src: url("inc/fonts/smw-icons.eot?lgvpie");
+  src: url("inc/fonts/smw-icons.eot?lgvpie#iefix") format("embedded-opentype"), url("inc/fonts/smw-icons.ttf?lgvpie") format("truetype"), url("inc/fonts/smw-icons.woff?lgvpie") format("woff"), url("inc/fonts/smw-icons.svg?lgvpie#smw-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 20, ../../../SASS/_fonts.scss */
+body, #homepageContact input[type='email'] {
+  font-family: "freight-sans-pro",sans-serif;
+}
+
+/* line 37, ../../../SASS/_common.scss */
+.copyInfo:after, .expertiseTiles:after, #homepageContact:after, .servicesContent:after, .servicesQuote:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+/* line 46, ../../../SASS/_common.scss */
+#headerContent ul, #footerNav > ul, .servicesTiles, #homepageVideo .contentLayer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 50, ../../../SASS/_common.scss */
+.social span, .slideshowControls span {
+  position: absolute;
+  left: -999999px;
+}
+
+/* line 54, ../../../SASS/_common.scss */
+#headerContent h1 span {
+  display: inline-block;
+  text-indent: -999999px;
+}
+
+/* line 56, ../../../SASS/_common.scss */
+#headerContent h1 a, #headerContent nav a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 61, ../../../SASS/_common.scss */
+.slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 68, ../../../SASS/_common.scss */
+#headerContent li:last-child {
+  margin-right: 0;
+}
+
+/* line 84, ../../../SASS/_common.scss */
+#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #servicesWrapper section {
+  width: 93%;
+  max-width: 1170px;
+  margin: auto;
+}
+
+/* line 90, ../../../SASS/_common.scss */
+#homepageWrapper, #servicesWrapper {
+  margin-top: 92px;
+}
+
+/* line 94, ../../../SASS/_common.scss */
+#homepageVideo p.jumplink, .servicesQuoteText .viewProjects {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* line 97, ../../../SASS/_common.scss */
+#homepageVideo p.jumplink a, .servicesQuoteText .viewProjects a {
+  display: inline-block;
+  color: #fafafa;
+  border: 2px solid #fafafa;
+  line-height: 1em;
+  padding: 20px 35px;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+/* line 104, ../../../SASS/_common.scss */
+#homepageVideo p.jumplink a:hover, .servicesQuoteText .viewProjects a:hover {
+  background-color: rgba(250, 250, 250, 0.6);
+  color: #26128c;
+}
+
+/* line 131, ../../../SASS/_common.scss */
+a {
+  color: black;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+  text-decoration: none;
+}
+/* line 135, ../../../SASS/_common.scss */
+a:hover {
+  color: #26128c;
+}
+
+/* line 139, ../../../SASS/_common.scss */
+.servicesCopy, #headerContent h1, .contactColumn, #headerContent nav, .servicesQuote, .copyInfo, #footerNav > ul {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 30px;
+  float: left;
+}
+/* line 143, ../../../SASS/_common.scss */
+.servicesCopy:last-child, #headerContent h1:last-child, .contactColumn:last-child, #headerContent nav:last-child, .servicesQuote:last-child, .copyInfo:last-child, #footerNav > ul:last-child {
+  padding-right: 0;
+}
+
+/* line 148, ../../../SASS/_common.scss */
+.servicesCopy {
+  width: 25%;
+}
+
+/* line 148, ../../../SASS/_common.scss */
+.contactColumn {
+  width: 33.33333%;
+}
+
+/* line 148, ../../../SASS/_common.scss */
+.servicesQuote {
+  width: 75%;
+}
+
+/* line 148, ../../../SASS/_common.scss */
+.copyInfo {
+  width: 83.33333%;
+}
+
+/* line 148, ../../../SASS/_common.scss */
+#footerNav > ul {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 171, ../../../SASS/_common.scss */
+  #headerContent h1 {
+    width: 33.33333%;
+  }
+
+  /* line 171, ../../../SASS/_common.scss */
+  #headerContent nav {
+    width: 66.66667%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 178, ../../../SASS/_common.scss */
+  #headerContent h1 {
+    width: 25%;
+  }
+
+  /* line 178, ../../../SASS/_common.scss */
+  #headerContent nav {
+    width: 75%;
+  }
+
+  /* line 178, ../../../SASS/_common.scss */
+  #footerNav > ul {
+    width: 83.33333%;
+  }
+}
+/* line 184, ../../../SASS/_common.scss */
+#feedback {
+  position: fixed;
+  z-index: 2000;
+  right: 10px;
+  bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #FFFFFF;
+  font-size: 11px;
+  padding: 5px;
+  display: none;
+}
+
+/* line 1, ../../../SASS/_header.scss */
+.fixedTop {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  z-index: 2000;
+}
+
+/* line 10, ../../../SASS/_header.scss */
+#topNav {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 0.9375em;
+}
+/* line 15, ../../../SASS/_header.scss */
+#topNav > ul {
+  width: 98%;
+  max-width: 1170px;
+  margin: auto;
+  text-align: right;
+}
+/* line 20, ../../../SASS/_header.scss */
+#topNav > ul > li {
+  margin-right: 27px;
+}
+/* line 22, ../../../SASS/_header.scss */
+#topNav > ul > li:last-child {
+  margin-right: 0;
+}
+/* line 25, ../../../SASS/_header.scss */
+#topNav li {
+  display: inline-block;
+}
+
+/* line 35, ../../../SASS/_header.scss */
+header {
+  border-bottom: 1px solid #e6e6e6;
+  height: 60px;
+}
+
+/* line 40, ../../../SASS/_header.scss */
+#headerContent {
+  height: 60px;
+}
+/* line 44, ../../../SASS/_header.scss */
+#headerContent h1 {
+  height: 60px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 185px 40px;
+  background-size: 185px 40px;
+  background-position: left center;
+}
+/* line 56, ../../../SASS/_header.scss */
+#headerContent nav {
+  height: 100%;
+}
+/* line 60, ../../../SASS/_header.scss */
+#headerContent nav a {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 24px;
+  position: relative;
+}
+/* line 65, ../../../SASS/_header.scss */
+#headerContent nav a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #26128c;
+  display: block;
+  content: " ";
+  overflow: hidden;
+  -webkit-transition: height 0.25s;
+  transition: height 0.25s;
+}
+/* line 80, ../../../SASS/_header.scss */
+#headerContent ul {
+  height: 100%;
+}
+/* line 85, ../../../SASS/_header.scss */
+#headerContent li {
+  font-size: 1.3125em;
+  margin-right: 70px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+}
+/* line 92, ../../../SASS/_header.scss */
+#headerContent li.current-menu-item a:before, #headerContent li.current_page_item a:before, #headerContent li:hover a:before {
+  height: 4px;
+}
+@media screen and (max-width: 1170px) {
+  /* line 85, ../../../SASS/_header.scss */
+  #headerContent li {
+    margin-right: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+}
+
+/* line 1, ../../../SASS/_footer.scss */
+footer {
+  background-color: #e6e6e6;
+  padding: 40px 0 50px;
+}
+/* line 4, ../../../SASS/_footer.scss */
+footer a {
+  color: #000000;
+}
+/* line 6, ../../../SASS/_footer.scss */
+footer a:hover {
+  color: #26128c;
+}
+
+/* line 15, ../../../SASS/_footer.scss */
+#footerNav > ul {
+  margin: auto;
+  float: none;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #666666;
+}
+/* line 24, ../../../SASS/_footer.scss */
+#footerNav > ul > li {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 1.125em;
+}
+
+/* line 31, ../../../SASS/_footer.scss */
+.copyInfo {
+  margin: auto;
+  float: none;
+  font-size: 0.9375em;
+}
+/* line 37, ../../../SASS/_footer.scss */
+.copyInfo li {
+  float: left;
+  margin-right: 30px;
+}
+/* line 41, ../../../SASS/_footer.scss */
+.copyInfo, .copyInfo a {
+  color: #666666;
+}
+
+/* line 1, ../../../SASS/_content.scss */
+.slideshowContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 74%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* line 10, ../../../SASS/_content.scss */
+.slideshowControls {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(38, 18, 140, 0.6);
+  z-index: 100;
+  min-height: 80px;
+}
+/* line 18, ../../../SASS/_content.scss */
+.slideshowControls h3 {
+  text-align: center;
+  color: #fafafa;
+  font-weight: 500;
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-top: 24px;
+}
+/* line 26, ../../../SASS/_content.scss */
+.slideshowControls ul {
+  text-align: center;
+}
+/* line 29, ../../../SASS/_content.scss */
+.slideshowControls li {
+  display: inline-block;
+  cursor: pointer;
+  color: #fafafa;
+  padding: 5px;
+}
+/* line 34, ../../../SASS/_content.scss */
+.slideshowControls li:after {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  opacity: 0.5;
+  display: block;
+  content: " ";
+  overflow: hidden;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+/* line 45, ../../../SASS/_content.scss */
+.slideshowControls li.active:after {
+  opacity: 1;
+}
+
+/* line 50, ../../../SASS/_content.scss */
+.slideshowSlider {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  -webkit-transition: left 0.25s;
+  transition: left 0.25s;
+}
+
+/* line 59, ../../../SASS/_content.scss */
+.slide {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+}
+/* line 66, ../../../SASS/_content.scss */
+.slide:first-child {
+  z-index: 100;
+}
+
+/* line 3, ../../../SASS/_homepage.scss */
+#homepageWrapper section {
+  margin-bottom: 45px;
+}
+/* line 5, ../../../SASS/_homepage.scss */
+#homepageWrapper section:first-child {
+  margin-top: 45px;
+}
+/* line 7, ../../../SASS/_homepage.scss */
+#homepageWrapper h2 {
+  text-align: center;
+  color: #26128c;
+  font-size: 2.75em;
+  font-weight: 300;
+}
+/* line 13, ../../../SASS/_homepage.scss */
+#homepageWrapper h3 {
+  color: #26128c;
+  font-size: 1.5em;
+}
+/* line 18, ../../../SASS/_homepage.scss */
+#homepageWrapper .sectionStatement {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 35px;
+}
+/* line 23, ../../../SASS/_homepage.scss */
+#homepageWrapper .slideshowControls h3 {
+  color: #fafafa;
+}
+
+/* line 35, ../../../SASS/_homepage.scss */
+#homepageServices a, #homepageServices a:hover {
+  color: black;
+}
+/* line 36, ../../../SASS/_homepage.scss */
+#homepageServices a:hover .readmore {
+  color: #26128c;
+}
+/* line 38, ../../../SASS/_homepage.scss */
+#homepageServices article {
+  width: 20%;
+  text-align: center;
+}
+/* line 42, ../../../SASS/_homepage.scss */
+#homepageServices .icon {
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  margin: 0 auto 18px;
+  background-color: #e6e6e6;
+}
+/* line 49, ../../../SASS/_homepage.scss */
+#homepageServices .blurb {
+  font-size: 1.125em;
+  line-height: 1.2em;
+  padding: 0 10px;
+}
+/* line 54, ../../../SASS/_homepage.scss */
+#homepageServices .readmore {
+  font-size: 0.9375em;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+
+/* line 63, ../../../SASS/_homepage.scss */
+#homepageExpertise article {
+  width: -webkit-calc(33.3333% - 30px);
+  width: calc(33.3333% - 30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  float: left;
+  position: relative;
+}
+/* line 69, ../../../SASS/_homepage.scss */
+#homepageExpertise article:nth-child(3n) {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 63, ../../../SASS/_homepage.scss */
+  #homepageExpertise article {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+  /* line 72, ../../../SASS/_homepage.scss */
+  #homepageExpertise article:nth-child(2n) {
+    margin-right: 0;
+  }
+  /* line 73, ../../../SASS/_homepage.scss */
+  #homepageExpertise article:nth-child(3n) {
+    margin-right: 30px;
+  }
+}
+
+/* line 85, ../../../SASS/_homepage.scss */
+#homepageContact p {
+  font-size: 1.125em;
+  margin-bottom: 1em;
+}
+/* line 87, ../../../SASS/_homepage.scss */
+#homepageContact input[type='email'] {
+  max-width: 225px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #e6e6e6;
+  font-size: 15px;
+  padding: 0 14px;
+  height: 26px;
+  background-color: #f3f3f3;
+}
+/* line 99, ../../../SASS/_homepage.scss */
+#homepageContact .socailLinks a:after {
+  content: " >";
+}
+
+/* line 107, ../../../SASS/_homepage.scss */
+#homepageVideo {
+  width: 100%;
+  height: -webkit-calc(100vh - 92px);
+  height: calc(100vh - 92px);
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+}
+/* line 114, ../../../SASS/_homepage.scss */
+#homepageVideo .videoLayer {
+  position: relative;
+  z-index: 0;
+}
+/* line 117, ../../../SASS/_homepage.scss */
+#homepageVideo .videoLayer video {
+  display: block;
+}
+/* line 120, ../../../SASS/_homepage.scss */
+#homepageVideo .dotLayer,
+#homepageVideo .contentLayer {
+  width: 100%;
+  height: -webkit-calc(100vh - 92px);
+  height: calc(100vh - 92px);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+/* line 138, ../../../SASS/_homepage.scss */
+#homepageVideo .dotLayer {
+  background-image: url("images/dots.png");
+  z-index: 20;
+}
+/* line 143, ../../../SASS/_homepage.scss */
+#homepageVideo .contentLayer {
+  background-color: rgba(38, 18, 140, 0.7);
+  z-index: 30;
+  color: #FFFFFF;
+  text-align: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+/* line 156, ../../../SASS/_homepage.scss */
+#homepageVideo p {
+  font-size: 2.75em;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+/* line 160, ../../../SASS/_homepage.scss */
+#homepageVideo p.jumplink {
+  font-size: 1.5em;
+}
+
+/* line 164, ../../../SASS/_homepage.scss */
+.feedback {
+  position: fixed;
+  z-index: 9000;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-size: 12px;
+  color: #FFFFFF;
+  padding: 5px;
+}
+
+/* line 3, ../../../SASS/_services.scss */
+#servicesWrapper section {
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+}
+/* line 8, ../../../SASS/_services.scss */
+#servicesWrapper section:last-child {
+  border: 0;
+  margin-bottom: 0;
+}
+/* line 13, ../../../SASS/_services.scss */
+#servicesWrapper h2 {
+  color: #26128c;
+  font-weight: 300;
+  font-size: 2.25em;
+  margin-bottom: 0.5em;
+}
+
+/* line 27, ../../../SASS/_services.scss */
+.servicesCopy p {
+  font-size: 1.125em;
+}
+
+/* line 30, ../../../SASS/_services.scss */
+.servicesQuote {
+  position: relative;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fafafa;
+  z-index: 0;
+}
+
+/* line 41, ../../../SASS/_services.scss */
+.servicesQuoteText, .servicesQuoteAttribute {
+  position: relative;
+  z-index: 100;
+  padding: 50px 0;
+}
+
+/* line 47, ../../../SASS/_services.scss */
+.servicesQuoteText {
+  width: 66%;
+  float: right;
+}
+/* line 50, ../../../SASS/_services.scss */
+.servicesQuoteText p {
+  font-size: 2.25em;
+  margin-right: 30px;
+  margin-bottom: 0.5em;
+  font-weight: 300;
+}
+/* line 55, ../../../SASS/_services.scss */
+.servicesQuoteText p:last-child {
+  margin-bottom: 0;
+}
+/* line 57, ../../../SASS/_services.scss */
+.servicesQuoteText .viewProjects {
+  font-size: 1.125em;
+}
+
+/* line 60, ../../../SASS/_services.scss */
+.servicesQuoteAttribute {
+  text-align: center;
+}
+
+/* line 65, ../../../SASS/_services.scss */
+.leadershipPortrait img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* line 71, ../../../SASS/_services.scss */
+.servicesQuoteOverlay {
+  background-color: rgba(38, 18, 140, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}

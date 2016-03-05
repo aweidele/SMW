@@ -1,0 +1,42 @@
+footer {
+  background-color: $gray;
+  padding: 40px 0 50px;
+  a {
+    color: #000000;
+    &:hover { color: $purple; }
+  }
+}
+
+#footerContent {
+  @extend %fullWidth;
+}
+
+#footerNav {
+  > ul {
+    @extend %col-12;
+    @extend %col-xl-10;
+    @extend %flex;
+    margin: auto;
+    float: none;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid $darkgray;
+    > li {
+      flex-grow: 1;
+      font-size: em(18px);
+    }
+  }
+}
+
+.copyInfo {
+  @extend %col-10;
+  @extend %clearAfter;
+  margin: auto;
+  float: none;
+  font-size: em(15px);
+  li {
+    float: left;
+    margin-right: 30px;
+  }
+  &,a { color: $darkgray; }
+}

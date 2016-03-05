@@ -1,0 +1,194 @@
+//// COLORS ////
+$black: #000000;
+$purple: #26128C;
+$gray: #E6E6E6;
+$darkgray: #666666;
+$beige: #FAFAFA;
+
+//// WIDTHS & HEIGHTS ////
+$maxW: 1170px;
+$pctW: 93%;
+
+$topH: 140px;
+$extNavH: 30px;
+$headerH: 60px;
+$intNavH: $topH - $headerH - $extNavH;
+
+$col: 65px;
+$gutter: 30px;
+
+$sCol: 4;
+
+//// RESPONSIVE BREAKPOINTS ////
+// tablet landscape
+$xl: 1024px;
+
+// tablet portrait
+$lg: 768px;
+
+// phone landscape
+$sm: 480px;
+
+// phone portrait
+$xs: 320px;
+
+//// @EXTEND CLASSES ////
+%clearAfter {
+  &:after {
+    content: " ";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+  }
+}
+
+%flex {
+  display: flex;
+}
+
+%positionOff {
+  position: absolute;
+  left: -999999px;
+}
+%indentOff { display: inline-block; text-indent: -999999px; }
+
+%blockA {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+%blockImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+%marginLast0 {
+  &:last-child { margin-right: 0; }
+}
+%marginBottomLast0 {
+  &:last-child { margin-bottom: 0; }
+}
+
+%social {
+  @extend %glyphs;
+  font-size: 14px;
+  span { @extend %positionOff; }
+  a:after {
+    content: "F";
+    display: block;
+  }
+}
+
+%fullWidth {
+  width: $pctW;
+  max-width: $maxW;
+  margin: auto;
+}
+
+%contentWrapper {
+  margin-top: $extNavH + $headerH + 2;
+}
+
+%linkButton {
+  font-weight: 700;
+  text-transform: uppercase;
+  a {
+    display: inline-block;
+    color: $beige;
+    border: 2px solid $beige;
+    line-height: 1em;
+    padding: 20px 35px;
+    transition: background-color 0.25s;
+    &:hover {
+      background-color: rgba($beige,0.6);
+      color: $purple;
+    }
+  }
+}
+
+//// FUNCTIONS AND MIXINS ////
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+@function cols($c) {
+  @return ($col * $c) + ($gutter * ($c - 1));
+}
+
+body { @extend %sans; }
+
+a {
+  color: $black;
+  transition: color 0.25s;
+  text-decoration: none;
+  &:hover { color: $purple; }
+}
+
+//// DEFINE COLUMNS ////
+%col {
+  box-sizing: border-box;
+  padding-right: $gutter;
+  float: left;
+  &:last-child { padding-right: 0; }
+}
+
+$cols: 12;
+@for $i from 1 through $cols {
+  %col-#{$i} {
+    width: (100% / $cols) * $i;
+  }
+  %col-#{$i},%col-xl-#{$i},%col-lg-#{$i},%col-sm-#{$i},%col-xs-#{$i} {
+    @extend %col;
+  }
+}
+@media screen and (max-width: $xs) { 
+  @for $i from 1 through $cols {
+    %col-xs-#{$i} {
+      width: (100% / $cols) * $i;
+    }
+  }
+}
+@media screen and (min-width: $sm) { 
+  @for $i from 1 through $cols {
+    %col-sm-#{$i} {
+      width: (100% / $cols) * $i;
+    }
+  }
+}
+@media screen and (min-width: $lg) { 
+  @for $i from 1 through $cols {
+    %col-lg-#{$i} {
+      width: (100% / $cols) * $i;
+    }
+  }
+}
+@media screen and (min-width: $xl) { 
+  @for $i from 1 through $cols {
+    %col-xl-#{$i} {
+      width: (100% / $cols) * $i;
+    }
+  }
+}
+
+#feedback {
+  position: fixed;
+  z-index: 2000;
+  right: 10px;
+  bottom: 10px;
+  background-color: rgba(0,0,0,0.8);
+  color: #FFFFFF;
+  font-size: 11px;
+  padding: 5px;
+  display: none;
+}
