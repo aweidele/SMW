@@ -65,3 +65,24 @@
   img { @extend %blockImg; }
   &:first-child { z-index: 100; }
 }
+
+.pageSectionContent {
+  @extend %clearAfter;
+}
+
+.pageSectionCopy {
+  @extend %col-3;
+  p { font-size: em(18px); }
+  h2 {
+    color: $purple;
+    font-weight: 300;
+    font-size: em(36px);
+    margin-bottom: 0.5em;
+  }
+}
+
+.pageSectionRight {
+  @extend %col-9;
+  @extend %clearAfter;
+  float: right;
+}

@@ -1,0 +1,29 @@
+#aboutWrapper {
+  @extend %contentWrapper;
+  section { 
+    @extend %fullWidth;
+  }
+}
+
+.leadershipPortrait {
+  img {
+    display: inline-block;
+    border-radius: 50%;
+  }
+}
+
+.leadershipContact {
+  @extend %glyphs;
+  li {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    line-height: 19px;
+  }
+  span { @extend %positionOff; }
+  a {
+    @extend %blockA;
+  }
+  .email a:after { content: "M"; }
+  .linkedin a:after { content: "L"; }
+}

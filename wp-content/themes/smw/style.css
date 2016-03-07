@@ -40,7 +40,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 37, ../../../SASS/_common.scss */
-.copyInfo:after, .expertiseTiles:after, #homepageContact:after, .servicesContent:after, .servicesQuote:after {
+.copyInfo:after, .pageSectionContent:after, .pageSectionRight:after, .servicesQuote:after, .expertiseTiles:after, #homepageContact:after {
   content: " ";
   display: block;
   height: 0;
@@ -88,14 +88,14 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 84, ../../../SASS/_common.scss */
-#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #servicesWrapper section {
+#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #aboutWrapper section, #servicesWrapper section {
   width: 93%;
   max-width: 1170px;
   margin: auto;
 }
 
 /* line 90, ../../../SASS/_common.scss */
-#homepageWrapper, #servicesWrapper {
+#homepageWrapper, #aboutWrapper, #servicesWrapper {
   margin-top: 92px;
 }
 
@@ -133,7 +133,7 @@ a:hover {
 }
 
 /* line 139, ../../../SASS/_common.scss */
-.servicesCopy, #headerContent h1, .contactColumn, #headerContent nav, .servicesQuote, .copyInfo, #footerNav > ul {
+.pageSectionCopy, #headerContent h1, .contactColumn, #headerContent nav, .pageSectionRight, .servicesQuote, .copyInfo, #footerNav > ul {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -141,12 +141,12 @@ a:hover {
   float: left;
 }
 /* line 143, ../../../SASS/_common.scss */
-.servicesCopy:last-child, #headerContent h1:last-child, .contactColumn:last-child, #headerContent nav:last-child, .servicesQuote:last-child, .copyInfo:last-child, #footerNav > ul:last-child {
+.pageSectionCopy:last-child, #headerContent h1:last-child, .contactColumn:last-child, #headerContent nav:last-child, .pageSectionRight:last-child, .servicesQuote:last-child, .copyInfo:last-child, #footerNav > ul:last-child {
   padding-right: 0;
 }
 
 /* line 148, ../../../SASS/_common.scss */
-.servicesCopy {
+.pageSectionCopy {
   width: 25%;
 }
 
@@ -156,7 +156,7 @@ a:hover {
 }
 
 /* line 148, ../../../SASS/_common.scss */
-.servicesQuote {
+.pageSectionRight, .servicesQuote {
   width: 75%;
 }
 
@@ -448,6 +448,23 @@ footer a:hover {
   z-index: 100;
 }
 
+/* line 75, ../../../SASS/_content.scss */
+.pageSectionCopy p {
+  font-size: 1.125em;
+}
+/* line 76, ../../../SASS/_content.scss */
+.pageSectionCopy h2 {
+  color: #26128c;
+  font-weight: 300;
+  font-size: 2.25em;
+  margin-bottom: 0.5em;
+}
+
+/* line 84, ../../../SASS/_content.scss */
+.pageSectionRight, .servicesQuote {
+  float: right;
+}
+
 /* line 3, ../../../SASS/_homepage.scss */
 #homepageWrapper section {
   margin-bottom: 45px;
@@ -638,6 +655,28 @@ footer a:hover {
   padding: 5px;
 }
 
+/* line 9, ../../../SASS/_about.scss */
+.leadershipPortrait img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* line 17, ../../../SASS/_about.scss */
+.leadershipContact li {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  line-height: 19px;
+}
+/* line 27, ../../../SASS/_about.scss */
+.leadershipContact .email a:after {
+  content: "M";
+}
+/* line 28, ../../../SASS/_about.scss */
+.leadershipContact .linkedin a:after {
+  content: "L";
+}
+
 /* line 3, ../../../SASS/_services.scss */
 #servicesWrapper section {
   border-bottom: 1px solid #e6e6e6;
@@ -649,20 +688,8 @@ footer a:hover {
   border: 0;
   margin-bottom: 0;
 }
-/* line 13, ../../../SASS/_services.scss */
-#servicesWrapper h2 {
-  color: #26128c;
-  font-weight: 300;
-  font-size: 2.25em;
-  margin-bottom: 0.5em;
-}
 
-/* line 27, ../../../SASS/_services.scss */
-.servicesCopy p {
-  font-size: 1.125em;
-}
-
-/* line 30, ../../../SASS/_services.scss */
+/* line 15, ../../../SASS/_services.scss */
 .servicesQuote {
   position: relative;
   background-position: center;
@@ -672,45 +699,47 @@ footer a:hover {
   color: #fafafa;
   z-index: 0;
 }
-/* line 39, ../../../SASS/_services.scss */
+/* line 23, ../../../SASS/_services.scss */
 .servicesQuote a {
   color: #fafafa;
 }
 
-/* line 42, ../../../SASS/_services.scss */
+/* line 26, ../../../SASS/_services.scss */
 .servicesQuoteText, .servicesQuoteAttribute {
   position: relative;
   z-index: 100;
   padding: 50px 0;
 }
 
-/* line 48, ../../../SASS/_services.scss */
+/* line 32, ../../../SASS/_services.scss */
 .servicesQuoteText {
   width: 66%;
   float: right;
 }
-/* line 51, ../../../SASS/_services.scss */
+/* line 35, ../../../SASS/_services.scss */
 .servicesQuoteText p {
   font-size: 2.25em;
   margin-right: 30px;
   margin-bottom: 0.5em;
   font-weight: 300;
 }
-/* line 56, ../../../SASS/_services.scss */
+/* line 40, ../../../SASS/_services.scss */
 .servicesQuoteText p:last-child {
   margin-bottom: 0;
 }
-/* line 58, ../../../SASS/_services.scss */
+/* line 42, ../../../SASS/_services.scss */
 .servicesQuoteText .viewProjects {
   font-size: 1.125em;
 }
 
-/* line 61, ../../../SASS/_services.scss */
+/* line 45, ../../../SASS/_services.scss */
 .servicesQuoteAttribute {
   text-align: center;
+  width: 33%;
+  float: left;
 }
 
-/* line 65, ../../../SASS/_services.scss */
+/* line 51, ../../../SASS/_services.scss */
 .servicesQuoteOverlay {
   background-color: rgba(38, 18, 140, 0.7);
   width: 100%;
@@ -719,26 +748,4 @@ footer a:hover {
   left: 0;
   top: 0;
   z-index: 0;
-}
-
-/* line 77, ../../../SASS/_services.scss */
-.leadershipPortrait img {
-  display: inline-block;
-  border-radius: 50%;
-}
-
-/* line 85, ../../../SASS/_services.scss */
-.leadershipContact li {
-  display: inline-block;
-  width: 19px;
-  height: 19px;
-  line-height: 19px;
-}
-/* line 95, ../../../SASS/_services.scss */
-.leadershipContact .email a:after {
-  content: "M";
-}
-/* line 96, ../../../SASS/_services.scss */
-.leadershipContact .linkedin a:after {
-  content: "L";
 }

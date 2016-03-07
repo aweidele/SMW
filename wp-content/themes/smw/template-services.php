@@ -18,8 +18,8 @@ endwhile;endif;wp_reset_query();
 <div id="servicesWrapper">
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
   <section id="services-intro">
-    <div class="servicesContent">
-      <div class="servicesCopy">
+    <div class="pageSectionContent">
+      <div class="pageSectionCopy">
         <?php the_content(); ?>
       </div>
     </div>
@@ -30,8 +30,8 @@ endwhile;endif;wp_reset_query();
 ?>
 
   <section id="services-<?php echo $service->post_name; ?>">
-    <div class="servicesContent">
-      <div class="servicesCopy">
+    <div class="pageSectionContent">
+      <div class="pageSectionCopy">
         <h2><?php echo $service->post_title; ?></h2>
         <?php echo wpautop($service->post_content); ?>
       </div>
@@ -41,14 +41,18 @@ endwhile;endif;wp_reset_query();
           <p class="viewProjects"><a href="">View Projects</a></p>
         </div>
         <div class="servicesQuoteAttribute">
-          <p class="leadershipPortrait"><img src="<?php echo $quote_attribute->thumbnail; ?>"></p>
-          <p><strong><?php echo $quote_attribute->post_title; ?></strong></p>
-          <p><?php echo get_field('title',$quote_attribute->ID); ?></p>
-          <p>+<?php echo str_replace('-',' ',get_field('phone',$quote_attribute->ID)); ?></p>
-          <ul class="leadershipContact">
-            <li class="email"><a href="mailto:<?php echo get_field('email',$quote_attribute->ID); ?>"><span><?php echo get_field('email',$quote_attribute->ID); ?></span></a></li>
-            <li class="linkedin"><a href="<?php echo get_field('linkedin',$quote_attribute->ID); ?>" target="_blank"><span><?php echo get_field('linkedin',$quote_attribute->ID); ?></span></a></li>
-          </ul>
+          <div class="leadershipCard">
+            <a href="<?php echo get_permalink($quote_attribute->ID); ?>" class="popupModal">
+              <p class="leadershipPortrait"><img src="<?php echo $quote_attribute->thumbnail; ?>"></p>
+              <p><strong><?php echo $quote_attribute->post_title; ?></strong></p>
+              <p><?php echo get_field('title',$quote_attribute->ID); ?></p>
+            </a>
+            <p><a href="tel:<?php echo get_field('phone',$quote_attribute->ID); ?>">+<?php echo str_replace('-',' ',get_field('phone',$quote_attribute->ID)); ?></a></p>
+            <ul class="leadershipContact">
+              <li class="email"><a href="mailto:<?php echo get_field('email',$quote_attribute->ID); ?>"><span><?php echo get_field('email',$quote_attribute->ID); ?></span></a></li>
+              <li class="linkedin"><a href="<?php echo get_field('linkedin',$quote_attribute->ID); ?>" target="_blank"><span><?php echo get_field('linkedin',$quote_attribute->ID); ?></span></a></li>
+            </ul>
+          </div>
         </div>
         <div class="servicesQuoteOverlay"></div>
       </div>
