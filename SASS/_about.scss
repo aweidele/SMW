@@ -1,29 +1,21 @@
 #aboutWrapper {
   @extend %contentWrapper;
+  .pageSectionContent { @extend %fullWidth; }
   section { 
-    @extend %fullWidth;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    &:first-child { padding-top: 0; }
+    &:last-child { border: 0; }
+    &:nth-child(2n) {
+      background-color: $beige; 
+      .pageSectionCopy { float: right; padding-right: 0; padding-left: $gutter; }
+      .pageSectionRight { float: left; }
+    }
   }
 }
 
-.leadershipPortrait {
-  img {
-    display: inline-block;
-    border-radius: 50%;
-  }
-}
-
-.leadershipContact {
-  @extend %glyphs;
-  li {
-    display: inline-block;
-    width: 19px;
-    height: 19px;
-    line-height: 19px;
-  }
-  span { @extend %positionOff; }
-  a {
-    @extend %blockA;
-  }
-  .email a:after { content: "M"; }
-  .linkedin a:after { content: "L"; }
+.aboutLeadership {
+  @extend %clearAfter;
+  .leadershipCard { width: 25%; height: 190px; text-align: center; float: left; }
 }

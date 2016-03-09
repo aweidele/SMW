@@ -40,7 +40,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 37, ../../../SASS/_common.scss */
-.copyInfo:after, .pageSectionContent:after, .pageSectionRight:after, .servicesQuote:after, .expertiseTiles:after, #homepageContact:after {
+.copyInfo:after, .pageSectionContent:after, .pageSectionRight:after, .servicesQuote:after, .expertiseTiles:after, #homepageContact:after, .aboutLeadership:after {
   content: " ";
   display: block;
   height: 0;
@@ -88,14 +88,14 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 84, ../../../SASS/_common.scss */
-#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #aboutWrapper section, #servicesWrapper section {
+#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #aboutWrapper .pageSectionContent, #servicesWrapper section {
   width: 93%;
   max-width: 1170px;
   margin: auto;
 }
 
 /* line 90, ../../../SASS/_common.scss */
-#homepageWrapper, #aboutWrapper, #servicesWrapper {
+#homepageWrapper, #leadershipWrapper, #aboutWrapper, #servicesWrapper {
   margin-top: 92px;
 }
 
@@ -655,26 +655,67 @@ footer a:hover {
   padding: 5px;
 }
 
-/* line 9, ../../../SASS/_about.scss */
+/* line 1, ../../../SASS/_leadership.scss */
+.leadershipPortrait {
+  height: 120px;
+}
+/* line 3, ../../../SASS/_leadership.scss */
 .leadershipPortrait img {
   display: inline-block;
   border-radius: 50%;
 }
 
-/* line 17, ../../../SASS/_about.scss */
+/* line 11, ../../../SASS/_leadership.scss */
 .leadershipContact li {
   display: inline-block;
   width: 19px;
   height: 19px;
   line-height: 19px;
 }
-/* line 27, ../../../SASS/_about.scss */
+/* line 21, ../../../SASS/_leadership.scss */
 .leadershipContact .email a:after {
   content: "M";
 }
-/* line 28, ../../../SASS/_about.scss */
+/* line 22, ../../../SASS/_leadership.scss */
 .leadershipContact .linkedin a:after {
   content: "L";
+}
+
+/* line 4, ../../../SASS/_about.scss */
+#aboutWrapper section {
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 30px;
+  padding-top: 50px;
+}
+/* line 8, ../../../SASS/_about.scss */
+#aboutWrapper section:first-child {
+  padding-top: 0;
+}
+/* line 9, ../../../SASS/_about.scss */
+#aboutWrapper section:last-child {
+  border: 0;
+}
+/* line 10, ../../../SASS/_about.scss */
+#aboutWrapper section:nth-child(2n) {
+  background-color: #fafafa;
+}
+/* line 12, ../../../SASS/_about.scss */
+#aboutWrapper section:nth-child(2n) .pageSectionCopy {
+  float: right;
+  padding-right: 0;
+  padding-left: 30px;
+}
+/* line 13, ../../../SASS/_about.scss */
+#aboutWrapper section:nth-child(2n) .pageSectionRight, #aboutWrapper section:nth-child(2n) .servicesQuote {
+  float: left;
+}
+
+/* line 20, ../../../SASS/_about.scss */
+.aboutLeadership .leadershipCard {
+  width: 25%;
+  height: 190px;
+  text-align: center;
+  float: left;
 }
 
 /* line 3, ../../../SASS/_services.scss */
