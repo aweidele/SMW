@@ -24,4 +24,24 @@
 
 #leadershipWrapper {
   @extend %contentWrapper;
+  section {
+    @extend %fullWidth;
+    @extend %clearAfter;
+  }
+  .leadershipLeft { @extend %col-2; }
+  .leadershipCopy { @extend %col-10; }
+}
+
+.leadershipLeft { text-align: center; }
+.leadershipCopy {
+  p { 
+    font-size: em(18px);
+    margin-bottom: 1em;
+    &:first-child {
+      color: $purple;
+      font-size: em(24px);
+      font-weight: 700;
+    }
+    &:last-child { margin-bottom: 0; }
+  }
 }

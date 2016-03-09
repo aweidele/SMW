@@ -40,7 +40,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 37, ../../../SASS/_common.scss */
-.copyInfo:after, .pageSectionContent:after, .pageSectionRight:after, .servicesQuote:after, .expertiseTiles:after, #homepageContact:after, .aboutLeadership:after {
+.copyInfo:after, .pageSectionContent:after, .pageSectionRight:after, .servicesQuote:after, .expertiseTiles:after, #homepageContact:after, #leadershipWrapper section:after, .aboutLeadership:after {
   content: " ";
   display: block;
   height: 0;
@@ -88,7 +88,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 84, ../../../SASS/_common.scss */
-#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #aboutWrapper .pageSectionContent, #servicesWrapper section {
+#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #leadershipWrapper section, #aboutWrapper .pageSectionContent, #servicesWrapper section {
   width: 93%;
   max-width: 1170px;
   margin: auto;
@@ -133,7 +133,7 @@ a:hover {
 }
 
 /* line 139, ../../../SASS/_common.scss */
-.pageSectionCopy, #headerContent h1, .contactColumn, #headerContent nav, .pageSectionRight, .servicesQuote, .copyInfo, #footerNav > ul {
+#leadershipWrapper .leadershipLeft, .pageSectionCopy, #headerContent h1, .contactColumn, #headerContent nav, .pageSectionRight, .servicesQuote, .copyInfo, #leadershipWrapper .leadershipCopy, #footerNav > ul {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -141,8 +141,13 @@ a:hover {
   float: left;
 }
 /* line 143, ../../../SASS/_common.scss */
-.pageSectionCopy:last-child, #headerContent h1:last-child, .contactColumn:last-child, #headerContent nav:last-child, .pageSectionRight:last-child, .servicesQuote:last-child, .copyInfo:last-child, #footerNav > ul:last-child {
+#leadershipWrapper .leadershipLeft:last-child, .pageSectionCopy:last-child, #headerContent h1:last-child, .contactColumn:last-child, #headerContent nav:last-child, .pageSectionRight:last-child, .servicesQuote:last-child, .copyInfo:last-child, #leadershipWrapper .leadershipCopy:last-child, #footerNav > ul:last-child {
   padding-right: 0;
+}
+
+/* line 148, ../../../SASS/_common.scss */
+#leadershipWrapper .leadershipLeft {
+  width: 16.66667%;
 }
 
 /* line 148, ../../../SASS/_common.scss */
@@ -161,7 +166,7 @@ a:hover {
 }
 
 /* line 148, ../../../SASS/_common.scss */
-.copyInfo {
+.copyInfo, #leadershipWrapper .leadershipCopy {
   width: 83.33333%;
 }
 
@@ -679,6 +684,27 @@ footer a:hover {
 /* line 22, ../../../SASS/_leadership.scss */
 .leadershipContact .linkedin a:after {
   content: "L";
+}
+
+/* line 35, ../../../SASS/_leadership.scss */
+.leadershipLeft {
+  text-align: center;
+}
+
+/* line 37, ../../../SASS/_leadership.scss */
+.leadershipCopy p {
+  font-size: 1.125em;
+  margin-bottom: 1em;
+}
+/* line 40, ../../../SASS/_leadership.scss */
+.leadershipCopy p:first-child {
+  color: #26128c;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+/* line 45, ../../../SASS/_leadership.scss */
+.leadershipCopy p:last-child {
+  margin-bottom: 0;
 }
 
 /* line 4, ../../../SASS/_about.scss */
