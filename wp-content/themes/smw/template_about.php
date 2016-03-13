@@ -11,7 +11,7 @@ get_header();
 <div id="aboutWrapper">
 <?php foreach($childPages as $page) { 
   $template = get_page_template_slug($page->ID);
-  //template-staff.php
+
 ?>
   <section id="<?php echo $page->page_name; ?>">
     <div class="pageSectionContent">
