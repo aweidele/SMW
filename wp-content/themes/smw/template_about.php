@@ -9,6 +9,15 @@ get_header();
 
 ?>
 <div id="aboutWrapper">
+<?php if(have_posts()): while(have_posts()): the_post(); ?>
+  <section id="<?php echo $post->post_name; ?>">
+    <div class="pageSectionContent">
+      <div class="pageSectionCopy">
+        <?php the_content(); ?>
+      </div>
+    </div>
+  </section>
+<?php endwhile; endif; wp_reset_query(); ?>
 <?php foreach($childPages as $page) { 
   $template = get_page_template_slug($page->ID);
   //template-staff.php
@@ -53,6 +62,8 @@ get_header();
     </div>
   </section>
 <?php } ?>
+
+<pre><?php print_r($post); ?></pre>
 <pre><?php print_r($childPages); ?></pre>
 </div>
 
