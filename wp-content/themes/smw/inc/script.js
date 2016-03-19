@@ -1,7 +1,7 @@
 var $ = jQuery;
 $(document).ready(function() {
   if($("#homepageVideo").length) { homepageVideo(); }
-  if($(".leadershipModal").length) { leadershipPopup(); }
+  if($("a[data-action='leadership']").length) { leadershipPopup(); }
 });
 
 $(window).load(function() {
@@ -90,5 +90,17 @@ function homepageVideo() {
 }
 
 function leadershipPopup() {
-  $("body").append('<aside id="leadershipPopup"><div id="leadershipPopupContent">hi</div></aside>');
+  $("body").append('<aside id="leadershipPopup"><div class="leadershipPopupContainer"><div class="leadershipPopupContent"></div><div class="leadershipPopupClose"><button><span>Close</span></button></div></div></aside>');
+  $("a[data-action='leadership']").on('click',function(e) {
+    e.preventDefault();
+    h = $(this).attr('href') + ' .leadershipBio';
+    o = $(this).parents('section').offset().top;
+    $('#leadershipPopup .leadershipPopupContent').load(h,function() {
+      $('#leadershipPopup').css({ top:o }).fadeIn(250);
+    });
+  });
+  $(".leadershipPopupClose button").on('click',function(e) {
+    e.preventDefault();
+    $('#leadershipPopup').fadeOut(250);
+  });
 }

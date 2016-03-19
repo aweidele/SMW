@@ -52,15 +52,44 @@
 }
 
 #leadershipPopup {
-  position: fixed;
+  position: absolute;
   z-index: 2000;
   top: $gutter;
   left: 0px;
   width: 100%;
+  display: none;
 }
 
-#leadershipPopupContent {
+.leadershipPopupContainer {
   @extend %fullWidth;
   background-color: $beige;
   position: relative;
+}
+
+.leadershipPopupContent {
+  @extend %col-9;
+  background-color: rgba(#FFFFFF,0.95);
+  padding: $gutter + 10 $gutter $gutter 0;
+  border: 1px solid $gray;
+  &:last-child { padding-right: $gutter; }
+  .leadershipBio { @extend %clearAfter; }
+  .leadershipLeft { width: 25%; float: left; }
+  .leadershipCopy { width: 75%; float: right; }
+}
+
+.leadershipPopupClose {
+  @extend %col-9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  button {
+    border: 0;
+    background: transparent;
+    width: 44px;
+    height: 44px;
+    float: right;
+    cursor: pointer;
+    span { @extend %positionOff; }
+    &:after { content: "X"; }
+  }
 }

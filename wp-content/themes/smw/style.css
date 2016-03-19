@@ -40,7 +40,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 37, ../../../SASS/_common.scss */
-.copyInfo:after, .pageSectionContent:after, .pageSectionRight:after, .servicesQuote:after, .expertiseTiles:after, #homepageContact:after, #leadershipWrapper section:after, .aboutLeadership:after {
+.copyInfo:after, .pageSectionContent:after, .pageSectionRight:after, .servicesQuote:after, .expertiseTiles:after, #homepageContact:after, #leadershipWrapper section:after, .leadershipPopupContent .leadershipBio:after, .aboutLeadership:after {
   content: " ";
   display: block;
   height: 0;
@@ -57,7 +57,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 50, ../../../SASS/_common.scss */
-.social span, .slideshowControls span, .leadershipContact span {
+.social span, .slideshowControls span, .leadershipContact span, .leadershipPopupClose button span {
   position: absolute;
   left: -999999px;
 }
@@ -88,7 +88,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 84, ../../../SASS/_common.scss */
-#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #leadershipWrapper section, #leadershipPopupContent, #aboutWrapper .pageSectionContent, #servicesWrapper section {
+#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #leadershipWrapper section, .leadershipPopupContainer, #aboutWrapper .pageSectionContent, #servicesWrapper section {
   width: 93%;
   max-width: 1170px;
   margin: auto;
@@ -133,7 +133,7 @@ a:hover {
 }
 
 /* line 139, ../../../SASS/_common.scss */
-#leadershipWrapper .leadershipLeft, #headerContent h1, .pageSectionCopy, .contactColumn, .pageSectionRight, .servicesQuote, #headerContent nav, .copyInfo, #leadershipWrapper .leadershipCopy, #footerNav > ul {
+#leadershipWrapper .leadershipLeft, #headerContent h1, .pageSectionCopy, .contactColumn, .pageSectionRight, .servicesQuote, #headerContent nav, .leadershipPopupContent, .leadershipPopupClose, .copyInfo, #leadershipWrapper .leadershipCopy, #footerNav > ul {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -141,7 +141,7 @@ a:hover {
   float: left;
 }
 /* line 143, ../../../SASS/_common.scss */
-#leadershipWrapper .leadershipLeft:last-child, #headerContent h1:last-child, .pageSectionCopy:last-child, .contactColumn:last-child, .pageSectionRight:last-child, .servicesQuote:last-child, #headerContent nav:last-child, .copyInfo:last-child, #leadershipWrapper .leadershipCopy:last-child, #footerNav > ul:last-child {
+#leadershipWrapper .leadershipLeft:last-child, #headerContent h1:last-child, .pageSectionCopy:last-child, .contactColumn:last-child, .pageSectionRight:last-child, .servicesQuote:last-child, #headerContent nav:last-child, .leadershipPopupContent:last-child, .leadershipPopupClose:last-child, .copyInfo:last-child, #leadershipWrapper .leadershipCopy:last-child, #footerNav > ul:last-child {
   padding-right: 0;
 }
 
@@ -161,7 +161,7 @@ a:hover {
 }
 
 /* line 148, ../../../SASS/_common.scss */
-#headerContent nav, .pageSectionRight, .servicesQuote {
+#headerContent nav, .pageSectionRight, .servicesQuote, .leadershipPopupContent, .leadershipPopupClose {
   width: 75%;
 }
 
@@ -733,17 +733,59 @@ footer a:hover {
 
 /* line 54, ../../../SASS/_leadership.scss */
 #leadershipPopup {
-  position: fixed;
+  position: absolute;
   z-index: 2000;
   top: 30px;
   left: 0px;
   width: 100%;
+  display: none;
 }
 
-/* line 62, ../../../SASS/_leadership.scss */
-#leadershipPopupContent {
+/* line 63, ../../../SASS/_leadership.scss */
+.leadershipPopupContainer {
   background-color: #fafafa;
   position: relative;
+}
+
+/* line 69, ../../../SASS/_leadership.scss */
+.leadershipPopupContent {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px 30px 0;
+  border: 1px solid #e6e6e6;
+}
+/* line 74, ../../../SASS/_leadership.scss */
+.leadershipPopupContent:last-child {
+  padding-right: 30px;
+}
+/* line 76, ../../../SASS/_leadership.scss */
+.leadershipPopupContent .leadershipLeft {
+  width: 25%;
+  float: left;
+}
+/* line 77, ../../../SASS/_leadership.scss */
+.leadershipPopupContent .leadershipCopy {
+  width: 75%;
+  float: right;
+}
+
+/* line 80, ../../../SASS/_leadership.scss */
+.leadershipPopupClose {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 85, ../../../SASS/_leadership.scss */
+.leadershipPopupClose button {
+  border: 0;
+  background: transparent;
+  width: 44px;
+  height: 44px;
+  float: right;
+  cursor: pointer;
+}
+/* line 93, ../../../SASS/_leadership.scss */
+.leadershipPopupClose button:after {
+  content: "X";
 }
 
 /* line 4, ../../../SASS/_about.scss */
