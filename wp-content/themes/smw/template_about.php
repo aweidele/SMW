@@ -39,7 +39,7 @@ get_header();
 <?php while($leadership->have_posts()) : $leadership->the_post(); ?>
 
           <div class="leadershipCard">
-            <a href="<?php echo get_permalink(); ?>" class="popupModal">
+            <a href="<?php echo get_permalink(); ?>" class="leadershipModal">
               <p class="leadershipPortrait"><img src="<?php echo get_the_post_thumbnail_url($post->post_quote_attribute->ID,'Leadership Thumb'); ?>"></p>
               <p><strong><?php echo $post->post_title; ?></strong></p>
               <p><?php echo get_field('title'); ?></p>

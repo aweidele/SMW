@@ -21,10 +21,10 @@ $sCol: 4;
 
 //// RESPONSIVE BREAKPOINTS ////
 // tablet landscape
-$xl: 1024px;
+$lg: 1024px;
 
 // tablet portrait
-$lg: 768px;
+$md: 768px;
 
 // phone landscape
 $sm: 480px;
@@ -152,30 +152,30 @@ $cols: 12;
     @extend %col;
   }
 }
-@media screen and (max-width: $xs) { 
-  @for $i from 1 through $cols {
-    %col-xs-#{$i} {
-      width: (100% / $cols) * $i;
-    }
-  }
-}
-@media screen and (min-width: $sm) { 
-  @for $i from 1 through $cols {
-    %col-sm-#{$i} {
-      width: (100% / $cols) * $i;
-    }
-  }
-}
-@media screen and (min-width: $lg) { 
+@media screen and (max-width: $lg) { 
   @for $i from 1 through $cols {
     %col-lg-#{$i} {
       width: (100% / $cols) * $i;
     }
   }
 }
-@media screen and (min-width: $xl) { 
+@media screen and (max-width: $md) { 
   @for $i from 1 through $cols {
-    %col-xl-#{$i} {
+    %col-md-#{$i} {
+      width: (100% / $cols) * $i;
+    }
+  }
+}
+@media screen and (max-width: $sm) { 
+  @for $i from 1 through $cols {
+    %col-sm-#{$i} {
+      width: (100% / $cols) * $i;
+    }
+  }
+}
+@media screen and (max-width: $xs) { 
+  @for $i from 1 through $cols {
+    %col-xs-#{$i} {
       width: (100% / $cols) * $i;
     }
   }

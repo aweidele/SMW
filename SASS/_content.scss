@@ -72,6 +72,8 @@
 
 .pageSectionCopy {
   @extend %col-3;
+  @extend %col-lg-4;
+  @extend %col-md-12;
   p { font-size: em(18px); }
   h2 {
     color: $purple;
@@ -83,6 +85,16 @@
 
 .pageSectionRight {
   @extend %col-9;
+  @extend %col-lg-8;
+  @extend %col-md-12;
   @extend %clearAfter;
   float: right;
+}
+
+@media screen and (max-width: $md) {
+  .pageSectionCopy, .pageSectionRight { 
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

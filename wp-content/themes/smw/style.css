@@ -88,7 +88,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 84, ../../../SASS/_common.scss */
-#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #leadershipWrapper section, #aboutWrapper .pageSectionContent, #servicesWrapper section {
+#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #leadershipWrapper section, #leadershipPopupContent, #aboutWrapper .pageSectionContent, #servicesWrapper section {
   width: 93%;
   max-width: 1170px;
   margin: auto;
@@ -133,7 +133,7 @@ a:hover {
 }
 
 /* line 139, ../../../SASS/_common.scss */
-#leadershipWrapper .leadershipLeft, .pageSectionCopy, #headerContent h1, .contactColumn, #headerContent nav, .pageSectionRight, .servicesQuote, .copyInfo, #leadershipWrapper .leadershipCopy, #footerNav > ul {
+#leadershipWrapper .leadershipLeft, #headerContent h1, .pageSectionCopy, .contactColumn, .pageSectionRight, .servicesQuote, #headerContent nav, .copyInfo, #leadershipWrapper .leadershipCopy, #footerNav > ul {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -141,7 +141,7 @@ a:hover {
   float: left;
 }
 /* line 143, ../../../SASS/_common.scss */
-#leadershipWrapper .leadershipLeft:last-child, .pageSectionCopy:last-child, #headerContent h1:last-child, .contactColumn:last-child, #headerContent nav:last-child, .pageSectionRight:last-child, .servicesQuote:last-child, .copyInfo:last-child, #leadershipWrapper .leadershipCopy:last-child, #footerNav > ul:last-child {
+#leadershipWrapper .leadershipLeft:last-child, #headerContent h1:last-child, .pageSectionCopy:last-child, .contactColumn:last-child, .pageSectionRight:last-child, .servicesQuote:last-child, #headerContent nav:last-child, .copyInfo:last-child, #leadershipWrapper .leadershipCopy:last-child, #footerNav > ul:last-child {
   padding-right: 0;
 }
 
@@ -151,7 +151,7 @@ a:hover {
 }
 
 /* line 148, ../../../SASS/_common.scss */
-.pageSectionCopy {
+#headerContent h1, .pageSectionCopy {
   width: 25%;
 }
 
@@ -161,7 +161,7 @@ a:hover {
 }
 
 /* line 148, ../../../SASS/_common.scss */
-.pageSectionRight, .servicesQuote {
+#headerContent nav, .pageSectionRight, .servicesQuote {
   width: 75%;
 }
 
@@ -175,31 +175,37 @@ a:hover {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-  /* line 171, ../../../SASS/_common.scss */
-  #headerContent h1 {
+@media screen and (max-width: 1024px) {
+  /* line 157, ../../../SASS/_common.scss */
+  .pageSectionCopy {
     width: 33.33333%;
   }
 
-  /* line 171, ../../../SASS/_common.scss */
-  #headerContent nav {
+  /* line 157, ../../../SASS/_common.scss */
+  .pageSectionRight, .servicesQuote {
     width: 66.66667%;
   }
 }
-@media screen and (min-width: 1024px) {
-  /* line 178, ../../../SASS/_common.scss */
-  #headerContent h1 {
-    width: 25%;
+@media screen and (max-width: 768px) {
+  /* line 164, ../../../SASS/_common.scss */
+  #leadershipWrapper .leadershipLeft {
+    width: 33.33333%;
   }
 
-  /* line 178, ../../../SASS/_common.scss */
-  #headerContent nav {
-    width: 75%;
+  /* line 164, ../../../SASS/_common.scss */
+  #leadershipWrapper .leadershipCopy {
+    width: 66.66667%;
   }
 
-  /* line 178, ../../../SASS/_common.scss */
-  #footerNav > ul {
-    width: 83.33333%;
+  /* line 164, ../../../SASS/_common.scss */
+  .pageSectionCopy, .pageSectionRight, .servicesQuote {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 171, ../../../SASS/_common.scss */
+  #leadershipWrapper .leadershipLeft, #leadershipWrapper .leadershipCopy {
+    width: 100%;
   }
 }
 /* line 184, ../../../SASS/_common.scss */
@@ -270,11 +276,11 @@ header {
   background-size: 185px 40px;
   background-position: left center;
 }
-/* line 56, ../../../SASS/_header.scss */
+/* line 55, ../../../SASS/_header.scss */
 #headerContent nav {
   height: 100%;
 }
-/* line 60, ../../../SASS/_header.scss */
+/* line 58, ../../../SASS/_header.scss */
 #headerContent nav a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -282,7 +288,7 @@ header {
   padding-top: 24px;
   position: relative;
 }
-/* line 65, ../../../SASS/_header.scss */
+/* line 63, ../../../SASS/_header.scss */
 #headerContent nav a:before {
   position: absolute;
   top: 0;
@@ -296,11 +302,11 @@ header {
   -webkit-transition: height 0.25s;
   transition: height 0.25s;
 }
-/* line 80, ../../../SASS/_header.scss */
+/* line 78, ../../../SASS/_header.scss */
 #headerContent ul {
   height: 100%;
 }
-/* line 85, ../../../SASS/_header.scss */
+/* line 83, ../../../SASS/_header.scss */
 #headerContent li {
   font-size: 1.3125em;
   margin-right: 70px;
@@ -309,12 +315,12 @@ header {
   box-sizing: border-box;
   height: 100%;
 }
-/* line 92, ../../../SASS/_header.scss */
+/* line 90, ../../../SASS/_header.scss */
 #headerContent li.current-menu-item a:before, #headerContent li.current_page_item a:before, #headerContent li:hover a:before {
   height: 4px;
 }
 @media screen and (max-width: 1170px) {
-  /* line 85, ../../../SASS/_header.scss */
+  /* line 83, ../../../SASS/_header.scss */
   #headerContent li {
     margin-right: 0;
     -webkit-box-flex: 1;
@@ -453,11 +459,11 @@ footer a:hover {
   z-index: 100;
 }
 
-/* line 75, ../../../SASS/_content.scss */
+/* line 77, ../../../SASS/_content.scss */
 .pageSectionCopy p {
   font-size: 1.125em;
 }
-/* line 76, ../../../SASS/_content.scss */
+/* line 78, ../../../SASS/_content.scss */
 .pageSectionCopy h2 {
   color: #26128c;
   font-weight: 300;
@@ -465,11 +471,19 @@ footer a:hover {
   margin-bottom: 0.5em;
 }
 
-/* line 84, ../../../SASS/_content.scss */
+/* line 86, ../../../SASS/_content.scss */
 .pageSectionRight, .servicesQuote {
   float: right;
 }
 
+@media screen and (max-width: 768px) {
+  /* line 95, ../../../SASS/_content.scss */
+  .pageSectionCopy, .pageSectionRight, .servicesQuote {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 /* line 3, ../../../SASS/_homepage.scss */
 #homepageWrapper section {
   margin-bottom: 45px;
@@ -548,7 +562,7 @@ footer a:hover {
 #homepageExpertise article:nth-child(3n) {
   margin-right: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   /* line 63, ../../../SASS/_homepage.scss */
   #homepageExpertise article {
     width: -webkit-calc(50% - 30px);
@@ -663,48 +677,73 @@ footer a:hover {
 /* line 1, ../../../SASS/_leadership.scss */
 .leadershipPortrait {
   height: 120px;
+  width: 120px;
+  margin: 0 auto 16px;
 }
-/* line 3, ../../../SASS/_leadership.scss */
+@media screen and (max-width: 320px) {
+  /* line 1, ../../../SASS/_leadership.scss */
+  .leadershipPortrait {
+    width: 100px;
+  }
+}
+/* line 6, ../../../SASS/_leadership.scss */
 .leadershipPortrait img {
   display: inline-block;
   border-radius: 50%;
+  width: 100%;
+  height: auto;
 }
 
-/* line 11, ../../../SASS/_leadership.scss */
+/* line 16, ../../../SASS/_leadership.scss */
 .leadershipContact li {
   display: inline-block;
   width: 19px;
   height: 19px;
   line-height: 19px;
 }
-/* line 21, ../../../SASS/_leadership.scss */
+/* line 26, ../../../SASS/_leadership.scss */
 .leadershipContact .email a:after {
   content: "M";
 }
-/* line 22, ../../../SASS/_leadership.scss */
+/* line 27, ../../../SASS/_leadership.scss */
 .leadershipContact .linkedin a:after {
   content: "L";
 }
 
-/* line 35, ../../../SASS/_leadership.scss */
+/* line 40, ../../../SASS/_leadership.scss */
 .leadershipLeft {
   text-align: center;
 }
 
-/* line 37, ../../../SASS/_leadership.scss */
+/* line 42, ../../../SASS/_leadership.scss */
 .leadershipCopy p {
   font-size: 1.125em;
   margin-bottom: 1em;
 }
-/* line 40, ../../../SASS/_leadership.scss */
+/* line 45, ../../../SASS/_leadership.scss */
 .leadershipCopy p:first-child {
   color: #26128c;
   font-size: 1.5em;
   font-weight: 700;
 }
-/* line 45, ../../../SASS/_leadership.scss */
+/* line 50, ../../../SASS/_leadership.scss */
 .leadershipCopy p:last-child {
   margin-bottom: 0;
+}
+
+/* line 54, ../../../SASS/_leadership.scss */
+#leadershipPopup {
+  position: fixed;
+  z-index: 2000;
+  top: 30px;
+  left: 0px;
+  width: 100%;
+}
+
+/* line 62, ../../../SASS/_leadership.scss */
+#leadershipPopupContent {
+  background-color: #fafafa;
+  position: relative;
 }
 
 /* line 4, ../../../SASS/_about.scss */
@@ -735,13 +774,52 @@ footer a:hover {
 #aboutWrapper section:nth-child(2n) .pageSectionRight, #aboutWrapper section:nth-child(2n) .servicesQuote {
   float: left;
 }
+@media screen and (max-width: 768px) {
+  /* line 15, ../../../SASS/_about.scss */
+  #aboutWrapper section:nth-child(2n) .pageSectionCopy, #aboutWrapper section:nth-child(2n) .pageSectionRight, #aboutWrapper section:nth-child(2n) .servicesQuote {
+    float: none;
+    padding: 0;
+  }
+}
 
-/* line 20, ../../../SASS/_about.scss */
+/* line 23, ../../../SASS/_about.scss */
 .aboutLeadership .leadershipCard {
   width: 25%;
-  height: 190px;
   text-align: center;
   float: left;
+  margin-bottom: 30px;
+}
+/* line 28, ../../../SASS/_about.scss */
+.aboutLeadership .leadershipCard:nth-child(4n) + .leadershipCard {
+  clear: both;
+}
+@media screen and (max-width: 900px) {
+  /* line 23, ../../../SASS/_about.scss */
+  .aboutLeadership .leadershipCard {
+    width: 33%;
+  }
+  /* line 31, ../../../SASS/_about.scss */
+  .aboutLeadership .leadershipCard:nth-child(3n) + .leadershipCard {
+    clear: both;
+  }
+  /* line 32, ../../../SASS/_about.scss */
+  .aboutLeadership .leadershipCard:nth-child(4n) + .leadershipCard {
+    clear: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 23, ../../../SASS/_about.scss */
+  .aboutLeadership .leadershipCard {
+    width: 50%;
+  }
+  /* line 36, ../../../SASS/_about.scss */
+  .aboutLeadership .leadershipCard:nth-child(2n) + .leadershipCard {
+    clear: both;
+  }
+  /* line 37, ../../../SASS/_about.scss */
+  .aboutLeadership .leadershipCard:nth-child(3n) + .leadershipCard {
+    clear: none;
+  }
 }
 
 /* line 3, ../../../SASS/_services.scss */

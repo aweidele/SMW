@@ -1,8 +1,13 @@
 .leadershipPortrait {
   height: 120px;
+  width: 120px;
+  margin: 0 auto 16px;
+  @media screen and (max-width: $xs) { width: 100px; }
   img {
     display: inline-block;
     border-radius: 50%;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -28,8 +33,8 @@
     @extend %fullWidth;
     @extend %clearAfter;
   }
-  .leadershipLeft { @extend %col-2; }
-  .leadershipCopy { @extend %col-10; }
+  .leadershipLeft { @extend %col-2; @extend %col-md-4; @extend %col-sm-12;}
+  .leadershipCopy { @extend %col-10; @extend %col-md-8; @extend %col-sm-12; }
 }
 
 .leadershipLeft { text-align: center; }
@@ -44,4 +49,18 @@
     }
     &:last-child { margin-bottom: 0; }
   }
+}
+
+#leadershipPopup {
+  position: fixed;
+  z-index: 2000;
+  top: $gutter;
+  left: 0px;
+  width: 100%;
+}
+
+#leadershipPopupContent {
+  @extend %fullWidth;
+  background-color: $beige;
+  position: relative;
 }

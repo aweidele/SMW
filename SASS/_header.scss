@@ -42,8 +42,7 @@ header {
   @extend %fullWidth;
 
   h1 {
-    @extend %col-xl-3;
-    @extend %col-lg-4;
+    @extend %col-3;
     //float: left;
     height: $headerH;
     background-repeat: no-repeat;
@@ -54,8 +53,7 @@ header {
   }
   
   nav {
-    @extend %col-xl-9;
-    @extend %col-lg-8;
+    @extend %col-9;
     height: 100%;
     a { 
       @extend %blockA;

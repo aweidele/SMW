@@ -42,7 +42,7 @@ endwhile;endif;wp_reset_query();
         </div>
         <div class="servicesQuoteAttribute">
           <div class="leadershipCard">
-            <a href="<?php echo get_permalink($quote_attribute->ID); ?>" class="popupModal">
+            <a href="<?php echo get_permalink($quote_attribute->ID); ?>" class="leadershipModal">
               <p class="leadershipPortrait"><img src="<?php echo $quote_attribute->thumbnail; ?>"></p>
               <p><strong><?php echo $quote_attribute->post_title; ?></strong></p>
               <p><?php echo get_field('title',$quote_attribute->ID); ?></p>
