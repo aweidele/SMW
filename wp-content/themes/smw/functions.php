@@ -210,7 +210,8 @@ function register_post_types() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
-		'supports' => array('title','editor','thumbnail','excerpt')
+		'supports' => array('title','editor','thumbnail','excerpt'),
+		'show_in_menu' => 'edit.php?post_type=projects',
 		//"menu_position" => 21
 	  ); 
  
@@ -219,14 +220,14 @@ function register_post_types() {
     
     /**** REGISTER EXPERTISE POST TYPE ****/
 	$labels = array(
-		'name' => _x('Expertise', 'post type general name'),
-		'singular_name' => _x('Expertise', 'post type singular name'),
-		'add_new' => _x('Add New Expertise', 'portfolio item'),
-		'add_new_item' => __('Add New Expertise'),
-		'edit_item' => __('Edit Expertise'),
-		'new_item' => __('New Expertise'),
-		'view_item' => __('View Expertise'),
-		'search_items' => __('Search Expertise'),
+		'name' => _x('Industries', 'post type general name'),
+		'singular_name' => _x('Industry', 'post type singular name'),
+		'add_new' => _x('Add New Industry', 'portfolio item'),
+		'add_new_item' => __('Add New Industry'),
+		'edit_item' => __('Edit Industry'),
+		'new_item' => __('New Industry'),
+		'view_item' => __('View Industry'),
+		'search_items' => __('Search Industries'),
 		'not_found' =>  __('Nothing found'),
 		'not_found_in_trash' => __('Nothing found in Trash'),
 		'parent_item_colon' => ''
@@ -247,6 +248,40 @@ function register_post_types() {
 		'show_in_menu' => 'edit.php?post_type=projects',
 		//"menu_position" => 21
 	  ); 
+	register_post_type( 'industry' , $args );
+
+    
+    /**** REGISTER LOCATION POST TYPE ****/
+	$labels = array(
+		'name' => _x('Locations', 'post type general name'),
+		'singular_name' => _x('Location', 'post type singular name'),
+		'add_new' => _x('Add New Location', 'portfolio item'),
+		'add_new_item' => __('Add New Location'),
+		'edit_item' => __('Edit Location'),
+		'new_item' => __('New Location'),
+		'view_item' => __('View Location'),
+		'search_items' => __('Search Locations'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+ 
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => get_stylesheet_directory_uri() . '/image/nav_team.png',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title','editor','thumbnail','excerpt'),
+		'show_in_menu' => 'edit.php?post_type=projects',
+		//"menu_position" => 21
+	  ); 
+	register_post_type( 'location' , $args );
 
     
     /**** REGISTER LEADERSHIP POST TYPE ****/
