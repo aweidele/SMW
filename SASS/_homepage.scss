@@ -114,7 +114,16 @@ $iconD: 160px;
   .videoLayer {
     position: relative;
     z-index: 0;
-    video { display: block; }
+    width: 100%;
+    height: 100%;
+    video { 
+      display: block;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      @extend %imgCenter;
+    }
   }
 
   .dotLayer,

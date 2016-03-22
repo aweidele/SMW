@@ -45,26 +45,26 @@ function slideshowInit() {
 
 
 function videoResize() {
-  winW = $("#homepageVideo").width();
-  winH = $("#homepageVideo").height();
-  winR = winH / winW;
-
-  newVW = winW;
-  newVH = winW * $vr;
-
-  if(newVH < winH) {
-    newVH = winH;
-    newVW = winH / $vr;
-  }
-
-  newVX = (winW - newVW) / 2;
-  newVY = (winH - newVH) / 2;
-  $("#homepageVideo .videoLayer").css({
-    top:newVY,
-    left:newVX
-  });
-
-  $("#homepageVideo video").width(newVW).height(newVH);
+//   winW = $("#homepageVideo").width();
+//   winH = $("#homepageVideo").height();
+//   winR = winH / winW;
+// 
+//   newVW = winW;
+//   newVH = winW * $vr;
+// 
+//   if(newVH < winH) {
+//     newVH = winH;
+//     newVW = winH / $vr;
+//   }
+// 
+//   newVX = (winW - newVW) / 2;
+//   newVY = (winH - newVH) / 2;
+//   $("#homepageVideo .videoLayer").css({
+//     top:newVY,
+//     left:newVX
+//   });
+// 
+//   $("#homepageVideo video").width(newVW).height(newVH);
 }
 
 function homepageVideo() {
@@ -83,8 +83,8 @@ function homepageVideo() {
     $vh = $("#homepageVideo video").height();
     $vr = $vh / $vw;
     
-    $(window).resize(function() { videoResize(); });
-    videoResize();
+//     $(window).resize(function() { videoResize(); });
+//     videoResize();
     
   });
 }

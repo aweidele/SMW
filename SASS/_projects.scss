@@ -1,0 +1,111 @@
+#projectsWrapper {
+  @extend %contentWrapper;
+}
+
+.projectFilters {
+  @extend %fullWidth;
+  @extend %clearAfter;
+  padding-top: 16px;
+  padding-bottom: 26px;
+  .filters {
+    float: left;
+    @extend %clearAfter;
+    > li {
+      float: left;
+      width: 113px;
+      margin-right: 20px;
+      font-size: 18px;
+      position: relative;
+      line-height: 22px;
+      height: 22px;
+      ul { 
+        display: none;
+        position: absolute;
+        left: -10px;
+        top: 22px;
+        width: 200%;
+        background-color: #FFFFFF;
+      }
+      li {
+        font-size: 14px;
+        line-height: 1.2em;
+        &:hover { background-color: $beige; }
+      }
+      a {
+        display: block;
+        padding: 10px;
+      }
+      &:hover { 
+        ul { display: block; }
+      }
+    }
+  }
+}
+
+.projectFiltersContainer {
+  @extend %col-9;
+  float: right;
+}
+
+#projects-intro { 
+  @extend %fullWidth;
+  margin-bottom: $gutter;
+}
+
+.projectFeature {
+  @extend %col-9;
+  background-color: $gray;
+}
+
+#projectsGrid {
+  @extend %fullWidth;
+  .projectRow {
+    @extend %clearAfter;
+    margin-bottom: $gutter;
+  }
+  .projectCol {
+    @extend %col-6;
+  }
+  
+  .project {
+    @extend %col-6;
+    margin-bottom: $gutter;
+    &:nth-child(2n) { padding-right: 0; }
+    &:nth-child(2n+1) { clear: both; padding-left: 0; }
+    &:last-child,&:nth-last-child(2) {  margin-bottom: 0; }
+    &:only-child { @extend %col-12; }
+  }
+}
+
+#projectsGrid .slideshowControls h3 { font-size: em(14px); padding: 0 20px;  }
+
+//#test { @extend %fullWidth;
+//  .row { 
+//    @extend %flex;
+//    margin-bottom: $gutter;
+//  }
+//  .column-big {
+//    @extend %flex;
+//    @extend %col-6;
+//    align-items: stretch;
+//    .proj { @extend %col-12; }
+//  }
+//  .column-small {
+//    @extend %flex;
+//    @extend %col-6;
+//    flex-wrap: wrap;
+//    .proj { @extend %col-6; }
+//  }
+//  .proj { 
+//    overflow: hidden;
+//    margin-bottom: $gutter;
+//    &:nth-child(2n) { padding-right: 0; }
+//    &:nth-child(2n+1) { padding-left: 0; }
+//    &:nth-last-child(2),&:last-child { margin-bottom: 0; }
+//  }
+//  img {
+//    @extend %blockImg;
+//    @extend %imgCenter;
+//  }
+//}
+

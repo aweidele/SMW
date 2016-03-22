@@ -18,6 +18,8 @@ add_theme_support('post-thumbnails');
 add_image_size('Anniversary Slideshow',790,620,true);
 add_image_size('Anniversary Slideshow Thumb',109,85,true);
 add_image_size('Homepage Slideshow Thumb',350,260,true);
+add_image_size('Grid Slideshow Small',270,190,true);
+add_image_size('Grid Slideshow Large',570,410,true);
 add_image_size('Leadership Thumb',120,120,true);
 add_image_size('Services Background',877,999999);
 
@@ -177,7 +179,8 @@ function register_post_types() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
-		'supports' => array('title','editor','thumbnail','excerpt'),
+		'supports' => array('title','editor'),
+        'taxonomies' => array('post_tag')
 		//"menu_position" => 21
 	  ); 
  
@@ -251,16 +254,16 @@ function register_post_types() {
 	register_post_type( 'industry' , $args );
 
     
-    /**** REGISTER LOCATION POST TYPE ****/
+    /**** REGISTER REGION POST TYPE ****/
 	$labels = array(
-		'name' => _x('Locations', 'post type general name'),
-		'singular_name' => _x('Location', 'post type singular name'),
-		'add_new' => _x('Add New Location', 'portfolio item'),
-		'add_new_item' => __('Add New Location'),
-		'edit_item' => __('Edit Location'),
-		'new_item' => __('New Location'),
-		'view_item' => __('View Location'),
-		'search_items' => __('Search Locations'),
+		'name' => _x('Regions', 'post type general name'),
+		'singular_name' => _x('Region', 'post type singular name'),
+		'add_new' => _x('Add New Region', 'portfolio item'),
+		'add_new_item' => __('Add New Region'),
+		'edit_item' => __('Edit Region'),
+		'new_item' => __('New Region'),
+		'view_item' => __('View Region'),
+		'search_items' => __('Search Region'),
 		'not_found' =>  __('Nothing found'),
 		'not_found_in_trash' => __('Nothing found in Trash'),
 		'parent_item_colon' => ''
@@ -281,7 +284,7 @@ function register_post_types() {
 		'show_in_menu' => 'edit.php?post_type=projects',
 		//"menu_position" => 21
 	  ); 
-	register_post_type( 'location' , $args );
+	register_post_type( 'region' , $args );
 
     
     /**** REGISTER LEADERSHIP POST TYPE ****/

@@ -79,39 +79,39 @@ header span {
   height: auto;
 }
 
-/* line 68, ../../../SASS/_common.scss */
+/* line 75, ../../../SASS/_common.scss */
 #externalNav li:last-child, #internalNav li:last-child {
   margin-right: 0;
 }
 
-/* line 71, ../../../SASS/_common.scss */
+/* line 78, ../../../SASS/_common.scss */
 .shareForm p:last-child {
   margin-bottom: 0;
 }
 
-/* line 74, ../../../SASS/_common.scss */
+/* line 81, ../../../SASS/_common.scss */
 .facebook, .twitter, .linkedin {
   font-size: 14px;
 }
-/* line 78, ../../../SASS/_common.scss */
+/* line 85, ../../../SASS/_common.scss */
 .facebook a:after, .twitter a:after, .linkedin a:after {
   content: "F";
   display: block;
 }
 
-/* line 131, ../../../SASS/_common.scss */
+/* line 139, ../../../SASS/_common.scss */
 a {
   color: black;
   -webkit-transition: color 0.25s;
   transition: color 0.25s;
   text-decoration: none;
 }
-/* line 135, ../../../SASS/_common.scss */
+/* line 143, ../../../SASS/_common.scss */
 a:hover {
   color: #26128c;
 }
 
-/* line 184, ../../../SASS/_common.scss */
+/* line 194, ../../../SASS/_common.scss */
 #feedback {
   position: fixed;
   z-index: 2000;
