@@ -153,40 +153,60 @@ a {
   &:last-child { padding-right: 0; }
 }
 
+%offset { &:first-child { padding-left: $gutter / 2; } }
+
 $cols: 12;
-@for $i from 1 through $cols {
+@for $i from 0 through $cols {
   %col-#{$i} {
     width: (100% / $cols) * $i;
+  }
+  %offset-#{$i} {
+    margin-left: (100% / $cols) * $i;
   }
   %col-#{$i},%col-xl-#{$i},%col-lg-#{$i},%col-sm-#{$i},%col-xs-#{$i} {
     @extend %col;
   }
+  %offset-#{$i},%offset-xl-#{$i},%offset-lg-#{$i},%offset-sm-#{$i},%offset-xs-#{$i} {
+    @extend %offset;
+  }
 }
 @media screen and (max-width: $lg) { 
-  @for $i from 1 through $cols {
+  @for $i from 0 through $cols {
     %col-lg-#{$i} {
       width: (100% / $cols) * $i;
+    }
+    %offset-lg-#{$i} {
+      margin-left: (100% / $cols) * $i;
     }
   }
 }
 @media screen and (max-width: $md) { 
-  @for $i from 1 through $cols {
+  @for $i from 0 through $cols {
     %col-md-#{$i} {
       width: (100% / $cols) * $i;
+    }
+    %offset-md-#{$i} {
+      margin-left: (100% / $cols) * $i;
     }
   }
 }
 @media screen and (max-width: $sm) { 
-  @for $i from 1 through $cols {
+  @for $i from 0 through $cols {
     %col-sm-#{$i} {
       width: (100% / $cols) * $i;
+    }
+    %offset-sm-#{$i} {
+      margin-left: (100% / $cols) * $i;
     }
   }
 }
 @media screen and (max-width: $xs) { 
-  @for $i from 1 through $cols {
+  @for $i from 0 through $cols {
     %col-xs-#{$i} {
       width: (100% / $cols) * $i;
+    }
+    %offset-xs-#{$i} {
+      margin-left: (100% / $cols) * $i;
     }
   }
 }

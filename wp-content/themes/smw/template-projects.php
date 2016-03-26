@@ -84,12 +84,36 @@ endwhile;endif;wp_reset_query();
 <?php foreach($projectCols as $type => $proj) { 
   $imgsize = $type == 'a' ? 'Grid Slideshow Large' : 'Grid Slideshow Small';
 ?>
-      <div class="projectCol">
-<?php foreach($proj as $project) { ?>
+      <div class="projectCol<?php if($type == 'a') { echo ' projectColBig'; } ?>">
+<?php foreach($proj as $project) { 
+  $ssid = uniqid();
+?>
         <article class="project" id="project-<?php echo $project['name']; ?>">
-          <a href="<?php echo $project['permalink']; ?>">
-          <img src="<?php echo $project['photos'][0]['sizes'][$imgsize]; ?>">
-          </a>
+          <div class="slideshowContainer" id="slideshow-<?php echo $ssid; ?>">
+            <a href="<?php echo $project['permalink']; ?>">
+            <div class="slideshowSlider">
+<?php foreach($project['photos'] as $key => $photo) { ?>
+              <div class="slide <?php if($key==0) { echo ' active'; } ?>"><img src="<?php echo $photo['sizes'][$imgsize]; ?>"></div>
+<?php } ?>
+            </div>
+            </a>
+            <div class="slideshowOverlay">
+              <div class="slideshowOverlayContainer"><h3><?php echo $project['title']; ?></h3></div>
+            </div>
+<?php if(sizeof($project['photos']) > 1) { ?>
+            <div class="slideshowControls">
+              <ul class="prevNext" data-slideshow="slideshow-<?php echo $ssid; ?>">
+                <li><span>Previous</span></li>
+                <li><span>Next</span></li>
+              </ul>
+              <ul class="slideshowIndicators" data-slideshow="slideshow-<?php echo $ssid; ?>">
+<?php foreach($project['photos'] as $i => $photo) { ?>
+                <li<?php if($i==0) { echo ' class="active"'; } ?>><span><?php echo $i; ?></span></li>
+<?php } ?>
+              </ul>
+            </div>
+<?php } ?>
+          </div>
         </article>
 <?php } ?>
       </div>
@@ -97,7 +121,6 @@ endwhile;endif;wp_reset_query();
     </div>
 <?php } ?>
   </section>
- ?>
 </div>
 <pre><?php print_r($groups); ?></pre>
 <?php get_footer(); ?>

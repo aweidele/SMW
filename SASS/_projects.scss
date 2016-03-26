@@ -2,6 +2,10 @@
   @extend %contentWrapper;
 }
 
+#singleProjectHeader {
+  @extend %contentWrapper;
+}
+
 .projectFilters {
   @extend %fullWidth;
   @extend %clearAfter;
@@ -79,33 +83,81 @@
 
 #projectsGrid .slideshowControls h3 { font-size: em(14px); padding: 0 20px;  }
 
-//#test { @extend %fullWidth;
-//  .row { 
-//    @extend %flex;
-//    margin-bottom: $gutter;
-//  }
-//  .column-big {
-//    @extend %flex;
-//    @extend %col-6;
-//    align-items: stretch;
-//    .proj { @extend %col-12; }
-//  }
-//  .column-small {
-//    @extend %flex;
-//    @extend %col-6;
-//    flex-wrap: wrap;
-//    .proj { @extend %col-6; }
-//  }
-//  .proj { 
-//    overflow: hidden;
-//    margin-bottom: $gutter;
-//    &:nth-child(2n) { padding-right: 0; }
-//    &:nth-child(2n+1) { padding-left: 0; }
-//    &:nth-last-child(2),&:last-child { margin-bottom: 0; }
-//  }
-//  img {
-//    @extend %blockImg;
-//    @extend %imgCenter;
-//  }
-//}
+#singleProjectHeader {
+  @extend %fullWidth;
+  @extend %clearAfter;
+  margin-bottom: 16px;
+}
 
+.singleProjectTitle {
+  @extend %col-9;
+  @extend %offset-3;
+  h2 { 
+    color: $purple;
+    font-size: em(30px);
+  }
+}
+
+#singleProjectSlideshow {
+  @extend %fullWidth;
+  @extend %clearAfter;
+  margin-bottom: 30px;
+  .servicesIcons {
+    @extend %col-1;
+    @extend %offset-2;
+    ul { float: right; }
+    li {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $gray;
+      margin-bottom: 10px;
+    }
+    span { @extend %positionOff; }
+    a { @extend %blockA; }
+  }
+  .projectSlideshow {
+    @extend %col-9;
+    .slideshowContainer { padding: 31% 0; }
+    .slideshowControls .slideshowIndicators li {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+#singleProjectCopy {
+  @extend %fullWidth;
+  @extend %clearAfter;
+  margin-bottom: 65px;
+  .mainCopy {
+    @extend %col-6;
+    @extend %offset-3;
+    h3 {
+      font-size: em(15px);
+      color: $purple;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: em(18px);
+      margin-bottom: 1em;
+    }
+    aside {
+      margin-bottom: 1em;
+      p,li { font-size: em(15px); margin-bottom: 0; }
+      li {
+        display: inline-block;
+        white-space: nowrap;
+        &:after {
+          display: inline-block;
+          content: "|";
+          margin: 0 3px;
+        }
+        &:last-child:after { display: none; }
+      }
+    }
+  }
+  .projectQuote {
+    @extend %col-3;
+  }
+}
