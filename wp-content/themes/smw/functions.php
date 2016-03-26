@@ -18,6 +18,7 @@ add_theme_support('post-thumbnails');
 add_image_size('Anniversary Slideshow',790,620,true);
 add_image_size('Anniversary Slideshow Thumb',109,85,true);
 add_image_size('Large Slideshow',825,520,true);
+add_image_size('Project Quote Photo',255,340,true);
 add_image_size('Homepage Slideshow Thumb',350,260,true);
 add_image_size('Grid Slideshow Small',270,190,true);
 add_image_size('Grid Slideshow Large',570,410,true);

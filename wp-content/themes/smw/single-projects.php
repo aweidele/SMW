@@ -1,13 +1,21 @@
-<?php get_header(); ?>
+<?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+get_header(); ?>
 <div id="projectsWrapper">
 <?php if(have_posts()): while(have_posts()) : the_post();
-  $services     = get_field('services');
-  $industry     = get_field('industry');
-  $photos       = get_field('photos');
-  $project_size = get_field('project_size');
-  $completion   = get_field('completion');
-  $owner        = get_field('owner');
-  $architect    = get_field('architect');
+  $services                = get_field('services');
+  $industry                = get_field('industry');
+  $photos                  = get_field('photos');
+  $project_size            = get_field('project_size');
+  $completion              = get_field('completion');
+  $owner                   = get_field('owner');
+  $architect               = get_field('architect');
+  $project_quote           = get_field('project_quote');
+  $project_quote_attribute = get_field('project_quote_attribute');
+  $project_quote_photo     = get_field('project_quote_photo');
+  $related_projects        = get_field('related_projects');
 ?>
   <section id="singleProjectHeader">
     <div class="singleProjectTitle">
@@ -85,9 +93,59 @@ if($completion != '') { ?>
       </aside>
     </div>
     <div class="projectQuote">
-      Quote here.
+<?php if(is_array($project_quote_photo)) { ?>
+      <p class="projectQuotePhoto"><img src="<?php echo $project_quote_photo['sizes']['Project Quote Photo']; ?>"></p>
+<?php } if($project_quote != '') { ?>
+      <blockquote>
+        <p><?php echo $project_quote; ?></p>
+<?php if($project_quote_attribute != '') { ?>
+        <cite>—<?php echo $project_quote_attribute; ?></cite>
+<?php } ?>
+      </blockquote>
+<?php } ?>
     </div>
   </section>
+<?php if(sizeof($related_projects)) { ?>
+  <section id="singleProjectRelated">
+    <div class="relatedProjects">
+      <h3>Related</h3>
+      <div>
+<?php foreach($related_projects as $project) { 
+  $ssid = uniqid(); 
+  $projPhotos = get_field('photos',$project->ID)
+  ?>
+        <article class="project" id="project-<?php echo $project->post_name; ?>">
+          <div class="slideshowContainer" id="slideshow-<?php echo $ssid; ?>">
+            <a href="<?php echo get_permalink($project-ID); ?>">
+            <div class="slideshowSlider">
+<?php foreach($projPhotos as $key => $photo) { ?>
+              <div class="slide <?php if($key==0) { echo ' active'; } ?>"><img src="<?php echo $photo['sizes']['Grid Slideshow Small']; ?>"></div>
+<?php } ?>
+            </div>
+            </a>
+            <div class="slideshowOverlay">
+              <div class="slideshowOverlayContainer"><h4><?php echo $project->post_title; ?></h4></div>
+            </div>
+<?php if(sizeof($projPhotos) > 1) { ?>
+            <div class="slideshowControls">
+              <ul class="prevNext" data-slideshow="slideshow-<?php echo $ssid; ?>">
+                <li><span>Previous</span></li>
+                <li><span>Next</span></li>
+              </ul>
+              <ul class="slideshowIndicators" data-slideshow="slideshow-<?php echo $ssid; ?>">
+<?php foreach($projPhotos as $i => $photo) { ?>
+                <li<?php if($i==0) { echo ' class="active"'; } ?>><span><?php echo $i; ?></span></li>
+<?php } ?>
+              </ul>
+            </div>
+<?php } ?>
+          </div>
+        </article>
+<?php } ?>
+      </div>
+    </div>
+  </section>
+<?php } ?>
 <?php endwhile; endif; wp_reset_query(); ?>
 </div>
 <?php get_footer(); ?>

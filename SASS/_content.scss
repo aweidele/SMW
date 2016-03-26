@@ -80,10 +80,13 @@
   width: 100%;
   bottom: 0;
   z-index: 25;
-  background-color: rgba($purple,0.9);
+  background-color: rgba($purple,0.6);
   color: $beige;
-  h3 { font-size: 14px; }
+  opacity: 0;
+  transition: opacity 0.25s;
+  h3,h4 { font-size: 14px; }
   .slideshowOverlayContainer { padding: 8px 8px 28px; }
+  .slideshowContainer:hover & { opacity: 1; }
 }
 
 .pageSectionContent {

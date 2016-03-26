@@ -40,7 +40,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 37, ../../../SASS/_common.scss */
-.copyInfo:after, .pageSectionContent:after, .pageSectionRight:after, .servicesQuote:after, .expertiseTiles:after, #homepageContact:after, #leadershipWrapper section:after, .leadershipPopupContent .leadershipBio:after, .aboutLeadership:after, .projectFilters:after, .projectFilters .filters:after, #projectsGrid .projectRow:after, #singleProjectHeader:after, #singleProjectSlideshow:after, #singleProjectCopy:after {
+.copyInfo:after, .pageSectionContent:after, .pageSectionRight:after, .servicesQuote:after, .expertiseTiles:after, #homepageContact:after, #leadershipWrapper section:after, .leadershipPopupContent .leadershipBio:after, .aboutLeadership:after, .projectFilters:after, .projectFilters .filters:after, #projectsGrid .projectRow:after, #singleProjectHeader:after, #singleProjectSlideshow:after, #singleProjectCopy:after, #singleProjectRelated:after, #singleProjectRelated > div:after {
   content: " ";
   display: block;
   height: 0;
@@ -76,7 +76,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 61, ../../../SASS/_common.scss */
-.slideshowSlider .slide img {
+.slideshowSlider .slide img, #singleProjectCopy .projectQuotePhoto img {
   display: block;
   width: 100%;
   height: auto;
@@ -98,7 +98,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 91, ../../../SASS/_common.scss */
-#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #leadershipWrapper section, .leadershipPopupContainer, #aboutWrapper .pageSectionContent, #servicesWrapper section, .projectFilters, #projects-intro, #projectsGrid, #singleProjectHeader, #singleProjectSlideshow, #singleProjectCopy {
+#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #leadershipWrapper section, .leadershipPopupContainer, #aboutWrapper .pageSectionContent, #servicesWrapper section, .projectFilters, #projects-intro, #projectsGrid, #singleProjectHeader, #singleProjectSlideshow, #singleProjectCopy, #singleProjectRelated {
   width: 93%;
   max-width: 1170px;
   margin: auto;
@@ -146,7 +146,7 @@ a:hover {
 }
 
 /* line 147, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesIcons, #leadershipWrapper .leadershipLeft, #headerContent h1, .pageSectionCopy, #singleProjectCopy .projectQuote, .contactColumn, #projectsGrid .projectCol, #projectsGrid .project, #singleProjectCopy .mainCopy, .pageSectionRight, .servicesQuote, #headerContent nav, .leadershipPopupContent, .leadershipPopupClose, .projectFiltersContainer, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow, .copyInfo, #leadershipWrapper .leadershipCopy, #footerNav > ul, #projectsGrid .project:only-child {
+#singleProjectSlideshow .servicesIcons, #leadershipWrapper .leadershipLeft, #headerContent h1, .pageSectionCopy, #singleProjectCopy .projectQuote, .contactColumn, #projectsGrid .projectCol, #projectsGrid .project, #singleProjectCopy .mainCopy, .pageSectionRight, .servicesQuote, #headerContent nav, .leadershipPopupContent, .leadershipPopupClose, .projectFiltersContainer, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow, #singleProjectRelated .relatedProjects, .copyInfo, #leadershipWrapper .leadershipCopy, #footerNav > ul, #projectsGrid .project:only-child {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -155,16 +155,16 @@ a:hover {
   float: left;
 }
 /* line 152, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesIcons:first-child, #leadershipWrapper .leadershipLeft:first-child, #headerContent h1:first-child, .pageSectionCopy:first-child, #singleProjectCopy .projectQuote:first-child, .contactColumn:first-child, #projectsGrid .projectCol:first-child, #projectsGrid .project:first-child, #singleProjectCopy .mainCopy:first-child, .pageSectionRight:first-child, .servicesQuote:first-child, #headerContent nav:first-child, .leadershipPopupContent:first-child, .leadershipPopupClose:first-child, .projectFiltersContainer:first-child, .projectFeature:first-child, .singleProjectTitle:first-child, #singleProjectSlideshow .projectSlideshow:first-child, .copyInfo:first-child, #leadershipWrapper .leadershipCopy:first-child, #footerNav > ul:first-child {
+#singleProjectSlideshow .servicesIcons:first-child, #leadershipWrapper .leadershipLeft:first-child, #headerContent h1:first-child, .pageSectionCopy:first-child, #singleProjectCopy .projectQuote:first-child, .contactColumn:first-child, #projectsGrid .projectCol:first-child, #projectsGrid .project:first-child, #singleProjectCopy .mainCopy:first-child, .pageSectionRight:first-child, .servicesQuote:first-child, #headerContent nav:first-child, .leadershipPopupContent:first-child, .leadershipPopupClose:first-child, .projectFiltersContainer:first-child, .projectFeature:first-child, .singleProjectTitle:first-child, #singleProjectSlideshow .projectSlideshow:first-child, #singleProjectRelated .relatedProjects:first-child, .copyInfo:first-child, #leadershipWrapper .leadershipCopy:first-child, #footerNav > ul:first-child {
   padding-left: 0;
 }
 /* line 153, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesIcons:last-child, #leadershipWrapper .leadershipLeft:last-child, #headerContent h1:last-child, .pageSectionCopy:last-child, #singleProjectCopy .projectQuote:last-child, .contactColumn:last-child, #projectsGrid .projectCol:last-child, #projectsGrid .project:last-child, #singleProjectCopy .mainCopy:last-child, .pageSectionRight:last-child, .servicesQuote:last-child, #headerContent nav:last-child, .leadershipPopupContent:last-child, .leadershipPopupClose:last-child, .projectFiltersContainer:last-child, .projectFeature:last-child, .singleProjectTitle:last-child, #singleProjectSlideshow .projectSlideshow:last-child, .copyInfo:last-child, #leadershipWrapper .leadershipCopy:last-child, #footerNav > ul:last-child {
+#singleProjectSlideshow .servicesIcons:last-child, #leadershipWrapper .leadershipLeft:last-child, #headerContent h1:last-child, .pageSectionCopy:last-child, #singleProjectCopy .projectQuote:last-child, .contactColumn:last-child, #projectsGrid .projectCol:last-child, #projectsGrid .project:last-child, #singleProjectCopy .mainCopy:last-child, .pageSectionRight:last-child, .servicesQuote:last-child, #headerContent nav:last-child, .leadershipPopupContent:last-child, .leadershipPopupClose:last-child, .projectFiltersContainer:last-child, .projectFeature:last-child, .singleProjectTitle:last-child, #singleProjectSlideshow .projectSlideshow:last-child, #singleProjectRelated .relatedProjects:last-child, .copyInfo:last-child, #leadershipWrapper .leadershipCopy:last-child, #footerNav > ul:last-child {
   padding-right: 0;
 }
 
 /* line 156, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesIcons:first-child, .singleProjectTitle:first-child, #singleProjectCopy .mainCopy:first-child {
+#singleProjectSlideshow .servicesIcons:first-child, .singleProjectTitle:first-child, #singleProjectCopy .mainCopy:first-child, #singleProjectRelated .relatedProjects:first-child {
   padding-left: 15px;
 }
 
@@ -189,7 +189,7 @@ a:hover {
 }
 
 /* line 163, ../../../SASS/_common.scss */
-.singleProjectTitle, #singleProjectCopy .mainCopy {
+.singleProjectTitle, #singleProjectCopy .mainCopy, #singleProjectRelated .relatedProjects {
   margin-left: 25%;
 }
 
@@ -204,7 +204,7 @@ a:hover {
 }
 
 /* line 160, ../../../SASS/_common.scss */
-#headerContent nav, .pageSectionRight, .servicesQuote, .leadershipPopupContent, .leadershipPopupClose, .projectFiltersContainer, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow {
+#headerContent nav, .pageSectionRight, .servicesQuote, .leadershipPopupContent, .leadershipPopupClose, .projectFiltersContainer, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow, #singleProjectRelated .relatedProjects {
   width: 75%;
 }
 
@@ -527,23 +527,30 @@ footer a:hover {
   width: 100%;
   bottom: 0;
   z-index: 25;
-  background-color: rgba(38, 18, 140, 0.9);
+  background-color: rgba(38, 18, 140, 0.6);
   color: #fafafa;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
 }
-/* line 85, ../../../SASS/_content.scss */
-.slideshowOverlay h3 {
+/* line 87, ../../../SASS/_content.scss */
+.slideshowOverlay h3, .slideshowOverlay h4 {
   font-size: 14px;
 }
-/* line 86, ../../../SASS/_content.scss */
+/* line 88, ../../../SASS/_content.scss */
 .slideshowOverlay .slideshowOverlayContainer {
   padding: 8px 8px 28px;
 }
+/* line 89, ../../../SASS/_content.scss */
+.slideshowContainer:hover .slideshowOverlay {
+  opacity: 1;
+}
 
-/* line 97, ../../../SASS/_content.scss */
+/* line 100, ../../../SASS/_content.scss */
 .pageSectionCopy p {
   font-size: 1.125em;
 }
-/* line 98, ../../../SASS/_content.scss */
+/* line 101, ../../../SASS/_content.scss */
 .pageSectionCopy h2 {
   color: #26128c;
   font-weight: 300;
@@ -551,13 +558,13 @@ footer a:hover {
   margin-bottom: 0.5em;
 }
 
-/* line 106, ../../../SASS/_content.scss */
+/* line 109, ../../../SASS/_content.scss */
 .pageSectionRight, .servicesQuote {
   float: right;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 115, ../../../SASS/_content.scss */
+  /* line 118, ../../../SASS/_content.scss */
   .pageSectionCopy, .pageSectionRight, .servicesQuote {
     float: none;
     margin-left: 0;
@@ -1150,42 +1157,92 @@ footer a:hover {
   height: 16px;
 }
 
-/* line 129, ../../../SASS/_projects.scss */
-#singleProjectCopy {
-  margin-bottom: 65px;
-}
-/* line 136, ../../../SASS/_projects.scss */
-#singleProjectCopy .mainCopy h3 {
+/* line 128, ../../../SASS/_projects.scss */
+#singleProjectCopy .mainCopy h3, #singleProjectRelated h3 {
   font-size: 0.9375em;
   color: #26128c;
   text-transform: uppercase;
+  margin-bottom: 6px;
 }
-/* line 141, ../../../SASS/_projects.scss */
+
+/* line 134, ../../../SASS/_projects.scss */
+#singleProjectCopy {
+  margin-bottom: 65px;
+}
+/* line 142, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy p {
   font-size: 1.125em;
   margin-bottom: 1em;
 }
-/* line 145, ../../../SASS/_projects.scss */
+/* line 146, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside {
   margin-bottom: 1em;
 }
-/* line 147, ../../../SASS/_projects.scss */
+/* line 148, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside p, #singleProjectCopy .mainCopy aside li {
   font-size: 0.9375em;
   margin-bottom: 0;
 }
-/* line 148, ../../../SASS/_projects.scss */
+/* line 149, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside li {
   display: inline-block;
   white-space: nowrap;
 }
-/* line 151, ../../../SASS/_projects.scss */
+/* line 152, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside li:after {
   display: inline-block;
   content: "|";
   margin: 0 3px;
 }
-/* line 156, ../../../SASS/_projects.scss */
+/* line 157, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside li:last-child:after {
   display: none;
+}
+/* line 163, ../../../SASS/_projects.scss */
+#singleProjectCopy .projectQuote blockquote {
+  font-size: 0.9375em;
+  color: #26128c;
+}
+/* line 166, ../../../SASS/_projects.scss */
+#singleProjectCopy .projectQuote blockquote p {
+  font-style: italic;
+}
+/* line 168, ../../../SASS/_projects.scss */
+#singleProjectCopy .projectQuote blockquote p:before {
+  content: "\201C";
+}
+/* line 169, ../../../SASS/_projects.scss */
+#singleProjectCopy .projectQuote blockquote p:after {
+  content: "\201D";
+}
+/* line 171, ../../../SASS/_projects.scss */
+#singleProjectCopy .projectQuote blockquote cite {
+  display: block;
+  text-align: right;
+  font-style: normal;
+}
+/* line 178, ../../../SASS/_projects.scss */
+#singleProjectCopy .projectQuotePhoto {
+  margin-bottom: 1em;
+}
+
+/* line 184, ../../../SASS/_projects.scss */
+#singleProjectRelated {
+  margin-bottom: 110px;
+}
+/* line 194, ../../../SASS/_projects.scss */
+#singleProjectRelated .project {
+  width: -webkit-calc(33% - 20px);
+  width: calc(33% - 20px);
+  margin-right: 30px;
+  float: left;
+  margin-bottom: 30px;
+}
+/* line 199, ../../../SASS/_projects.scss */
+#singleProjectRelated .project:nth-child(3n) {
+  margin-right: 0;
+}
+/* line 200, ../../../SASS/_projects.scss */
+#singleProjectRelated .project:nth-child(3n+1) {
+  clear: both;
 }

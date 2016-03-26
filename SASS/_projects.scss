@@ -125,7 +125,12 @@
     }
   }
 }
-
+%projectH3 {
+  font-size: em(15px);
+  color: $purple;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
 #singleProjectCopy {
   @extend %fullWidth;
   @extend %clearAfter;
@@ -133,11 +138,7 @@
   .mainCopy {
     @extend %col-6;
     @extend %offset-3;
-    h3 {
-      font-size: em(15px);
-      color: $purple;
-      text-transform: uppercase;
-    }
+    h3 { @extend %projectH3; }
     p {
       font-size: em(18px);
       margin-bottom: 1em;
@@ -159,5 +160,43 @@
   }
   .projectQuote {
     @extend %col-3;
+    blockquote {
+      font-size: em(15px);
+      color: $purple;
+      p {
+        font-style: italic;
+        &:before { content: "\201C"; }
+        &:after { content: "\201D"; }
+      }
+      cite {
+        display: block;
+        text-align: right;
+        font-style: normal;
+      }
+    }
+  }
+  .projectQuotePhoto {
+    margin-bottom: 1em;
+    img { @extend %blockImg; }
+  }
+}
+
+#singleProjectRelated {
+  @extend %fullWidth;
+  @extend %clearAfter;
+  margin-bottom: 140px - $gutter;
+  .relatedProjects {
+    @extend %col-9;
+    @extend %offset-3;
+  }
+  h3 { @extend %projectH3; }
+  > div { @extend %clearAfter; }
+  .project {
+    width: calc(33% - #{(($gutter * 2) / 3)});
+    margin-right: $gutter;
+    float: left;
+    margin-bottom: $gutter;
+    &:nth-child(3n) { margin-right: 0; }
+    &:nth-child(3n+1) { clear: both; }
   }
 }
