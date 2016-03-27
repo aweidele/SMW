@@ -16,6 +16,7 @@ get_header(); ?>
   $project_quote_attribute = get_field('project_quote_attribute');
   $project_quote_photo     = get_field('project_quote_photo');
   $related_projects        = get_field('related_projects');
+  $tags                    = get_terms('project_tags');
 ?>
   <section id="singleProjectHeader">
     <div class="singleProjectTitle">
@@ -87,10 +88,16 @@ if($completion != '') { ?>
         <h3>Completion</h3>
         <p><?php echo $completion; ?></p>
       </aside>
-<?php } ?>
+<?php } if(sizeof($tags)) { ?>
       <aside>
         <h3>Tags</h3>
+        <ul>
+<?php foreach($tags as $tag) { ?>
+          <li><a href="<?php echo get_term_link($tag->term_id); ?>"><?php echo $tag->name; ?></a></li>
+<?php } ?>
+        </ul>
       </aside>
+<?php } ?>
     </div>
     <div class="projectQuote">
 <?php if(is_array($project_quote_photo)) { ?>

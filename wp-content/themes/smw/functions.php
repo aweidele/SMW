@@ -181,12 +181,30 @@ function register_post_types() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
-		'supports' => array('title','editor'),
-        'taxonomies' => array('post_tag')
+		'supports' => array('title','editor','tags')
 		//"menu_position" => 21
 	  ); 
  
 	register_post_type( 'projects' , $args );
+	
+	// Project Tags Taxonomy
+    register_taxonomy(
+        'project_tags',
+        'projects',
+        array(
+            'labels' => array(
+                'name'              => _x( 'Project Tags' , 'taxonomy general name' ),
+                'singular_name'     => _x( 'Project Tag' , 'taxonomy singular name'),
+                'add_new_item' => 'Add Project Tag',
+                'new_item_name' => "New Project Tag"
+            ),
+            'show_ui' => true,
+            'show_admin_column' => true,
+            'show_tagcloud' => false,
+            'hierarchical' => false,
+            'support' => array('tags')
+        )
+    );
 
     
     /**** REGISTER SERVICES POST TYPE ****/
