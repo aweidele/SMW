@@ -121,3 +121,57 @@
     margin-right: 0;
   }
 }
+
+// Quote box
+%quoteBox {
+  @extend %col-9;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $beige; 
+  z-index: 0;
+  a { color: $beige; }
+}
+
+%quoteBoxText,%quoteBoxAttribute {
+  position: relative;
+  z-index: 100;
+  padding: 50px 0;
+}
+
+%quoteBoxText {
+  width: 66%;
+  float: right;
+  p { 
+    font-size: em(36px); 
+    margin-right: $gutter; 
+    margin-bottom: 0.5em;
+    font-weight: 300;
+    &:last-child { margin-bottom: 0; }
+    &%quoteBoxAttribution {
+      text-align: right;
+      font-size: em(24px);
+      margin-top: -1em;
+    }
+  }
+  %quoteBoxButton { @extend %linkButton; font-size: em(18px); }
+}
+
+
+
+%quoteBoxAttribute {
+  text-align: center;
+  width: 33%;
+  float: left;
+}
+
+%quoteBoxOverlay {
+  background-color: rgba($purple,0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
