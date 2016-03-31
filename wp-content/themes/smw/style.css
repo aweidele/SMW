@@ -28,19 +28,19 @@ strong {
   font-style: normal;
 }
 /* line 13, ../../../SASS/_fonts.scss */
-.leadershipContact {
+.leadershipContact, .projectFilters .views > li {
   font-family: 'smw-icons';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 20, ../../../SASS/_fonts.scss */
+/* line 21, ../../../SASS/_fonts.scss */
 body, #homepageContact input[type='email'] {
   font-family: "freight-sans-pro",sans-serif;
 }
 
 /* line 37, ../../../SASS/_common.scss */
-.copyInfo:after, .pageSectionContent:after, .pageSectionRight:after, .expertiseTiles:after, #homepageContact:after, #leadershipWrapper section:after, .leadershipPopupContent .leadershipBio:after, .aboutLeadership:after, .projectFilters:after, .projectFilters .filters:after, #projectsGrid .projectRow:after, #singleProjectHeader:after, #singleProjectSlideshow:after, #singleProjectCopy:after, #singleProjectRelated:after, #singleProjectRelated > div:after, #industryContent:after, #industryProjects:after {
+.copyInfo:after, .pageSectionContent:after, .pageSectionRight:after, .expertiseTiles:after, #homepageContact:after, #leadershipWrapper section:after, .leadershipPopupContent .leadershipBio:after, .aboutLeadership:after, .projectFilters:after, .projectFilters .filters:after, #projectsGrid .projectRow:after, #singleProjectHeader:after, #singleProjectSlideshow:after, #singleProjectCopy:after, #singleProjectRelated:after, #singleProjectRelated > div:after, #projects-list:after, #industryContent:after, #industryProjects:after {
   content: " ";
   display: block;
   height: 0;
@@ -57,7 +57,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 50, ../../../SASS/_common.scss */
-.social span, .slideshowControls span, .leadershipContact span, .leadershipPopupClose button span, #singleProjectSlideshow .servicesIcons span {
+.social span, .slideshowControls span, .leadershipContact span, .leadershipPopupClose button span, .projectFilters .views span, .servicesIcons span {
   position: absolute;
   left: -999999px;
 }
@@ -69,7 +69,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 56, ../../../SASS/_common.scss */
-#headerContent h1 a, #headerContent nav a, .leadershipContact a, #singleProjectSlideshow .servicesIcons a {
+#headerContent h1 a, #headerContent nav a, .leadershipContact a, .projectFilters .views a, .servicesIcons a {
   display: block;
   width: 100%;
   height: 100%;
@@ -98,7 +98,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 91, ../../../SASS/_common.scss */
-#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #leadershipWrapper section, .leadershipPopupContainer, #aboutWrapper .pageSectionContent, #servicesWrapper section, .projectFilters, #projects-intro, #projectsGrid, #singleProjectHeader, #singleProjectSlideshow, #singleProjectCopy, #singleProjectRelated, #industryContent, #industryProjects {
+#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #leadershipWrapper section, .leadershipPopupContainer, #aboutWrapper .pageSectionContent, #servicesWrapper section, .projectFilters, #projects-intro, #projectsGrid, #singleProjectHeader, #singleProjectSlideshow, #singleProjectCopy, #singleProjectRelated, #projects-list, #industryContent, #industryProjects {
   width: 93%;
   max-width: 1170px;
   margin: auto;
@@ -146,7 +146,7 @@ a:hover {
 }
 
 /* line 147, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesIcons, #leadershipWrapper .leadershipLeft, #headerContent h1, .pageSectionCopy, #singleProjectCopy .projectQuote, .contactColumn, #projectsGrid .projectCol, #projectsGrid .project, #singleProjectCopy .mainCopy, .pageSectionRight, #headerContent nav, .servicesQuote, .industryQuote, .leadershipPopupContent, .leadershipPopupClose, .projectFiltersContainer, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow, #singleProjectRelated .relatedProjects, .copyInfo, #leadershipWrapper .leadershipCopy, #footerNav > ul, #projectsGrid .project:only-child {
+#singleProjectSlideshow .servicesList, #leadershipWrapper .leadershipLeft, #headerContent h1, .pageSectionCopy, #singleProjectCopy .projectQuote, .contactColumn, #projectsGrid .projectCol, #projectsGrid .project, #singleProjectCopy .mainCopy, .pageSectionRight, #headerContent nav, .servicesQuote, .industryQuote, .leadershipPopupContent, .leadershipPopupClose, .projectFiltersContainer, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow, #singleProjectRelated .relatedProjects, .projectListView, .copyInfo, #leadershipWrapper .leadershipCopy, #footerNav > ul, #projectsGrid .project:only-child {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -155,21 +155,21 @@ a:hover {
   float: left;
 }
 /* line 152, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesIcons:first-child, #leadershipWrapper .leadershipLeft:first-child, #headerContent h1:first-child, .pageSectionCopy:first-child, #singleProjectCopy .projectQuote:first-child, .contactColumn:first-child, #projectsGrid .projectCol:first-child, #projectsGrid .project:first-child, #singleProjectCopy .mainCopy:first-child, .pageSectionRight:first-child, #headerContent nav:first-child, .servicesQuote:first-child, .industryQuote:first-child, .leadershipPopupContent:first-child, .leadershipPopupClose:first-child, .projectFiltersContainer:first-child, .projectFeature:first-child, .singleProjectTitle:first-child, #singleProjectSlideshow .projectSlideshow:first-child, #singleProjectRelated .relatedProjects:first-child, .copyInfo:first-child, #leadershipWrapper .leadershipCopy:first-child, #footerNav > ul:first-child {
+#singleProjectSlideshow .servicesList:first-child, #leadershipWrapper .leadershipLeft:first-child, #headerContent h1:first-child, .pageSectionCopy:first-child, #singleProjectCopy .projectQuote:first-child, .contactColumn:first-child, #projectsGrid .projectCol:first-child, #projectsGrid .project:first-child, #singleProjectCopy .mainCopy:first-child, .pageSectionRight:first-child, #headerContent nav:first-child, .servicesQuote:first-child, .industryQuote:first-child, .leadershipPopupContent:first-child, .leadershipPopupClose:first-child, .projectFiltersContainer:first-child, .projectFeature:first-child, .singleProjectTitle:first-child, #singleProjectSlideshow .projectSlideshow:first-child, #singleProjectRelated .relatedProjects:first-child, .projectListView:first-child, .copyInfo:first-child, #leadershipWrapper .leadershipCopy:first-child, #footerNav > ul:first-child {
   padding-left: 0;
 }
 /* line 153, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesIcons:last-child, #leadershipWrapper .leadershipLeft:last-child, #headerContent h1:last-child, .pageSectionCopy:last-child, #singleProjectCopy .projectQuote:last-child, .contactColumn:last-child, #projectsGrid .projectCol:last-child, #projectsGrid .project:last-child, #singleProjectCopy .mainCopy:last-child, .pageSectionRight:last-child, #headerContent nav:last-child, .servicesQuote:last-child, .industryQuote:last-child, .leadershipPopupContent:last-child, .leadershipPopupClose:last-child, .projectFiltersContainer:last-child, .projectFeature:last-child, .singleProjectTitle:last-child, #singleProjectSlideshow .projectSlideshow:last-child, #singleProjectRelated .relatedProjects:last-child, .copyInfo:last-child, #leadershipWrapper .leadershipCopy:last-child, #footerNav > ul:last-child {
+#singleProjectSlideshow .servicesList:last-child, #leadershipWrapper .leadershipLeft:last-child, #headerContent h1:last-child, .pageSectionCopy:last-child, #singleProjectCopy .projectQuote:last-child, .contactColumn:last-child, #projectsGrid .projectCol:last-child, #projectsGrid .project:last-child, #singleProjectCopy .mainCopy:last-child, .pageSectionRight:last-child, #headerContent nav:last-child, .servicesQuote:last-child, .industryQuote:last-child, .leadershipPopupContent:last-child, .leadershipPopupClose:last-child, .projectFiltersContainer:last-child, .projectFeature:last-child, .singleProjectTitle:last-child, #singleProjectSlideshow .projectSlideshow:last-child, #singleProjectRelated .relatedProjects:last-child, .projectListView:last-child, .copyInfo:last-child, #leadershipWrapper .leadershipCopy:last-child, #footerNav > ul:last-child {
   padding-right: 0;
 }
 
 /* line 156, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesIcons:first-child, .singleProjectTitle:first-child, #singleProjectCopy .mainCopy:first-child, #singleProjectRelated .relatedProjects:first-child {
+#singleProjectSlideshow .servicesList:first-child, .singleProjectTitle:first-child, #singleProjectCopy .mainCopy:first-child, #singleProjectRelated .relatedProjects:first-child {
   padding-left: 15px;
 }
 
 /* line 160, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesIcons {
+#singleProjectSlideshow .servicesList {
   width: 8.33333%;
 }
 
@@ -179,7 +179,7 @@ a:hover {
 }
 
 /* line 163, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesIcons {
+#singleProjectSlideshow .servicesList {
   margin-left: 16.66667%;
 }
 
@@ -204,7 +204,7 @@ a:hover {
 }
 
 /* line 160, ../../../SASS/_common.scss */
-#headerContent nav, .pageSectionRight, .servicesQuote, .industryQuote, .leadershipPopupContent, .leadershipPopupClose, .projectFiltersContainer, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow, #singleProjectRelated .relatedProjects {
+#headerContent nav, .pageSectionRight, .servicesQuote, .industryQuote, .leadershipPopupContent, .leadershipPopupClose, .projectFiltersContainer, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow, #singleProjectRelated .relatedProjects, .projectListView {
   width: 75%;
 }
 
@@ -1042,10 +1042,14 @@ footer a:hover {
   padding-bottom: 26px;
 }
 /* line 14, ../../../SASS/_projects.scss */
+.projectFilters ul:first-child {
+  padding-left: 15px;
+}
+/* line 15, ../../../SASS/_projects.scss */
 .projectFilters .filters {
   float: left;
 }
-/* line 17, ../../../SASS/_projects.scss */
+/* line 18, ../../../SASS/_projects.scss */
 .projectFilters .filters > li {
   float: left;
   width: 113px;
@@ -1055,7 +1059,7 @@ footer a:hover {
   line-height: 22px;
   height: 22px;
 }
-/* line 25, ../../../SASS/_projects.scss */
+/* line 26, ../../../SASS/_projects.scss */
 .projectFilters .filters > li ul {
   display: none;
   position: absolute;
@@ -1064,106 +1068,155 @@ footer a:hover {
   width: 200%;
   background-color: #FFFFFF;
 }
-/* line 33, ../../../SASS/_projects.scss */
+/* line 34, ../../../SASS/_projects.scss */
 .projectFilters .filters > li li {
   font-size: 14px;
   line-height: 1.2em;
 }
-/* line 36, ../../../SASS/_projects.scss */
+/* line 37, ../../../SASS/_projects.scss */
 .projectFilters .filters > li li:hover {
   background-color: #fafafa;
 }
-/* line 38, ../../../SASS/_projects.scss */
+/* line 39, ../../../SASS/_projects.scss */
 .projectFilters .filters > li a {
   display: block;
   padding: 10px;
 }
-/* line 43, ../../../SASS/_projects.scss */
+/* line 44, ../../../SASS/_projects.scss */
 .projectFilters .filters > li:hover ul {
   display: block;
 }
+/* line 48, ../../../SASS/_projects.scss */
+.projectFilters .views {
+  float: right;
+}
+/* line 50, ../../../SASS/_projects.scss */
+.projectFilters .views > li {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  font-size: 19px;
+  line-height: 19px;
+  margin: 0 10px;
+  position: relative;
+}
+/* line 59, ../../../SASS/_projects.scss */
+.projectFilters .views > li.gridview a:after {
+  content: "\e901";
+}
+/* line 60, ../../../SASS/_projects.scss */
+.projectFilters .views > li.listview a:after {
+  content: "\e902";
+}
+/* line 61, ../../../SASS/_projects.scss */
+.projectFilters .views > li.locationview a:after {
+  content: "\e900";
+}
+/* line 62, ../../../SASS/_projects.scss */
+.projectFilters .views > li:before {
+  width: 1px;
+  background-color: #e6e6e6;
+  display: block;
+  height: 17px;
+  position: absolute;
+  left: -11px;
+  top: 1px;
+  content: " ";
+}
+/* line 72, ../../../SASS/_projects.scss */
+.projectFilters .views > li:first-child:before {
+  display: none;
+}
+/* line 73, ../../../SASS/_projects.scss */
+.projectFilters .views > li:last-child {
+  margin-right: 0;
+}
 
-/* line 49, ../../../SASS/_projects.scss */
+/* line 80, ../../../SASS/_projects.scss */
 .projectFiltersContainer {
   float: right;
 }
 
-/* line 54, ../../../SASS/_projects.scss */
+/* line 85, ../../../SASS/_projects.scss */
 #projects-intro {
   margin-bottom: 30px;
 }
 
-/* line 59, ../../../SASS/_projects.scss */
+/* line 90, ../../../SASS/_projects.scss */
 .projectFeature {
   background-color: #e6e6e6;
 }
 
-/* line 66, ../../../SASS/_projects.scss */
+/* line 97, ../../../SASS/_projects.scss */
 #projectsGrid .projectRow {
   margin-bottom: 30px;
 }
-/* line 74, ../../../SASS/_projects.scss */
+/* line 105, ../../../SASS/_projects.scss */
 #projectsGrid .project {
   margin-bottom: 30px;
 }
-/* line 77, ../../../SASS/_projects.scss */
+/* line 108, ../../../SASS/_projects.scss */
 #projectsGrid .project:nth-child(2n) {
   padding-right: 0;
 }
-/* line 78, ../../../SASS/_projects.scss */
+/* line 109, ../../../SASS/_projects.scss */
 #projectsGrid .project:nth-child(2n+1) {
   clear: both;
   padding-left: 0;
 }
-/* line 79, ../../../SASS/_projects.scss */
+/* line 110, ../../../SASS/_projects.scss */
 #projectsGrid .project:last-child, #projectsGrid .project:nth-last-child(2) {
   margin-bottom: 0;
 }
 
-/* line 84, ../../../SASS/_projects.scss */
+/* line 115, ../../../SASS/_projects.scss */
 #projectsGrid .slideshowControls h3 {
   font-size: 0.875em;
   padding: 0 20px;
 }
 
-/* line 86, ../../../SASS/_projects.scss */
+/* line 117, ../../../SASS/_projects.scss */
 #singleProjectHeader {
   margin-bottom: 16px;
 }
 
-/* line 95, ../../../SASS/_projects.scss */
+/* line 126, ../../../SASS/_projects.scss */
 .singleProjectTitle h2 {
   color: #26128c;
   font-size: 1.875em;
 }
 
-/* line 101, ../../../SASS/_projects.scss */
+/* line 132, ../../../SASS/_projects.scss */
 #singleProjectSlideshow {
   margin-bottom: 30px;
 }
-/* line 108, ../../../SASS/_projects.scss */
-#singleProjectSlideshow .servicesIcons ul {
+/* line 139, ../../../SASS/_projects.scss */
+#singleProjectSlideshow .servicesList ul {
   float: right;
 }
-/* line 109, ../../../SASS/_projects.scss */
-#singleProjectSlideshow .servicesIcons li {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #e6e6e6;
+/* line 140, ../../../SASS/_projects.scss */
+#singleProjectSlideshow .servicesList li {
   margin-bottom: 10px;
 }
-/* line 121, ../../../SASS/_projects.scss */
+/* line 144, ../../../SASS/_projects.scss */
 #singleProjectSlideshow .projectSlideshow .slideshowContainer {
   padding: 31% 0;
 }
-/* line 122, ../../../SASS/_projects.scss */
+/* line 145, ../../../SASS/_projects.scss */
 #singleProjectSlideshow .projectSlideshow .slideshowControls .slideshowIndicators li {
   width: 16px;
   height: 16px;
 }
 
-/* line 128, ../../../SASS/_projects.scss */
+/* line 153, ../../../SASS/_projects.scss */
+.servicesIcons li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e6e6e6;
+}
+
+/* line 163, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy h3, #singleProjectRelated h3 {
   font-size: 0.9375em;
   color: #26128c;
@@ -1171,72 +1224,72 @@ footer a:hover {
   margin-bottom: 6px;
 }
 
-/* line 134, ../../../SASS/_projects.scss */
+/* line 169, ../../../SASS/_projects.scss */
 #singleProjectCopy {
   margin-bottom: 65px;
 }
-/* line 142, ../../../SASS/_projects.scss */
+/* line 177, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy p {
   font-size: 1.125em;
   margin-bottom: 1em;
 }
-/* line 146, ../../../SASS/_projects.scss */
+/* line 181, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside {
   margin-bottom: 1em;
 }
-/* line 148, ../../../SASS/_projects.scss */
+/* line 183, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside p, #singleProjectCopy .mainCopy aside li {
   font-size: 0.9375em;
   margin-bottom: 0;
 }
-/* line 149, ../../../SASS/_projects.scss */
+/* line 184, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside li {
   display: inline-block;
   white-space: nowrap;
 }
-/* line 152, ../../../SASS/_projects.scss */
+/* line 187, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside li:after {
   display: inline-block;
   content: "|";
   margin: 0 3px;
 }
-/* line 157, ../../../SASS/_projects.scss */
+/* line 192, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside li:last-child:after {
   display: none;
 }
-/* line 163, ../../../SASS/_projects.scss */
+/* line 198, ../../../SASS/_projects.scss */
 #singleProjectCopy .projectQuote blockquote {
   font-size: 0.9375em;
   color: #26128c;
 }
-/* line 166, ../../../SASS/_projects.scss */
+/* line 201, ../../../SASS/_projects.scss */
 #singleProjectCopy .projectQuote blockquote p {
   font-style: italic;
 }
-/* line 168, ../../../SASS/_projects.scss */
+/* line 203, ../../../SASS/_projects.scss */
 #singleProjectCopy .projectQuote blockquote p:before {
   content: "\201C";
 }
-/* line 169, ../../../SASS/_projects.scss */
+/* line 204, ../../../SASS/_projects.scss */
 #singleProjectCopy .projectQuote blockquote p:after {
   content: "\201D";
 }
-/* line 171, ../../../SASS/_projects.scss */
+/* line 206, ../../../SASS/_projects.scss */
 #singleProjectCopy .projectQuote blockquote cite {
   display: block;
   text-align: right;
   font-style: normal;
 }
-/* line 178, ../../../SASS/_projects.scss */
+/* line 213, ../../../SASS/_projects.scss */
 #singleProjectCopy .projectQuotePhoto {
   margin-bottom: 1em;
 }
 
-/* line 184, ../../../SASS/_projects.scss */
+/* line 219, ../../../SASS/_projects.scss */
 #singleProjectRelated {
   margin-bottom: 110px;
 }
-/* line 194, ../../../SASS/_projects.scss */
+/* line 229, ../../../SASS/_projects.scss */
 #singleProjectRelated .project {
   width: -webkit-calc(33% - 20px);
   width: calc(33% - 20px);
@@ -1244,13 +1297,79 @@ footer a:hover {
   float: left;
   margin-bottom: 30px;
 }
-/* line 199, ../../../SASS/_projects.scss */
+/* line 234, ../../../SASS/_projects.scss */
 #singleProjectRelated .project:nth-child(3n) {
   margin-right: 0;
 }
-/* line 200, ../../../SASS/_projects.scss */
+/* line 235, ../../../SASS/_projects.scss */
 #singleProjectRelated .project:nth-child(3n+1) {
   clear: both;
+}
+
+/* line 239, ../../../SASS/_projects.scss */
+#projects-list {
+  margin-bottom: 140px;
+}
+
+/* line 245, ../../../SASS/_projects.scss */
+.projectListView {
+  display: table;
+}
+/* line 248, ../../../SASS/_projects.scss */
+.projectListView .row {
+  display: table-row;
+}
+/* line 249, ../../../SASS/_projects.scss */
+.projectListView .th {
+  font-size: 1.125em;
+}
+/* line 250, ../../../SASS/_projects.scss */
+.projectListView .col {
+  font-size: 0.9375em;
+}
+/* line 251, ../../../SASS/_projects.scss */
+.projectListView .th, .projectListView .col {
+  display: table-cell;
+  width: 22.22%;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e6e6e6;
+  vertical-align: top;
+}
+/* line 257, ../../../SASS/_projects.scss */
+.projectListView .th:first-child, .projectListView .col:first-child {
+  width: 33.33%;
+  padding-left: 0;
+}
+/* line 258, ../../../SASS/_projects.scss */
+.projectListView .th:last-child, .projectListView .col:last-child {
+  padding-right: 0;
+}
+/* line 262, ../../../SASS/_projects.scss */
+.projectListView .industry li {
+  display: inline-block;
+}
+/* line 264, ../../../SASS/_projects.scss */
+.projectListView .industry li a {
+  white-space: nowrap;
+}
+/* line 266, ../../../SASS/_projects.scss */
+.projectListView .industry li a:after {
+  content: "|";
+  display: inline-block;
+  margin: 0 3px;
+}
+/* line 268, ../../../SASS/_projects.scss */
+.projectListView .industry li:last-child a:after {
+  display: none;
+}
+/* line 272, ../../../SASS/_projects.scss */
+.projectListView .servicesIcons li {
+  display: inline-block;
+  margin-right: 5px;
+}
+/* line 272, ../../../SASS/_projects.scss */
+.projectListView .servicesIcons li:last-child {
+  margin-right: 0;
 }
 
 /* line 5, ../../../SASS/_industry.scss */

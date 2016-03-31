@@ -11,6 +11,7 @@
   @extend %clearAfter;
   padding-top: 16px;
   padding-bottom: 26px;
+  ul:first-child { padding-left: $gutter / 2; }
   .filters {
     float: left;
     @extend %clearAfter;
@@ -43,6 +44,36 @@
         ul { display: block; }
       }
     }
+  }
+  .views {
+    float: right;
+    > li {
+      display: inline-block;
+      width: 19px;
+      height: 19px;
+      font-size: 19px;
+      line-height: 19px;
+      margin: 0 10px;
+      position: relative;
+      @extend %glyphs;
+      &.gridview a:after { content: "\e901"; }
+      &.listview a:after { content: "\e902"; }
+      &.locationview a:after { content: "\e900"; }
+      &:before {
+        width: 1px;
+        background-color: $gray;
+        display: block;
+        height: 17px;
+        position: absolute;
+        left: -11px;
+        top: 1px;
+        content: " ";
+      }
+      &:first-child:before { display: none; }
+      &:last-child { margin-right: 0; }
+    }
+    a { @extend %blockA; }
+    span { @extend %positionOff; }
   }
 }
 
@@ -102,19 +133,11 @@
   @extend %fullWidth;
   @extend %clearAfter;
   margin-bottom: 30px;
-  .servicesIcons {
+  .servicesList {
     @extend %col-1;
     @extend %offset-2;
     ul { float: right; }
-    li {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: $gray;
-      margin-bottom: 10px;
-    }
-    span { @extend %positionOff; }
-    a { @extend %blockA; }
+    li { margin-bottom: 10px; }
   }
   .projectSlideshow {
     @extend %col-9;
@@ -125,6 +148,18 @@
     }
   }
 }
+
+.servicesIcons {
+  li {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $gray;
+  }
+  span { @extend %positionOff; }
+  a { @extend %blockA; }
+}
+
 %projectH3 {
   font-size: em(15px);
   color: $purple;
@@ -198,5 +233,42 @@
     margin-bottom: $gutter;
     &:nth-child(3n) { margin-right: 0; }
     &:nth-child(3n+1) { clear: both; }
+  }
+}
+
+#projects-list { 
+  @extend %fullWidth;
+  @extend %clearAfter;
+  margin-bottom: 140px;
+}
+
+.projectListView {
+  @extend %col-9;
+  display: table;
+  .row { display: table-row; }
+  .th { font-size: em(18px); }
+  .col { font-size: em(15px); }
+  .th,.col { 
+    display: table-cell;
+    width: 22.22%;
+    padding: 10px $gutter / 2;
+    border-bottom: 1px solid $gray;
+    vertical-align: top;
+    &:first-child { width: 33.33%; padding-left: 0; }
+    &:last-child { padding-right: 0; }
+  }
+  //a { @extend %blockA; }
+  .industry {
+    li {
+      display: inline-block;
+      a {
+        white-space: nowrap;
+        &:after { content: "|"; display: inline-block; margin: 0 3px; }
+      }
+      &:last-child a:after { display: none; }
+    }
+  }
+  .servicesIcons {
+    li { display: inline-block; margin-right: 5px; &:last-child { margin-right: 0; } }
   }
 }

@@ -20,8 +20,8 @@
     </div>
   </section>
   <section id="singleProjectSlideshow">
-    <div class="servicesIcons">
-      <ul>
+    <div class="servicesList">
+      <ul class="servicesIcons">
 <?php foreach($services as $s) { ?>
         <li><a href="<?php echo get_permalink($s->ID); ?>"><span><?php echo $s->post_title; ?></a></span></li>
 <?php } ?>

@@ -38,7 +38,7 @@ endwhile;endif;wp_reset_query();
       <div class="servicesQuote" style="background-image: url(<?php echo $service->post_thumbnail; ?>)">
         <div class="servicesQuoteText">
           <p>&ldquo;<?php echo $service->post_quote; ?>&rdquo;</p>
-          <p class="viewProjects"><a href="">View Projects</a></p>
+          <p class="viewProjects"><a href="<?php echo get_permalink($service->ID); ?>">View Projects</a></p>
         </div>
         <div class="servicesQuoteAttribute">
           <div class="leadershipCard">
