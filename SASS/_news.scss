@@ -1,0 +1,195 @@
+#newsWrapper {
+  @extend %contentWrapper;
+}
+
+#newsContent {
+  @extend %fullWidth;
+  @extend %clearAfter;
+}
+
+
+$newsheight: 190px;
+.tiled {
+  position: relative;
+  z-index: 0;
+  &.go .tile { position: absolute; }
+  .tile {
+    width: calc(25% - #{($gutter * 3) / 4});
+    height: 190px;
+    background-color: $purple;
+    overflow: hidden;
+    
+    &.featured {
+      width: calc(50% - #{$gutter / 2});
+      //width: 50%;
+      height: ($newsheight * 2) + $gutter;
+    }
+    
+    @media screen and (max-width: $lg) {
+      width: calc(33% - #{($gutter * 2) / 3});
+      &.featured { width: calc(66% - #{($gutter) / 3}); }
+    }
+    @media screen and (max-width: $md) {
+      width: calc(50% - #{$gutter / 2});
+      &.featured { width: 100%; }
+    }
+  }
+  @media screen and (max-width: $sm) {
+    &.go .tile { position: static; }
+    .tile { 
+      width: 100%;
+      margin-bottom: $gutter;
+      &,&.featured { height: ($newsheight * 2); }
+    }
+  }
+}
+
+.articleContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  img {
+    display: block;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba($purple,0.6);
+    &,a { color: $beige; }
+    a:hover { color: rgba($beige,0.8); }
+    h2 {
+      padding: 0 10px 10px 10px;
+      font-size: em(18px);
+      line-height: 1.1em;
+    }
+    .categories {
+      font-size: em(13px);
+      text-transform: uppercase;
+      padding: 10px 10px 0 10px;
+      line-height: 1.1em;
+    }
+  }
+}
+
+#newsNav {
+  ul { @extend %subnavUL; }
+}
+
+.newsNextPrev {
+  @extend %fullWidth;
+  ul {
+    @extend %col-9;
+    @extend %offset-3;
+    @extend %clearAfter;
+  }
+  li {
+    &:first-child { float: left; }
+    &:last-child { float: right; }
+  }
+}
+
+.newsInfo {
+  @extend %clearAfter;
+  text-transform: uppercase;
+  font-size: em(15px);
+  > li {
+    float: left;
+    &:after { display: inline-block; content: "|"; margin: 0 5px; }
+    &:last-child:after { display: none; }
+  }
+  ul { display: inline-block; }
+}
+
+.newsDetail {
+  @extend %fullWidth;
+  @extend %clearAfter;
+  margin-bottom: 20px;
+  h2 { 
+    font-size: em(30px);
+    color: $purple;
+  }
+  .featureImage {
+    img { @extend %blockImg; }
+  }
+}
+.newsSectionContent {
+  @extend %col-9;
+  @extend %offset-3;
+}
+.newsContent {
+  @extend %fullWidth;
+  @extend %clearAfter;
+}
+
+.newsCopy {
+  @extend %col-6;
+  @extend %offset-3;
+  
+  @extend %col-lg-7;
+  @extend %offset-lg-1;
+  
+  font-size: em(18px);
+  p { margin-bottom: 1em; }
+  
+}
+.newsAuthor {
+  @extend %col-3;
+  @extend %col-lg-4;
+  text-align: center;
+}
+
+.newsRelated { @extend .newsContent; }
+
+.newsRelatedList {
+  @extend .newsSectionContent;
+  @extend %clearAfter;
+  .project {
+    width: calc(33% - #{($gutter * 2) / 3});
+    float: left;
+    margin-right: $gutter;
+    margin-bottom: $gutter;
+    &:nth-child(3n) { margin-right: 0; }
+    &:nth-child(3n+) { clear: both; }
+  }
+}
+
+.AIAIntro {
+  @extend %col-3;
+}
+.AIACourses {
+  @extend %col-9;
+  position: relative;
+  padding-top: 63px;
+  padding-bottom: 160px;
+  h2 {
+    font-size: em(21px);
+    margin-bottom: 1em;
+  }
+  h3 {
+    font-size: em(18px);
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: em(18px);
+    margin-bottom: 1em;
+  }
+  .featureImage {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+  }
+}

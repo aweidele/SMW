@@ -20,8 +20,8 @@ if($filter->have_posts()) : while($filter->have_posts()) : $filter->the_post();
 endwhile;endif;wp_reset_query();
 ?>
 <div id="projectsWrapper">
-  <nav class="projectFilters">
-    <div class="projectFiltersContainer">
+  <nav class="subnav">
+    <div class="subnavContainer">
       <ul class="filters">
         <li>Filter by:</li>
         <li>Industry

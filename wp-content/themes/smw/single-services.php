@@ -55,7 +55,7 @@ if($projects->have_posts()): ?>
   $photos = get_field('photos');
 ?>
 
-        <article class="project" id="project-new-york-presbyterian-hospitalweill-cornell-medical-college-ophthalmology-center-2">
+        <article class="project" id="<?php echo $post->post_name; ?>">
           <div class="slideshowContainer" id="slideshow-<?php echo $ssid; ?>">
             <a href="<?php echo get_permalink(); ?>">
             <div class="slideshowSlider">

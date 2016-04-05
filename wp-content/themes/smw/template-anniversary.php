@@ -5,7 +5,7 @@ get_header('anniversary');
 
 // get all the pages
 $my_wp_query = new WP_Query();
-$all_wp_pages = $my_wp_query->query(array('post_type' => 'page','orderby' => 'menu_order','order'=>'ASC'));
+$all_wp_pages = $my_wp_query->query(array('post_type' => 'page','orderby' => 'menu_order','order'=>'ASC','posts_per_page'=>-1));
 
 // get the page childred
 $children = get_page_children( $post->ID, $all_wp_pages );

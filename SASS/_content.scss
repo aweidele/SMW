@@ -91,18 +91,24 @@
 
 .pageSectionContent {
   @extend %clearAfter;
+  @extend %fullWidth;
 }
 
 .pageSectionCopy {
   @extend %col-3;
   @extend %col-lg-4;
   @extend %col-md-12;
-  p { font-size: em(18px); }
+  p { font-size: em(18px); margin-bottom: 1em; }
   h2 {
     color: $purple;
     font-weight: 300;
     font-size: em(36px);
     margin-bottom: 0.5em;
+  }
+  ul { font-size: em(15px); margin-bottom: 1em; }
+  li { margin-bottom: 1em; }
+  p,li,ul { 
+    &:last-child { margin-bottom: 0; }
   }
 }
 
@@ -111,7 +117,6 @@
   @extend %col-lg-8;
   @extend %col-md-12;
   @extend %clearAfter;
-  float: right;
 }
 
 @media screen and (max-width: $md) {
@@ -175,3 +180,91 @@
   top: 0;
   z-index: 0;
 }
+
+%subnavUL {
+  @extend %clearAfter;
+  > li {
+    float: left;
+    font-size: em(18px);
+    line-height: 1.2em;
+    margin-right: 50px;
+    &.active a { color: $purple; }
+  }
+}
+
+.subnav {
+  @extend %fullWidth;
+  @extend %clearAfter;
+  padding-top: 16px;
+  padding-bottom: 26px;
+  
+  .filters {
+    float: left;
+    @extend %clearAfter;
+    > li {
+      float: left;
+      width: 113px;
+      margin-right: 20px;
+      font-size: 18px;
+      position: relative;
+      line-height: 22px;
+      height: 22px;
+      ul { 
+        display: none;
+        position: absolute;
+        left: -10px;
+        top: 22px;
+        width: 200%;
+        background-color: #FFFFFF;
+      }
+      li {
+        font-size: 14px;
+        line-height: 1.2em;
+        &:hover { background-color: $beige; }
+      }
+      a {
+        display: block;
+        padding: 10px;
+      }
+      &:hover { 
+        ul { display: block; }
+      }
+    }
+  }
+  .views {
+    float: right;
+    > li {
+      display: inline-block;
+      width: 19px;
+      height: 19px;
+      font-size: 19px;
+      line-height: 19px;
+      margin: 0 10px;
+      position: relative;
+      @extend %glyphs;
+      &.gridview a:after { content: "\e901"; }
+      &.listview a:after { content: "\e902"; }
+      &.locationview a:after { content: "\e900"; }
+      &:before {
+        width: 1px;
+        background-color: $gray;
+        display: block;
+        height: 17px;
+        position: absolute;
+        left: -11px;
+        top: 1px;
+        content: " ";
+      }
+      &:first-child:before { display: none; }
+      &:last-child { margin-right: 0; }
+    }
+    a { @extend %blockA; }
+    span { @extend %positionOff; }
+  }
+}
+
+.subnavContainer {
+  @extend %col-9;
+  @extend %offset-3;
+}
+

@@ -28,7 +28,7 @@ strong {
   font-style: normal;
 }
 /* line 13, ../../../SASS/_fonts.scss */
-.leadershipContact, .projectFilters .views > li {
+.subnav .views > li, .leadershipContact {
   font-family: 'smw-icons';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,7 +40,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 37, ../../../SASS/_common.scss */
-.copyInfo:after, .pageSectionContent:after, .pageSectionRight:after, .expertiseTiles:after, #homepageContact:after, #leadershipWrapper section:after, .leadershipPopupContent .leadershipBio:after, .aboutLeadership:after, .projectFilters:after, .projectFilters .filters:after, #projectsGrid .projectRow:after, #singleProjectHeader:after, #singleProjectSlideshow:after, #singleProjectCopy:after, #singleProjectRelated:after, #singleProjectRelated > div:after, #projects-list:after, #industryContent:after, #industryProjects:after {
+.copyInfo:after, .pageSectionContent:after, .pageSectionRight:after, #newsNav ul:after, .subnav:after, .subnav .filters:after, .expertiseTiles:after, #homepageContact:after, #leadershipWrapper section:after, .leadershipPopupContent .leadershipBio:after, .aboutLeadership:after, #projectsGrid .projectRow:after, #singleProjectHeader:after, #singleProjectSlideshow:after, #singleProjectCopy:after, #singleProjectRelated:after, #singleProjectRelated > div:after, #projects-list:after, #industryContent:after, #industryProjects:after, #newsContent:after, .newsNextPrev ul:after, .newsInfo:after, .newsDetail:after, .newsContent:after, .newsRelated:after, .newsRelatedList:after {
   content: " ";
   display: block;
   height: 0;
@@ -57,7 +57,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 50, ../../../SASS/_common.scss */
-.social span, .slideshowControls span, .leadershipContact span, .leadershipPopupClose button span, .projectFilters .views span, .servicesIcons span {
+.social span, .slideshowControls span, .subnav .views span, .leadershipContact span, .leadershipPopupClose button span, .servicesIcons span {
   position: absolute;
   left: -999999px;
 }
@@ -69,14 +69,14 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 56, ../../../SASS/_common.scss */
-#headerContent h1 a, #headerContent nav a, .leadershipContact a, .projectFilters .views a, .servicesIcons a {
+#headerContent h1 a, #headerContent nav a, .subnav .views a, .leadershipContact a, .servicesIcons a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
 /* line 61, ../../../SASS/_common.scss */
-.slideshowSlider .slide img, #singleProjectCopy .projectQuotePhoto img {
+.slideshowSlider .slide img, #singleProjectCopy .projectQuotePhoto img, .newsDetail .featureImage img {
   display: block;
   width: 100%;
   height: auto;
@@ -98,7 +98,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 91, ../../../SASS/_common.scss */
-#headerContent, #footerContent, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #leadershipWrapper section, .leadershipPopupContainer, #aboutWrapper .pageSectionContent, #servicesWrapper section, .projectFilters, #projects-intro, #projectsGrid, #singleProjectHeader, #singleProjectSlideshow, #singleProjectCopy, #singleProjectRelated, #projects-list, #industryContent, #industryProjects {
+#headerContent, #footerContent, .pageSectionContent, .subnav, #homepageServices, #homepageExpertise, #homepageContact, #homepageVideo .contentLayerContent, #leadershipWrapper section, .leadershipPopupContainer, #aboutWrapper .pageSectionContent, #servicesWrapper section, #projects-intro, #projectsGrid, #singleProjectHeader, #singleProjectSlideshow, #singleProjectCopy, #singleProjectRelated, #projects-list, #industryContent, #industryProjects, #newsContent, .newsNextPrev, .newsDetail, .newsContent, .newsRelated {
   width: 93%;
   max-width: 1170px;
   margin: auto;
@@ -108,7 +108,7 @@ body, #homepageContact input[type='email'] {
 }
 
 /* line 98, ../../../SASS/_common.scss */
-#homepageWrapper, #leadershipWrapper, #aboutWrapper, #servicesWrapper, #projectsWrapper, #singleProjectHeader, #industryWrapper {
+#homepageWrapper, #leadershipWrapper, #aboutWrapper, #servicesWrapper, #projectsWrapper, #singleProjectHeader, #industryWrapper, #newsWrapper, #locationsWrapper {
   margin-top: 92px;
 }
 
@@ -146,7 +146,7 @@ a:hover {
 }
 
 /* line 147, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesList, #leadershipWrapper .leadershipLeft, #headerContent h1, .pageSectionCopy, #singleProjectCopy .projectQuote, .contactColumn, #projectsGrid .projectCol, #projectsGrid .project, #singleProjectCopy .mainCopy, .pageSectionRight, #headerContent nav, .servicesQuote, .industryQuote, .leadershipPopupContent, .leadershipPopupClose, .projectFiltersContainer, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow, #singleProjectRelated .relatedProjects, .projectListView, .copyInfo, #leadershipWrapper .leadershipCopy, #footerNav > ul, #projectsGrid .project:only-child {
+#singleProjectSlideshow .servicesList, #leadershipWrapper .leadershipLeft, #headerContent h1, .pageSectionCopy, #singleProjectCopy .projectQuote, .newsAuthor, .AIAIntro, .contactColumn, #projectsGrid .projectCol, #projectsGrid .project, #singleProjectCopy .mainCopy, .newsCopy, .pageSectionRight, #headerContent nav, .servicesQuote, .industryQuote, .subnavContainer, .leadershipPopupContent, .leadershipPopupClose, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow, #singleProjectRelated .relatedProjects, .projectListView, .newsNextPrev ul, .newsSectionContent, .newsRelatedList, .AIACourses, .copyInfo, #leadershipWrapper .leadershipCopy, #footerNav > ul, #projectsGrid .project:only-child {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -155,16 +155,16 @@ a:hover {
   float: left;
 }
 /* line 152, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesList:first-child, #leadershipWrapper .leadershipLeft:first-child, #headerContent h1:first-child, .pageSectionCopy:first-child, #singleProjectCopy .projectQuote:first-child, .contactColumn:first-child, #projectsGrid .projectCol:first-child, #projectsGrid .project:first-child, #singleProjectCopy .mainCopy:first-child, .pageSectionRight:first-child, #headerContent nav:first-child, .servicesQuote:first-child, .industryQuote:first-child, .leadershipPopupContent:first-child, .leadershipPopupClose:first-child, .projectFiltersContainer:first-child, .projectFeature:first-child, .singleProjectTitle:first-child, #singleProjectSlideshow .projectSlideshow:first-child, #singleProjectRelated .relatedProjects:first-child, .projectListView:first-child, .copyInfo:first-child, #leadershipWrapper .leadershipCopy:first-child, #footerNav > ul:first-child {
+#singleProjectSlideshow .servicesList:first-child, #leadershipWrapper .leadershipLeft:first-child, #headerContent h1:first-child, .pageSectionCopy:first-child, #singleProjectCopy .projectQuote:first-child, .newsAuthor:first-child, .AIAIntro:first-child, .contactColumn:first-child, #projectsGrid .projectCol:first-child, #projectsGrid .project:first-child, #singleProjectCopy .mainCopy:first-child, .newsCopy:first-child, .pageSectionRight:first-child, #headerContent nav:first-child, .servicesQuote:first-child, .industryQuote:first-child, .subnavContainer:first-child, .leadershipPopupContent:first-child, .leadershipPopupClose:first-child, .projectFeature:first-child, .singleProjectTitle:first-child, #singleProjectSlideshow .projectSlideshow:first-child, #singleProjectRelated .relatedProjects:first-child, .projectListView:first-child, .newsNextPrev ul:first-child, .newsSectionContent:first-child, .newsRelatedList:first-child, .AIACourses:first-child, .copyInfo:first-child, #leadershipWrapper .leadershipCopy:first-child, #footerNav > ul:first-child {
   padding-left: 0;
 }
 /* line 153, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesList:last-child, #leadershipWrapper .leadershipLeft:last-child, #headerContent h1:last-child, .pageSectionCopy:last-child, #singleProjectCopy .projectQuote:last-child, .contactColumn:last-child, #projectsGrid .projectCol:last-child, #projectsGrid .project:last-child, #singleProjectCopy .mainCopy:last-child, .pageSectionRight:last-child, #headerContent nav:last-child, .servicesQuote:last-child, .industryQuote:last-child, .leadershipPopupContent:last-child, .leadershipPopupClose:last-child, .projectFiltersContainer:last-child, .projectFeature:last-child, .singleProjectTitle:last-child, #singleProjectSlideshow .projectSlideshow:last-child, #singleProjectRelated .relatedProjects:last-child, .projectListView:last-child, .copyInfo:last-child, #leadershipWrapper .leadershipCopy:last-child, #footerNav > ul:last-child {
+#singleProjectSlideshow .servicesList:last-child, #leadershipWrapper .leadershipLeft:last-child, #headerContent h1:last-child, .pageSectionCopy:last-child, #singleProjectCopy .projectQuote:last-child, .newsAuthor:last-child, .AIAIntro:last-child, .contactColumn:last-child, #projectsGrid .projectCol:last-child, #projectsGrid .project:last-child, #singleProjectCopy .mainCopy:last-child, .newsCopy:last-child, .pageSectionRight:last-child, #headerContent nav:last-child, .servicesQuote:last-child, .industryQuote:last-child, .subnavContainer:last-child, .leadershipPopupContent:last-child, .leadershipPopupClose:last-child, .projectFeature:last-child, .singleProjectTitle:last-child, #singleProjectSlideshow .projectSlideshow:last-child, #singleProjectRelated .relatedProjects:last-child, .projectListView:last-child, .newsNextPrev ul:last-child, .newsSectionContent:last-child, .newsRelatedList:last-child, .AIACourses:last-child, .copyInfo:last-child, #leadershipWrapper .leadershipCopy:last-child, #footerNav > ul:last-child {
   padding-right: 0;
 }
 
 /* line 156, ../../../SASS/_common.scss */
-#singleProjectSlideshow .servicesList:first-child, .singleProjectTitle:first-child, #singleProjectCopy .mainCopy:first-child, #singleProjectRelated .relatedProjects:first-child {
+.newsCopy:first-child, #singleProjectSlideshow .servicesList:first-child, .subnavContainer:first-child, .singleProjectTitle:first-child, #singleProjectCopy .mainCopy:first-child, #singleProjectRelated .relatedProjects:first-child, .newsNextPrev ul:first-child, .newsSectionContent:first-child, .newsRelatedList:first-child {
   padding-left: 15px;
 }
 
@@ -184,12 +184,12 @@ a:hover {
 }
 
 /* line 160, ../../../SASS/_common.scss */
-#headerContent h1, .pageSectionCopy, #singleProjectCopy .projectQuote {
+#headerContent h1, .pageSectionCopy, #singleProjectCopy .projectQuote, .newsAuthor, .AIAIntro {
   width: 25%;
 }
 
 /* line 163, ../../../SASS/_common.scss */
-.singleProjectTitle, #singleProjectCopy .mainCopy, #singleProjectRelated .relatedProjects {
+.subnavContainer, .singleProjectTitle, #singleProjectCopy .mainCopy, #singleProjectRelated .relatedProjects, .newsNextPrev ul, .newsSectionContent, .newsRelatedList, .newsCopy {
   margin-left: 25%;
 }
 
@@ -199,12 +199,12 @@ a:hover {
 }
 
 /* line 160, ../../../SASS/_common.scss */
-#projectsGrid .projectCol, #projectsGrid .project, #singleProjectCopy .mainCopy {
+#projectsGrid .projectCol, #projectsGrid .project, #singleProjectCopy .mainCopy, .newsCopy {
   width: 50%;
 }
 
 /* line 160, ../../../SASS/_common.scss */
-#headerContent nav, .pageSectionRight, .servicesQuote, .industryQuote, .leadershipPopupContent, .leadershipPopupClose, .projectFiltersContainer, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow, #singleProjectRelated .relatedProjects, .projectListView {
+#headerContent nav, .pageSectionRight, .servicesQuote, .industryQuote, .subnavContainer, .leadershipPopupContent, .leadershipPopupClose, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow, #singleProjectRelated .relatedProjects, .projectListView, .newsNextPrev ul, .newsSectionContent, .newsRelatedList, .AIACourses {
   width: 75%;
 }
 
@@ -219,9 +219,19 @@ a:hover {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 178, ../../../SASS/_common.scss */
+  .newsCopy {
+    margin-left: 8.33333%;
+  }
+
   /* line 175, ../../../SASS/_common.scss */
-  .pageSectionCopy {
+  .pageSectionCopy, .newsAuthor {
     width: 33.33333%;
+  }
+
+  /* line 175, ../../../SASS/_common.scss */
+  .newsCopy {
+    width: 58.33333%;
   }
 
   /* line 175, ../../../SASS/_common.scss */
@@ -251,7 +261,23 @@ a:hover {
     width: 100%;
   }
 }
-/* line 214, ../../../SASS/_common.scss */
+/* line 216, ../../../SASS/_common.scss */
+.oEmbedWrapper {
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+/* line 220, ../../../SASS/_common.scss */
+.oEmbedWrapper iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 230, ../../../SASS/_common.scss */
 #feedback {
   position: fixed;
   z-index: 2000;
@@ -546,32 +572,41 @@ footer a:hover {
   opacity: 1;
 }
 
-/* line 100, ../../../SASS/_content.scss */
+/* line 101, ../../../SASS/_content.scss */
 .pageSectionCopy p {
   font-size: 1.125em;
+  margin-bottom: 1em;
 }
-/* line 101, ../../../SASS/_content.scss */
+/* line 102, ../../../SASS/_content.scss */
 .pageSectionCopy h2 {
   color: #26128c;
   font-weight: 300;
   font-size: 2.25em;
   margin-bottom: 0.5em;
 }
-
+/* line 108, ../../../SASS/_content.scss */
+.pageSectionCopy ul {
+  font-size: 0.9375em;
+  margin-bottom: 1em;
+}
 /* line 109, ../../../SASS/_content.scss */
-.pageSectionRight {
-  float: right;
+.pageSectionCopy li {
+  margin-bottom: 1em;
+}
+/* line 111, ../../../SASS/_content.scss */
+.pageSectionCopy p:last-child, .pageSectionCopy li:last-child, .pageSectionCopy ul:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 118, ../../../SASS/_content.scss */
+  /* line 123, ../../../SASS/_content.scss */
   .pageSectionCopy, .pageSectionRight {
     float: none;
     margin-left: 0;
     margin-right: 0;
   }
 }
-/* line 126, ../../../SASS/_content.scss */
+/* line 131, ../../../SASS/_content.scss */
 .servicesQuote, .industryQuote {
   position: relative;
   background-position: center;
@@ -581,53 +616,53 @@ footer a:hover {
   color: #fafafa;
   z-index: 0;
 }
-/* line 134, ../../../SASS/_content.scss */
+/* line 139, ../../../SASS/_content.scss */
 .servicesQuote a, .industryQuote a {
   color: #fafafa;
 }
 
-/* line 137, ../../../SASS/_content.scss */
+/* line 142, ../../../SASS/_content.scss */
 .servicesQuoteText, .industryQuoteText, .servicesQuoteAttribute, .industryLeader {
   position: relative;
   z-index: 100;
   padding: 50px 0;
 }
 
-/* line 143, ../../../SASS/_content.scss */
+/* line 148, ../../../SASS/_content.scss */
 .servicesQuoteText, .industryQuoteText {
   width: 66%;
   float: right;
 }
-/* line 146, ../../../SASS/_content.scss */
+/* line 151, ../../../SASS/_content.scss */
 .servicesQuoteText p, .industryQuoteText p {
   font-size: 2.25em;
   margin-right: 30px;
   margin-bottom: 0.5em;
   font-weight: 300;
 }
-/* line 151, ../../../SASS/_content.scss */
+/* line 156, ../../../SASS/_content.scss */
 .servicesQuoteText p:last-child, .industryQuoteText p:last-child {
   margin-bottom: 0;
 }
-/* line 152, ../../../SASS/_content.scss */
+/* line 157, ../../../SASS/_content.scss */
 .servicesQuoteText p.industryQuoteAttribution, .industryQuoteText p.industryQuoteAttribution {
   text-align: right;
   font-size: 1.5em;
   margin-top: -1em;
 }
-/* line 158, ../../../SASS/_content.scss */
+/* line 163, ../../../SASS/_content.scss */
 .servicesQuoteText .viewProjects, .industryQuoteText .downloadBrochure {
   font-size: 1.125em;
 }
 
-/* line 163, ../../../SASS/_content.scss */
+/* line 168, ../../../SASS/_content.scss */
 .servicesQuoteAttribute, .industryLeader {
   text-align: center;
   width: 33%;
   float: left;
 }
 
-/* line 169, ../../../SASS/_content.scss */
+/* line 174, ../../../SASS/_content.scss */
 .servicesQuoteOverlay, .industryQuoteOverlay {
   background-color: rgba(38, 18, 140, 0.7);
   width: 100%;
@@ -636,6 +671,110 @@ footer a:hover {
   left: 0;
   top: 0;
   z-index: 0;
+}
+
+/* line 186, ../../../SASS/_content.scss */
+#newsNav ul > li {
+  float: left;
+  font-size: 1.125em;
+  line-height: 1.2em;
+  margin-right: 50px;
+}
+/* line 191, ../../../SASS/_content.scss */
+#newsNav ul > li.active a {
+  color: #26128c;
+}
+
+/* line 195, ../../../SASS/_content.scss */
+.subnav {
+  padding-top: 16px;
+  padding-bottom: 26px;
+}
+/* line 201, ../../../SASS/_content.scss */
+.subnav .filters {
+  float: left;
+}
+/* line 204, ../../../SASS/_content.scss */
+.subnav .filters > li {
+  float: left;
+  width: 113px;
+  margin-right: 20px;
+  font-size: 18px;
+  position: relative;
+  line-height: 22px;
+  height: 22px;
+}
+/* line 212, ../../../SASS/_content.scss */
+.subnav .filters > li ul {
+  display: none;
+  position: absolute;
+  left: -10px;
+  top: 22px;
+  width: 200%;
+  background-color: #FFFFFF;
+}
+/* line 220, ../../../SASS/_content.scss */
+.subnav .filters > li li {
+  font-size: 14px;
+  line-height: 1.2em;
+}
+/* line 223, ../../../SASS/_content.scss */
+.subnav .filters > li li:hover {
+  background-color: #fafafa;
+}
+/* line 225, ../../../SASS/_content.scss */
+.subnav .filters > li a {
+  display: block;
+  padding: 10px;
+}
+/* line 230, ../../../SASS/_content.scss */
+.subnav .filters > li:hover ul {
+  display: block;
+}
+/* line 234, ../../../SASS/_content.scss */
+.subnav .views {
+  float: right;
+}
+/* line 236, ../../../SASS/_content.scss */
+.subnav .views > li {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  font-size: 19px;
+  line-height: 19px;
+  margin: 0 10px;
+  position: relative;
+}
+/* line 245, ../../../SASS/_content.scss */
+.subnav .views > li.gridview a:after {
+  content: "\e901";
+}
+/* line 246, ../../../SASS/_content.scss */
+.subnav .views > li.listview a:after {
+  content: "\e902";
+}
+/* line 247, ../../../SASS/_content.scss */
+.subnav .views > li.locationview a:after {
+  content: "\e900";
+}
+/* line 248, ../../../SASS/_content.scss */
+.subnav .views > li:before {
+  width: 1px;
+  background-color: #e6e6e6;
+  display: block;
+  height: 17px;
+  position: absolute;
+  left: -11px;
+  top: 1px;
+  content: " ";
+}
+/* line 258, ../../../SASS/_content.scss */
+.subnav .views > li:first-child:before {
+  display: none;
+}
+/* line 259, ../../../SASS/_content.scss */
+.subnav .views > li:last-child {
+  margin-right: 0;
 }
 
 /* line 3, ../../../SASS/_homepage.scss */
@@ -1037,178 +1176,77 @@ footer a:hover {
 }
 
 /* line 9, ../../../SASS/_projects.scss */
-.projectFilters {
-  padding-top: 16px;
-  padding-bottom: 26px;
-}
-/* line 14, ../../../SASS/_projects.scss */
-.projectFilters ul:first-child {
-  padding-left: 15px;
-}
-/* line 15, ../../../SASS/_projects.scss */
-.projectFilters .filters {
-  float: left;
-}
-/* line 18, ../../../SASS/_projects.scss */
-.projectFilters .filters > li {
-  float: left;
-  width: 113px;
-  margin-right: 20px;
-  font-size: 18px;
-  position: relative;
-  line-height: 22px;
-  height: 22px;
-}
-/* line 26, ../../../SASS/_projects.scss */
-.projectFilters .filters > li ul {
-  display: none;
-  position: absolute;
-  left: -10px;
-  top: 22px;
-  width: 200%;
-  background-color: #FFFFFF;
-}
-/* line 34, ../../../SASS/_projects.scss */
-.projectFilters .filters > li li {
-  font-size: 14px;
-  line-height: 1.2em;
-}
-/* line 37, ../../../SASS/_projects.scss */
-.projectFilters .filters > li li:hover {
-  background-color: #fafafa;
-}
-/* line 39, ../../../SASS/_projects.scss */
-.projectFilters .filters > li a {
-  display: block;
-  padding: 10px;
-}
-/* line 44, ../../../SASS/_projects.scss */
-.projectFilters .filters > li:hover ul {
-  display: block;
-}
-/* line 48, ../../../SASS/_projects.scss */
-.projectFilters .views {
-  float: right;
-}
-/* line 50, ../../../SASS/_projects.scss */
-.projectFilters .views > li {
-  display: inline-block;
-  width: 19px;
-  height: 19px;
-  font-size: 19px;
-  line-height: 19px;
-  margin: 0 10px;
-  position: relative;
-}
-/* line 59, ../../../SASS/_projects.scss */
-.projectFilters .views > li.gridview a:after {
-  content: "\e901";
-}
-/* line 60, ../../../SASS/_projects.scss */
-.projectFilters .views > li.listview a:after {
-  content: "\e902";
-}
-/* line 61, ../../../SASS/_projects.scss */
-.projectFilters .views > li.locationview a:after {
-  content: "\e900";
-}
-/* line 62, ../../../SASS/_projects.scss */
-.projectFilters .views > li:before {
-  width: 1px;
-  background-color: #e6e6e6;
-  display: block;
-  height: 17px;
-  position: absolute;
-  left: -11px;
-  top: 1px;
-  content: " ";
-}
-/* line 72, ../../../SASS/_projects.scss */
-.projectFilters .views > li:first-child:before {
-  display: none;
-}
-/* line 73, ../../../SASS/_projects.scss */
-.projectFilters .views > li:last-child {
-  margin-right: 0;
-}
-
-/* line 80, ../../../SASS/_projects.scss */
-.projectFiltersContainer {
-  float: right;
-}
-
-/* line 85, ../../../SASS/_projects.scss */
 #projects-intro {
   margin-bottom: 30px;
 }
 
-/* line 90, ../../../SASS/_projects.scss */
+/* line 14, ../../../SASS/_projects.scss */
 .projectFeature {
   background-color: #e6e6e6;
 }
 
-/* line 97, ../../../SASS/_projects.scss */
+/* line 21, ../../../SASS/_projects.scss */
 #projectsGrid .projectRow {
   margin-bottom: 30px;
 }
-/* line 105, ../../../SASS/_projects.scss */
+/* line 29, ../../../SASS/_projects.scss */
 #projectsGrid .project {
   margin-bottom: 30px;
 }
-/* line 108, ../../../SASS/_projects.scss */
+/* line 32, ../../../SASS/_projects.scss */
 #projectsGrid .project:nth-child(2n) {
   padding-right: 0;
 }
-/* line 109, ../../../SASS/_projects.scss */
+/* line 33, ../../../SASS/_projects.scss */
 #projectsGrid .project:nth-child(2n+1) {
   clear: both;
   padding-left: 0;
 }
-/* line 110, ../../../SASS/_projects.scss */
+/* line 34, ../../../SASS/_projects.scss */
 #projectsGrid .project:last-child, #projectsGrid .project:nth-last-child(2) {
   margin-bottom: 0;
 }
 
-/* line 115, ../../../SASS/_projects.scss */
+/* line 39, ../../../SASS/_projects.scss */
 #projectsGrid .slideshowControls h3 {
   font-size: 0.875em;
   padding: 0 20px;
 }
 
-/* line 117, ../../../SASS/_projects.scss */
+/* line 41, ../../../SASS/_projects.scss */
 #singleProjectHeader {
   margin-bottom: 16px;
 }
 
-/* line 126, ../../../SASS/_projects.scss */
+/* line 50, ../../../SASS/_projects.scss */
 .singleProjectTitle h2 {
   color: #26128c;
   font-size: 1.875em;
 }
 
-/* line 132, ../../../SASS/_projects.scss */
+/* line 56, ../../../SASS/_projects.scss */
 #singleProjectSlideshow {
   margin-bottom: 30px;
 }
-/* line 139, ../../../SASS/_projects.scss */
+/* line 63, ../../../SASS/_projects.scss */
 #singleProjectSlideshow .servicesList ul {
   float: right;
 }
-/* line 140, ../../../SASS/_projects.scss */
+/* line 64, ../../../SASS/_projects.scss */
 #singleProjectSlideshow .servicesList li {
   margin-bottom: 10px;
 }
-/* line 144, ../../../SASS/_projects.scss */
+/* line 68, ../../../SASS/_projects.scss */
 #singleProjectSlideshow .projectSlideshow .slideshowContainer {
   padding: 31% 0;
 }
-/* line 145, ../../../SASS/_projects.scss */
+/* line 69, ../../../SASS/_projects.scss */
 #singleProjectSlideshow .projectSlideshow .slideshowControls .slideshowIndicators li {
   width: 16px;
   height: 16px;
 }
 
-/* line 153, ../../../SASS/_projects.scss */
+/* line 77, ../../../SASS/_projects.scss */
 .servicesIcons li {
   width: 50px;
   height: 50px;
@@ -1216,7 +1254,7 @@ footer a:hover {
   background-color: #e6e6e6;
 }
 
-/* line 163, ../../../SASS/_projects.scss */
+/* line 87, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy h3, #singleProjectRelated h3 {
   font-size: 0.9375em;
   color: #26128c;
@@ -1224,72 +1262,72 @@ footer a:hover {
   margin-bottom: 6px;
 }
 
-/* line 169, ../../../SASS/_projects.scss */
+/* line 93, ../../../SASS/_projects.scss */
 #singleProjectCopy {
   margin-bottom: 65px;
 }
-/* line 177, ../../../SASS/_projects.scss */
+/* line 101, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy p {
   font-size: 1.125em;
   margin-bottom: 1em;
 }
-/* line 181, ../../../SASS/_projects.scss */
+/* line 105, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside {
   margin-bottom: 1em;
 }
-/* line 183, ../../../SASS/_projects.scss */
+/* line 107, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside p, #singleProjectCopy .mainCopy aside li {
   font-size: 0.9375em;
   margin-bottom: 0;
 }
-/* line 184, ../../../SASS/_projects.scss */
+/* line 108, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside li {
   display: inline-block;
   white-space: nowrap;
 }
-/* line 187, ../../../SASS/_projects.scss */
+/* line 111, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside li:after {
   display: inline-block;
   content: "|";
   margin: 0 3px;
 }
-/* line 192, ../../../SASS/_projects.scss */
+/* line 116, ../../../SASS/_projects.scss */
 #singleProjectCopy .mainCopy aside li:last-child:after {
   display: none;
 }
-/* line 198, ../../../SASS/_projects.scss */
+/* line 122, ../../../SASS/_projects.scss */
 #singleProjectCopy .projectQuote blockquote {
   font-size: 0.9375em;
   color: #26128c;
 }
-/* line 201, ../../../SASS/_projects.scss */
+/* line 125, ../../../SASS/_projects.scss */
 #singleProjectCopy .projectQuote blockquote p {
   font-style: italic;
 }
-/* line 203, ../../../SASS/_projects.scss */
+/* line 127, ../../../SASS/_projects.scss */
 #singleProjectCopy .projectQuote blockquote p:before {
   content: "\201C";
 }
-/* line 204, ../../../SASS/_projects.scss */
+/* line 128, ../../../SASS/_projects.scss */
 #singleProjectCopy .projectQuote blockquote p:after {
   content: "\201D";
 }
-/* line 206, ../../../SASS/_projects.scss */
+/* line 130, ../../../SASS/_projects.scss */
 #singleProjectCopy .projectQuote blockquote cite {
   display: block;
   text-align: right;
   font-style: normal;
 }
-/* line 213, ../../../SASS/_projects.scss */
+/* line 137, ../../../SASS/_projects.scss */
 #singleProjectCopy .projectQuotePhoto {
   margin-bottom: 1em;
 }
 
-/* line 219, ../../../SASS/_projects.scss */
+/* line 143, ../../../SASS/_projects.scss */
 #singleProjectRelated {
   margin-bottom: 110px;
 }
-/* line 229, ../../../SASS/_projects.scss */
+/* line 153, ../../../SASS/_projects.scss */
 #singleProjectRelated .project {
   width: -webkit-calc(33% - 20px);
   width: calc(33% - 20px);
@@ -1297,37 +1335,37 @@ footer a:hover {
   float: left;
   margin-bottom: 30px;
 }
-/* line 234, ../../../SASS/_projects.scss */
+/* line 158, ../../../SASS/_projects.scss */
 #singleProjectRelated .project:nth-child(3n) {
   margin-right: 0;
 }
-/* line 235, ../../../SASS/_projects.scss */
+/* line 159, ../../../SASS/_projects.scss */
 #singleProjectRelated .project:nth-child(3n+1) {
   clear: both;
 }
 
-/* line 239, ../../../SASS/_projects.scss */
+/* line 163, ../../../SASS/_projects.scss */
 #projects-list {
   margin-bottom: 140px;
 }
 
-/* line 245, ../../../SASS/_projects.scss */
+/* line 169, ../../../SASS/_projects.scss */
 .projectListView {
   display: table;
 }
-/* line 248, ../../../SASS/_projects.scss */
+/* line 172, ../../../SASS/_projects.scss */
 .projectListView .row {
   display: table-row;
 }
-/* line 249, ../../../SASS/_projects.scss */
+/* line 173, ../../../SASS/_projects.scss */
 .projectListView .th {
   font-size: 1.125em;
 }
-/* line 250, ../../../SASS/_projects.scss */
+/* line 174, ../../../SASS/_projects.scss */
 .projectListView .col {
   font-size: 0.9375em;
 }
-/* line 251, ../../../SASS/_projects.scss */
+/* line 175, ../../../SASS/_projects.scss */
 .projectListView .th, .projectListView .col {
   display: table-cell;
   width: 22.22%;
@@ -1335,39 +1373,39 @@ footer a:hover {
   border-bottom: 1px solid #e6e6e6;
   vertical-align: top;
 }
-/* line 257, ../../../SASS/_projects.scss */
+/* line 181, ../../../SASS/_projects.scss */
 .projectListView .th:first-child, .projectListView .col:first-child {
   width: 33.33%;
   padding-left: 0;
 }
-/* line 258, ../../../SASS/_projects.scss */
+/* line 182, ../../../SASS/_projects.scss */
 .projectListView .th:last-child, .projectListView .col:last-child {
   padding-right: 0;
 }
-/* line 262, ../../../SASS/_projects.scss */
+/* line 186, ../../../SASS/_projects.scss */
 .projectListView .industry li {
   display: inline-block;
 }
-/* line 264, ../../../SASS/_projects.scss */
+/* line 188, ../../../SASS/_projects.scss */
 .projectListView .industry li a {
   white-space: nowrap;
 }
-/* line 266, ../../../SASS/_projects.scss */
+/* line 190, ../../../SASS/_projects.scss */
 .projectListView .industry li a:after {
   content: "|";
   display: inline-block;
   margin: 0 3px;
 }
-/* line 268, ../../../SASS/_projects.scss */
+/* line 192, ../../../SASS/_projects.scss */
 .projectListView .industry li:last-child a:after {
   display: none;
 }
-/* line 272, ../../../SASS/_projects.scss */
+/* line 196, ../../../SASS/_projects.scss */
 .projectListView .servicesIcons li {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 272, ../../../SASS/_projects.scss */
+/* line 196, ../../../SASS/_projects.scss */
 .projectListView .servicesIcons li:last-child {
   margin-right: 0;
 }
@@ -1392,4 +1430,222 @@ footer a:hover {
 /* line 29, ../../../SASS/_industry.scss */
 #industryProjects .project:nth-child(4n+1) {
   clear: both;
+}
+
+/* line 12, ../../../SASS/_news.scss */
+.tiled {
+  position: relative;
+  z-index: 0;
+}
+/* line 15, ../../../SASS/_news.scss */
+.tiled.go .tile {
+  position: absolute;
+}
+/* line 16, ../../../SASS/_news.scss */
+.tiled .tile {
+  width: -webkit-calc(25% - 22.5px);
+  width: calc(25% - 22.5px);
+  height: 190px;
+  background-color: #26128c;
+  overflow: hidden;
+}
+/* line 22, ../../../SASS/_news.scss */
+.tiled .tile.featured {
+  width: -webkit-calc(50% - 15px);
+  width: calc(50% - 15px);
+  height: 410px;
+}
+@media screen and (max-width: 1024px) {
+  /* line 16, ../../../SASS/_news.scss */
+  .tiled .tile {
+    width: -webkit-calc(33% - 20px);
+    width: calc(33% - 20px);
+  }
+  /* line 30, ../../../SASS/_news.scss */
+  .tiled .tile.featured {
+    width: -webkit-calc(66% - 10px);
+    width: calc(66% - 10px);
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 16, ../../../SASS/_news.scss */
+  .tiled .tile {
+    width: -webkit-calc(50% - 15px);
+    width: calc(50% - 15px);
+  }
+  /* line 34, ../../../SASS/_news.scss */
+  .tiled .tile.featured {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 38, ../../../SASS/_news.scss */
+  .tiled.go .tile {
+    position: static;
+  }
+  /* line 39, ../../../SASS/_news.scss */
+  .tiled .tile {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  /* line 42, ../../../SASS/_news.scss */
+  .tiled .tile, .tiled .tile.featured {
+    height: 380px;
+  }
+}
+
+/* line 47, ../../../SASS/_news.scss */
+.articleContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+/* line 51, ../../../SASS/_news.scss */
+.articleContainer img {
+  display: block;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 63, ../../../SASS/_news.scss */
+.articleContainer .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(38, 18, 140, 0.6);
+}
+/* line 70, ../../../SASS/_news.scss */
+.articleContainer .overlay, .articleContainer .overlay a {
+  color: #fafafa;
+}
+/* line 71, ../../../SASS/_news.scss */
+.articleContainer .overlay a:hover {
+  color: rgba(250, 250, 250, 0.8);
+}
+/* line 72, ../../../SASS/_news.scss */
+.articleContainer .overlay h2 {
+  padding: 0 10px 10px 10px;
+  font-size: 1.125em;
+  line-height: 1.1em;
+}
+/* line 77, ../../../SASS/_news.scss */
+.articleContainer .overlay .categories {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  padding: 10px 10px 0 10px;
+  line-height: 1.1em;
+}
+
+/* line 98, ../../../SASS/_news.scss */
+.newsNextPrev li:first-child {
+  float: left;
+}
+/* line 99, ../../../SASS/_news.scss */
+.newsNextPrev li:last-child {
+  float: right;
+}
+
+/* line 103, ../../../SASS/_news.scss */
+.newsInfo {
+  text-transform: uppercase;
+  font-size: 0.9375em;
+}
+/* line 107, ../../../SASS/_news.scss */
+.newsInfo > li {
+  float: left;
+}
+/* line 109, ../../../SASS/_news.scss */
+.newsInfo > li:after {
+  display: inline-block;
+  content: "|";
+  margin: 0 5px;
+}
+/* line 110, ../../../SASS/_news.scss */
+.newsInfo > li:last-child:after {
+  display: none;
+}
+/* line 112, ../../../SASS/_news.scss */
+.newsInfo ul {
+  display: inline-block;
+}
+
+/* line 115, ../../../SASS/_news.scss */
+.newsDetail {
+  margin-bottom: 20px;
+}
+/* line 119, ../../../SASS/_news.scss */
+.newsDetail h2 {
+  font-size: 1.875em;
+  color: #26128c;
+}
+
+/* line 136, ../../../SASS/_news.scss */
+.newsCopy {
+  font-size: 1.125em;
+}
+/* line 144, ../../../SASS/_news.scss */
+.newsCopy p {
+  margin-bottom: 1em;
+}
+
+/* line 147, ../../../SASS/_news.scss */
+.newsAuthor {
+  text-align: center;
+}
+
+/* line 158, ../../../SASS/_news.scss */
+.newsRelatedList .project {
+  width: -webkit-calc(33% - 20px);
+  width: calc(33% - 20px);
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+/* line 163, ../../../SASS/_news.scss */
+.newsRelatedList .project:nth-child(3n) {
+  margin-right: 0;
+}
+/* line 164, ../../../SASS/_news.scss */
+.newsRelatedList .project:nth-child(3n+) {
+  clear: both;
+}
+
+/* line 171, ../../../SASS/_news.scss */
+.AIACourses {
+  position: relative;
+  padding-top: 63px;
+  padding-bottom: 160px;
+}
+/* line 176, ../../../SASS/_news.scss */
+.AIACourses h2 {
+  font-size: 1.3125em;
+  margin-bottom: 1em;
+}
+/* line 180, ../../../SASS/_news.scss */
+.AIACourses h3 {
+  font-size: 1.125em;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+/* line 185, ../../../SASS/_news.scss */
+.AIACourses p {
+  font-size: 1.125em;
+  margin-bottom: 1em;
+}
+/* line 189, ../../../SASS/_news.scss */
+.AIACourses .featureImage {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
 }

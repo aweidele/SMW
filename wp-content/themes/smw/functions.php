@@ -144,11 +144,11 @@ function mytheme_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'mytheme_customize_register' );
 
 /*** ALLOW SVG IN MEDIA LIBRARY ***/
-function cc_mime_types($mimes) {
+function smw_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
 }
-add_filter('upload_mimes', 'cc_mime_types');
+add_filter('upload_mimes', 'smw_mime_types');
 
 /*** POST TYPES ***/
 add_action('init', 'register_post_types');
@@ -338,6 +338,39 @@ function register_post_types() {
 	  ); 
  
 	register_post_type( 'leadership' , $args );
+
+    
+    /**** REGISTER LOCATIONS POST TYPE ****/
+	$labels = array(
+		'name' => _x('Locations', 'post type general name'),
+		'singular_name' => _x('Location', 'post type singular name'),
+		'add_new' => _x('Add New Location', 'Location item'),
+		'add_new_item' => __('Add New Location'),
+		'edit_item' => __('Edit Location'),
+		'new_item' => __('New Location'),
+		'view_item' => __('View Location'),
+		'search_items' => __('Search Locations'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+ 
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => get_stylesheet_directory_uri() . '/image/nav_team.png',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title','editor','thumbnail','excerpt'),
+		//"menu_position" => 21
+	  ); 
+ 
+	register_post_type( 'location' , $args );
     flush_rewrite_rules();
 }
 ?>

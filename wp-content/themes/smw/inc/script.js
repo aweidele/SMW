@@ -2,6 +2,7 @@ var $ = jQuery;
 $(document).ready(function() {
   if($("#homepageVideo").length) { homepageVideo(); }
   if($("a[data-action='leadership']").length) { leadershipPopup(); }
+  if($('.tiled').length) { tiledGo(); }
 });
 
 $(window).load(function() {
@@ -62,30 +63,6 @@ function slideshowAdvance(ssid) {
   $('#'+ssid+' .slideshowIndicators li:eq('+current+')').addClass('active');
 }
 
-
-function videoResize() {
-//   winW = $("#homepageVideo").width();
-//   winH = $("#homepageVideo").height();
-//   winR = winH / winW;
-// 
-//   newVW = winW;
-//   newVH = winW * $vr;
-// 
-//   if(newVH < winH) {
-//     newVH = winH;
-//     newVW = winH / $vr;
-//   }
-// 
-//   newVX = (winW - newVW) / 2;
-//   newVY = (winH - newVH) / 2;
-//   $("#homepageVideo .videoLayer").css({
-//     top:newVY,
-//     left:newVX
-//   });
-// 
-//   $("#homepageVideo video").width(newVW).height(newVH);
-}
-
 function homepageVideo() {
   $("#homepageVideo video").hide();
   
@@ -122,4 +99,73 @@ function leadershipPopup() {
     e.preventDefault();
     $('#leadershipPopup').fadeOut(250);
   });
+}
+
+function tiledGo() {
+  $('.tiled').addClass('go');
+  $(window).on('load resize',function() { tiledResize(); });
+  tiledResize();
+}
+
+function tiledResize() {
+  
+  // DETERMINE NUMBER OF COLUMNS
+  smallest = Infinity;
+  largest = 0;
+  container = $('.tile').parent().width();
+  $('.tiled .tile').each(function() {
+    w = $(this).width();
+    if(w < smallest) { smallest = w; }
+    if(w > largest) { largest = w; }
+  });
+  numcols = Math.round(container / smallest);
+
+  columns = new Array(); 
+  for(i=0;i<numcols;i++) {
+    columns.push(0);
+  }
+  
+  gutter = (container - (smallest * numcols)) / (numcols - 1); /* the space between columns */
+  colwidth = gutter + smallest;
+  
+  // ASSIGN TILE TO CORRECT SPACE
+  $('.tiled .tile').each(function() {
+    w = $(this).width();
+    h = $(this).height() + 30;
+    s = Infinity;
+    
+    if(w > smallest) {
+      l = numcols - 1;
+    } else {
+      l = numcols;
+    }
+    
+    for(i=0;i<l;i++) {
+      if(columns[i] < s) {
+        scol = i;
+        s = columns[i];
+      }
+    }
+    
+    $(this).css({ 
+      left: scol * colwidth,
+      top: columns[scol]
+    });
+    columns[scol] += h;
+    if(w > smallest) {
+      columns[scol + 1] += h;
+    }
+    
+  });
+  
+  tallest = 0;
+  for(i=0;i<numcols;i++) {
+    if(columns[i] > tallest) {
+      tallest = columns[i];
+    }
+  }
+  
+  $('.tile').parent().height(tallest);
+  console.log(columns); 
+  $('#feedback').html($(window).width() + '<br>' + smallest + ' / ' + largest + ' / ' + container + ' / ' + numcols + ' / ' + gutter);
 }

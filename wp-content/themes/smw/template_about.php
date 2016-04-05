@@ -15,6 +15,13 @@ get_header();
       <div class="pageSectionCopy">
         <?php the_content(); ?>
       </div>
+      <div class="pageSectionRight">
+<?php switch(get_field('additional_content')) {
+  case 'video': ?>
+        <div class="oEmbedWrapper"><?php echo get_field('additional_content_video'); ?></div>
+<?php break;
+} ?>
+      </div>
     </div>
   </section>
 <?php endwhile; endif; wp_reset_query(); ?>
@@ -44,13 +51,7 @@ get_header();
               <p><strong><?php echo $post->post_title; ?></strong></p>
               <p><?php echo get_field('title'); ?></p>
             </a>
-<!-- 
-            <p><a href="tel:<?php echo get_field('phone'); ?>">+<?php echo str_replace('-',' ',get_field('phone')); ?></a></p>
-            <ul class="leadershipContact">
-              <li class="email"><a href="mailto:<?php echo get_field('email'); ?>"><span><?php echo get_field('email'); ?></span></a></li>
-              <li class="linkedin"><a href="<?php echo get_field('linkedin'); ?>" target="_blank"><span><?php echo get_field('linkedin'); ?></span></a></li>
-            </ul>
- -->
+
           </div>
 
 <?php endwhile; ?>
