@@ -1,3 +1,34 @@
 #locationsWrapper {
   @extend %contentWrapper;
+  position: relative;
+  z-index: 0;
+}
+
+.locationsMap {
+  position: relative;
+  z-index: 0;
+}
+
+.locationsTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.locationsNav { @extend %fullWidth; }
+.locationsList {
+  @extend %col-9;
+  @extend %offset-3;
+  li {
+    display: inline-block;
+    font-size: em(18px);
+    margin-right: 39px;
+    &:last-child { margin-right: 0; }
+  }
+  a {
+    display: inline-block;
+    white-space: nowrap;
+  }
 }

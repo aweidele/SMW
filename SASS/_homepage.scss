@@ -170,6 +170,24 @@ $iconD: 160px;
   }
 }
 
+//// homepageLocations
+#homepageWrapper #homepageLocations { 
+  margin-bottom: 0;
+  + section { margin-top: -150px; position: relative; z-index: 1; }
+}
+#homepageLocations {
+  position: relative;
+  z-index: 0;
+  .mapplic-container { background-color: transparent; }
+  .homepageLocationCopy {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+  }
+}
+
 .feedback {
   position: fixed;
   z-index: 9000;

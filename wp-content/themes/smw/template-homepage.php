@@ -137,6 +137,24 @@ foreach($homepage_sections as $k => $section) {
 <?php
     break;
 
+    case "locations";
+?>
+
+  <!-- LOCATIONS -->
+  <section id="homepageLocations">
+    <div class="homepageLocationCopy">
+      <h2><?php echo $section['section_title']; ?></h2>
+      <p class="sectionStatement"><?php echo $section['section_blurb']; ?></p>
+    </div>
+    <div class="locationsMap">
+      <?php echo do_shortcode('[mapplic id="6" h="970"]'); ?>
+    </div>
+  </section>
+  <!-- END LOCATIONS -->
+
+<?php
+    break;
+
     case "contact";
 ?>
 
