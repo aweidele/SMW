@@ -73,6 +73,9 @@ $iconD: 160px;
       &:nth-child(3n) { margin-right: $gutter; }
     }
   }
+  .slideshowOverlay { opacity: 1; text-align: center; 
+    h3,a { color: $beige; }
+  }
 }
 
 .expertiseTiles {

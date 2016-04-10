@@ -870,13 +870,22 @@ footer a:hover {
     margin-right: 30px;
   }
 }
+/* line 76, ../../../SASS/_homepage.scss */
+#homepageExpertise .slideshowOverlay {
+  opacity: 1;
+  text-align: center;
+}
+/* line 77, ../../../SASS/_homepage.scss */
+#homepageExpertise .slideshowOverlay h3, #homepageExpertise .slideshowOverlay a {
+  color: #fafafa;
+}
 
-/* line 85, ../../../SASS/_homepage.scss */
+/* line 88, ../../../SASS/_homepage.scss */
 #homepageContact p {
   font-size: 1.125em;
   margin-bottom: 1em;
 }
-/* line 87, ../../../SASS/_homepage.scss */
+/* line 90, ../../../SASS/_homepage.scss */
 #homepageContact input[type='email'] {
   max-width: 225px;
   width: 100%;
@@ -889,12 +898,12 @@ footer a:hover {
   height: 26px;
   background-color: #f3f3f3;
 }
-/* line 99, ../../../SASS/_homepage.scss */
+/* line 102, ../../../SASS/_homepage.scss */
 #homepageContact .socailLinks a:after {
   content: " >";
 }
 
-/* line 107, ../../../SASS/_homepage.scss */
+/* line 110, ../../../SASS/_homepage.scss */
 #homepageVideo {
   width: 100%;
   height: -webkit-calc(100vh - 92px);
@@ -903,14 +912,14 @@ footer a:hover {
   overflow: hidden;
   margin-top: 0;
 }
-/* line 114, ../../../SASS/_homepage.scss */
+/* line 117, ../../../SASS/_homepage.scss */
 #homepageVideo .videoLayer {
   position: relative;
   z-index: 0;
   width: 100%;
   height: 100%;
 }
-/* line 119, ../../../SASS/_homepage.scss */
+/* line 122, ../../../SASS/_homepage.scss */
 #homepageVideo .videoLayer video {
   display: block;
   min-width: 100%;
@@ -918,7 +927,7 @@ footer a:hover {
   width: auto;
   height: auto;
 }
-/* line 129, ../../../SASS/_homepage.scss */
+/* line 132, ../../../SASS/_homepage.scss */
 #homepageVideo .dotLayer,
 #homepageVideo .contentLayer {
   width: 100%;
@@ -928,12 +937,12 @@ footer a:hover {
   top: 0px;
   left: 0px;
 }
-/* line 147, ../../../SASS/_homepage.scss */
+/* line 150, ../../../SASS/_homepage.scss */
 #homepageVideo .dotLayer {
   background-image: url("images/dots.png");
   z-index: 20;
 }
-/* line 152, ../../../SASS/_homepage.scss */
+/* line 155, ../../../SASS/_homepage.scss */
 #homepageVideo .contentLayer {
   background-color: rgba(38, 18, 140, 0.7);
   z-index: 30;
@@ -950,38 +959,38 @@ footer a:hover {
   -webkit-transition: background-color 0.25s;
   transition: background-color 0.25s;
 }
-/* line 165, ../../../SASS/_homepage.scss */
+/* line 168, ../../../SASS/_homepage.scss */
 #homepageVideo p {
   font-size: 2.75em;
   font-weight: 300;
   margin-bottom: 1em;
 }
-/* line 169, ../../../SASS/_homepage.scss */
+/* line 172, ../../../SASS/_homepage.scss */
 #homepageVideo p.jumplink {
   font-size: 1.5em;
 }
 
-/* line 174, ../../../SASS/_homepage.scss */
+/* line 177, ../../../SASS/_homepage.scss */
 #homepageWrapper #homepageLocations {
   margin-bottom: 0;
 }
-/* line 176, ../../../SASS/_homepage.scss */
+/* line 179, ../../../SASS/_homepage.scss */
 #homepageWrapper #homepageLocations + section {
   margin-top: -150px;
   position: relative;
   z-index: 1;
 }
 
-/* line 178, ../../../SASS/_homepage.scss */
+/* line 181, ../../../SASS/_homepage.scss */
 #homepageLocations {
   position: relative;
   z-index: 0;
 }
-/* line 181, ../../../SASS/_homepage.scss */
+/* line 184, ../../../SASS/_homepage.scss */
 #homepageLocations .mapplic-container {
   background-color: transparent;
 }
-/* line 182, ../../../SASS/_homepage.scss */
+/* line 185, ../../../SASS/_homepage.scss */
 #homepageLocations .homepageLocationCopy {
   position: absolute;
   width: 100%;
@@ -990,7 +999,7 @@ footer a:hover {
   z-index: 10;
 }
 
-/* line 191, ../../../SASS/_homepage.scss */
+/* line 194, ../../../SASS/_homepage.scss */
 .feedback {
   position: fixed;
   z-index: 9000;

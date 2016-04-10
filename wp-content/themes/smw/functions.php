@@ -373,4 +373,15 @@ function register_post_types() {
 	register_post_type( 'location' , $args );
     flush_rewrite_rules();
 }
+
+function project_thumb($projectID,$size) {
+  $thumb = get_the_post_thumbnail($projectID,$size);
+  if($thumb == "") {
+    $g = get_field('photos',$projectID);
+    if(sizeof($g)) {
+      $thumb = '<img src="'.$g[0]['sizes'][$size].'">';
+    }
+  }
+  return $thumb;
+}
 ?>

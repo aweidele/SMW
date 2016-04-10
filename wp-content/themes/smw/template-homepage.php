@@ -78,26 +78,21 @@ foreach($homepage_sections as $k => $section) {
     break;
 
     case "expertise";
-     
-     $expSort = array();
-     $expArray = array();
-     
-     $args = array(
-       'post_type'  => 'projects',
-       'posts_per_page' => -1,
-       'meta_key'   => 'featured_on_homepage',
-       'meta_value' => 1
-     );
-     $projectsQuery = new WP_Query($args);
-     if($projectsQuery->have_posts()) : while($projectsQuery->have_posts()) : $projectsQuery->the_post();
-       $expertise = get_field('expertise');
-       foreach($expertise as $exp) {
-         $expSort[$exp->post_name] = $exp->post_title;
-         $expArray[$exp->post_name]['name'] = $exp->post_title;
-         $expArray[$exp->post_name]['posts'][] = $post;
-       }
-     endwhile; endif; wp_reset_query();
-     array_multisort($expSort,$expArray);
+      $expSort = array();
+      $expArray = array();
+      foreach($section['featured_projects'] as $project) {
+        $project->slideImage = project_thumb($project->ID,'Homepage Slideshow Thumb');
+        $industry = get_field('industry',$project->ID);
+        if(is_array($industry)) {
+          foreach($industry as $exp) {
+            $expSort[$exp->ID] = $exp->post_title;
+            $expArray[$exp->post_name]['permalink'] = get_permalink($exp->ID);
+            $expArray[$exp->post_name]['name'] = $exp->post_title;
+            $expArray[$exp->post_name]['posts'][] = $project;
+          }
+        }
+      }
+      array_multisort($expSort,$expArray);
 ?>
 
   <!-- EXPERTISE -->
@@ -105,36 +100,44 @@ foreach($homepage_sections as $k => $section) {
     <h2><?php echo $section['section_title']; ?></h2>
     <p class="sectionStatement"><?php echo $section['section_blurb']; ?></p>
     <div class="expertiseTiles">
-
 <?php foreach($expArray as $expID => $exp) { ?>
+
     <article id="expertise-<?php echo $expID; ?>">
       <div class="slideshowContainer" id="slideshow-<?php echo $expID; ?>">
-        <div class="slideshowControls">
-          <h3><?php echo $exp['name']; ?></h3>
-<?php if(sizeof($exp['posts']) > 1) { ?>
-          <ul>
-<?php for($i=0;$i<sizeof($exp['posts']);$i++) { ?>
-            <li<?php if($i==0) { echo ' class="active"'; } ?>><span><?php echo $i; ?></span></li>
-<?php } ?>
-          </ul>
-<?php } ?>
-        </div>
         <div class="slideshowSlider">
 
 <?php foreach($exp['posts'] as $project) { ?>
-            <div class="slide"><a href="<?php echo get_permalink($project->ID); ?>"><?php echo get_the_post_thumbnail($project->ID,'Homepage Slideshow Thumb'); ?></a></div>
+            <div class="slide"><a href="<?php echo $exp['permalink']; ?>"><?php echo $project->slideImage; ?></a></div>
 <?php } ?>
 
         </div>
+        <div class="slideshowOverlay">
+          <div class="slideshowOverlayContainer"><h3><a href="<?php echo $exp['permalink']; ?>"><?php echo $exp['name']; ?></a></h3></div>
+        </div>
+<?php if(sizeof($exp['posts']) > 1) { ?>
+        <div class="slideshowControls">
+          <ul class="prevNext" data-slideshow="slideshow-<?php echo $expID; ?>">
+            <li><span>Previous</span></li>
+            <li><span>Next</span></li>
+          </ul>
+          <ul class="slideshowIndicators" data-slideshow="slideshow-<?php echo $expID; ?>">
+<?php foreach($exp['posts'] as $i => $project) { ?>
+            <li<?php if($i==0) { echo ' class="active"'; } ?>><span><?php echo $i; ?></span></li>
+<?php } ?>
+          </ul>
+        </div>
+<?php } ?>
       </div>
     </article>
+
 <?php } ?>
+
 
     </div>
   </section>
-  <!-- END EXPERTISE -->
 
 <?php
+
     break;
 
     case "locations";
