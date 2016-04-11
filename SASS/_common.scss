@@ -100,8 +100,9 @@ $xs: 320px;
 }
 
 %linkButton {
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
+  letter-spacing: 1px;
   a {
     display: inline-block;
     color: $beige;
@@ -110,7 +111,8 @@ $xs: 320px;
     padding: 20px 35px;
     transition: background-color 0.25s;
     &:hover {
-      background-color: rgba($beige,0.6);
+//      background-color: rgba($beige,0.6);
+      background-color: $beige;
       color: $purple;
     }
   }
@@ -225,6 +227,13 @@ $cols: 12;
     left: 0;
     top: 0;
   }
+}
+
+.locationsMap .mapplic-pin { background-image: url(images/map_marker.svg); }
+
+#landmarks-countries {
+  path { transition: fill 0.25s; }
+  path:hover, g:hover path { fill: #CCCCCC; }
 }
 
 #feedback {

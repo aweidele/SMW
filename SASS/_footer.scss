@@ -21,8 +21,8 @@ footer {
     padding-bottom: 22px;
     margin-bottom: 22px;
     border-bottom: 1px solid $darkgray;
+    justify-content: space-between;
     > li {
-      flex-grow: 1;
       font-size: em(18px);
     }
   }

@@ -99,25 +99,25 @@ header span {
   display: block;
 }
 
-/* line 139, ../../../SASS/_common.scss */
+/* line 141, ../../../SASS/_common.scss */
 a {
   color: black;
   -webkit-transition: color 0.25s;
   transition: color 0.25s;
   text-decoration: none;
 }
-/* line 143, ../../../SASS/_common.scss */
+/* line 145, ../../../SASS/_common.scss */
 a:hover {
   color: #26128c;
 }
 
-/* line 216, ../../../SASS/_common.scss */
+/* line 218, ../../../SASS/_common.scss */
 .oEmbedWrapper {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
 }
-/* line 220, ../../../SASS/_common.scss */
+/* line 222, ../../../SASS/_common.scss */
 .oEmbedWrapper iframe {
   display: block;
   width: 100%;
@@ -127,7 +127,22 @@ a:hover {
   top: 0;
 }
 
-/* line 230, ../../../SASS/_common.scss */
+/* line 232, ../../../SASS/_common.scss */
+.locationsMap .mapplic-pin {
+  background-image: url(images/map_marker.svg);
+}
+
+/* line 235, ../../../SASS/_common.scss */
+#landmarks-countries path {
+  -webkit-transition: fill 0.25s;
+  transition: fill 0.25s;
+}
+/* line 236, ../../../SASS/_common.scss */
+#landmarks-countries path:hover, #landmarks-countries g:hover path {
+  fill: #CCCCCC;
+}
+
+/* line 239, ../../../SASS/_common.scss */
 #feedback {
   position: fixed;
   z-index: 2000;

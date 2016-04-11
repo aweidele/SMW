@@ -36,7 +36,9 @@
     <div id="headerContent">
       <h1 style="background-image: url('<?php echo get_option('smw_logo'); ?>')"><a href="<?php echo get_home_url(); ?>"><span><?php echo get_bloginfo('name'); ?></span></a></h1>
       <nav>
-<?php wp_nav_menu('primary-menu'); ?>
+        <ul>
+<?php smw_nav('primary-menu'); ?>
+        </ul>
       </nav>
     </div>
   </header>

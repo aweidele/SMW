@@ -33,7 +33,7 @@ $iconD: 160px;
   @extend %fullWidth;
   a {
     &,&:hover { color: $black; }
-    &:hover .readmore { color: $purple; }
+    &:hover { color: $purple; }
   }
   article {
     width: 20%;
@@ -169,6 +169,7 @@ $iconD: 160px;
     font-size: em(44px);
     font-weight: 300;
     margin-bottom: 1em;
+    line-height: 1.2em;
     &.jumplink { @extend %linkButton; font-size: em(24px); }
   }
 }

@@ -34,6 +34,25 @@ function register_my_menu() {
   register_nav_menu( 'top-menu', __( 'Top Nav' ) );
 }
 
+function smw_get_menu_items($menu_name){
+  if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+    $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+    return wp_get_nav_menu_items($menu->term_id);
+  }
+}
+
+function smw_nav($menu_name) {
+
+  $nav = smw_get_menu_items($menu_name);
+  //echo '<pre>',print_r($nav),'</pre>';
+  foreach($nav as $n) {
+    if($n->post_status == 'publish') {
+      echo '  <li><a href="'.$n->url.'">'.$n->title."</a></li>\n";
+    }
+  }
+
+}
+
 
 /*** THEME CUSTOMIZATION SETTINGS ***/
 function mytheme_customize_register( $wp_customize ) {

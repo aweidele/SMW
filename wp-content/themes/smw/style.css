@@ -114,10 +114,11 @@ body, #homepageContact input[type='email'] {
 
 /* line 102, ../../../SASS/_common.scss */
 .servicesQuoteText .viewProjects, .industryQuoteText .downloadBrochure, #homepageVideo p.jumplink {
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
-/* line 105, ../../../SASS/_common.scss */
+/* line 106, ../../../SASS/_common.scss */
 .servicesQuoteText .viewProjects a, .industryQuoteText .downloadBrochure a, #homepageVideo p.jumplink a {
   display: inline-block;
   color: #fafafa;
@@ -127,25 +128,25 @@ body, #homepageContact input[type='email'] {
   -webkit-transition: background-color 0.25s;
   transition: background-color 0.25s;
 }
-/* line 112, ../../../SASS/_common.scss */
+/* line 113, ../../../SASS/_common.scss */
 .servicesQuoteText .viewProjects a:hover, .industryQuoteText .downloadBrochure a:hover, #homepageVideo p.jumplink a:hover {
-  background-color: rgba(250, 250, 250, 0.6);
+  background-color: #fafafa;
   color: #26128c;
 }
 
-/* line 139, ../../../SASS/_common.scss */
+/* line 141, ../../../SASS/_common.scss */
 a {
   color: black;
   -webkit-transition: color 0.25s;
   transition: color 0.25s;
   text-decoration: none;
 }
-/* line 143, ../../../SASS/_common.scss */
+/* line 145, ../../../SASS/_common.scss */
 a:hover {
   color: #26128c;
 }
 
-/* line 147, ../../../SASS/_common.scss */
+/* line 149, ../../../SASS/_common.scss */
 #singleProjectSlideshow .servicesList, #leadershipWrapper .leadershipLeft, #headerContent h1, .pageSectionCopy, #singleProjectCopy .projectQuote, .newsAuthor, .AIAIntro, .contactColumn, #projectsGrid .projectCol, #projectsGrid .project, #singleProjectCopy .mainCopy, .newsCopy, .pageSectionRight, #headerContent nav, .servicesQuote, .industryQuote, .subnavContainer, .leadershipPopupContent, .leadershipPopupClose, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow, #singleProjectRelated .relatedProjects, .projectListView, .newsNextPrev ul, .newsSectionContent, .newsRelatedList, .AIACourses, .locationsList, .copyInfo, #leadershipWrapper .leadershipCopy, #footerNav > ul, #projectsGrid .project:only-child {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -154,120 +155,120 @@ a:hover {
   padding-left: 15px;
   float: left;
 }
-/* line 152, ../../../SASS/_common.scss */
+/* line 154, ../../../SASS/_common.scss */
 #singleProjectSlideshow .servicesList:first-child, #leadershipWrapper .leadershipLeft:first-child, #headerContent h1:first-child, .pageSectionCopy:first-child, #singleProjectCopy .projectQuote:first-child, .newsAuthor:first-child, .AIAIntro:first-child, .contactColumn:first-child, #projectsGrid .projectCol:first-child, #projectsGrid .project:first-child, #singleProjectCopy .mainCopy:first-child, .newsCopy:first-child, .pageSectionRight:first-child, #headerContent nav:first-child, .servicesQuote:first-child, .industryQuote:first-child, .subnavContainer:first-child, .leadershipPopupContent:first-child, .leadershipPopupClose:first-child, .projectFeature:first-child, .singleProjectTitle:first-child, #singleProjectSlideshow .projectSlideshow:first-child, #singleProjectRelated .relatedProjects:first-child, .projectListView:first-child, .newsNextPrev ul:first-child, .newsSectionContent:first-child, .newsRelatedList:first-child, .AIACourses:first-child, .locationsList:first-child, .copyInfo:first-child, #leadershipWrapper .leadershipCopy:first-child, #footerNav > ul:first-child {
   padding-left: 0;
 }
-/* line 153, ../../../SASS/_common.scss */
+/* line 155, ../../../SASS/_common.scss */
 #singleProjectSlideshow .servicesList:last-child, #leadershipWrapper .leadershipLeft:last-child, #headerContent h1:last-child, .pageSectionCopy:last-child, #singleProjectCopy .projectQuote:last-child, .newsAuthor:last-child, .AIAIntro:last-child, .contactColumn:last-child, #projectsGrid .projectCol:last-child, #projectsGrid .project:last-child, #singleProjectCopy .mainCopy:last-child, .newsCopy:last-child, .pageSectionRight:last-child, #headerContent nav:last-child, .servicesQuote:last-child, .industryQuote:last-child, .subnavContainer:last-child, .leadershipPopupContent:last-child, .leadershipPopupClose:last-child, .projectFeature:last-child, .singleProjectTitle:last-child, #singleProjectSlideshow .projectSlideshow:last-child, #singleProjectRelated .relatedProjects:last-child, .projectListView:last-child, .newsNextPrev ul:last-child, .newsSectionContent:last-child, .newsRelatedList:last-child, .AIACourses:last-child, .locationsList:last-child, .copyInfo:last-child, #leadershipWrapper .leadershipCopy:last-child, #footerNav > ul:last-child {
   padding-right: 0;
 }
 
-/* line 156, ../../../SASS/_common.scss */
+/* line 158, ../../../SASS/_common.scss */
 .newsCopy:first-child, #singleProjectSlideshow .servicesList:first-child, .subnavContainer:first-child, .singleProjectTitle:first-child, #singleProjectCopy .mainCopy:first-child, #singleProjectRelated .relatedProjects:first-child, .newsNextPrev ul:first-child, .newsSectionContent:first-child, .newsRelatedList:first-child, .locationsList:first-child {
   padding-left: 15px;
 }
 
-/* line 160, ../../../SASS/_common.scss */
+/* line 162, ../../../SASS/_common.scss */
 #singleProjectSlideshow .servicesList {
   width: 8.33333%;
 }
 
-/* line 160, ../../../SASS/_common.scss */
+/* line 162, ../../../SASS/_common.scss */
 #leadershipWrapper .leadershipLeft {
   width: 16.66667%;
 }
 
-/* line 163, ../../../SASS/_common.scss */
+/* line 165, ../../../SASS/_common.scss */
 #singleProjectSlideshow .servicesList {
   margin-left: 16.66667%;
 }
 
-/* line 160, ../../../SASS/_common.scss */
+/* line 162, ../../../SASS/_common.scss */
 #headerContent h1, .pageSectionCopy, #singleProjectCopy .projectQuote, .newsAuthor, .AIAIntro {
   width: 25%;
 }
 
-/* line 163, ../../../SASS/_common.scss */
+/* line 165, ../../../SASS/_common.scss */
 .subnavContainer, .singleProjectTitle, #singleProjectCopy .mainCopy, #singleProjectRelated .relatedProjects, .newsNextPrev ul, .newsSectionContent, .newsRelatedList, .newsCopy, .locationsList {
   margin-left: 25%;
 }
 
-/* line 160, ../../../SASS/_common.scss */
+/* line 162, ../../../SASS/_common.scss */
 .contactColumn {
   width: 33.33333%;
 }
 
-/* line 160, ../../../SASS/_common.scss */
+/* line 162, ../../../SASS/_common.scss */
 #projectsGrid .projectCol, #projectsGrid .project, #singleProjectCopy .mainCopy, .newsCopy {
   width: 50%;
 }
 
-/* line 160, ../../../SASS/_common.scss */
+/* line 162, ../../../SASS/_common.scss */
 #headerContent nav, .pageSectionRight, .servicesQuote, .industryQuote, .subnavContainer, .leadershipPopupContent, .leadershipPopupClose, .projectFeature, .singleProjectTitle, #singleProjectSlideshow .projectSlideshow, #singleProjectRelated .relatedProjects, .projectListView, .newsNextPrev ul, .newsSectionContent, .newsRelatedList, .AIACourses, .locationsList {
   width: 75%;
 }
 
-/* line 160, ../../../SASS/_common.scss */
+/* line 162, ../../../SASS/_common.scss */
 .copyInfo, #leadershipWrapper .leadershipCopy {
   width: 83.33333%;
 }
 
-/* line 160, ../../../SASS/_common.scss */
+/* line 162, ../../../SASS/_common.scss */
 #footerNav > ul, #projectsGrid .project:only-child {
   width: 100%;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 178, ../../../SASS/_common.scss */
+  /* line 180, ../../../SASS/_common.scss */
   .newsCopy {
     margin-left: 8.33333%;
   }
 
-  /* line 175, ../../../SASS/_common.scss */
+  /* line 177, ../../../SASS/_common.scss */
   .pageSectionCopy, .newsAuthor {
     width: 33.33333%;
   }
 
-  /* line 175, ../../../SASS/_common.scss */
+  /* line 177, ../../../SASS/_common.scss */
   .newsCopy {
     width: 58.33333%;
   }
 
-  /* line 175, ../../../SASS/_common.scss */
+  /* line 177, ../../../SASS/_common.scss */
   .pageSectionRight {
     width: 66.66667%;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 185, ../../../SASS/_common.scss */
+  /* line 187, ../../../SASS/_common.scss */
   #leadershipWrapper .leadershipLeft {
     width: 33.33333%;
   }
 
-  /* line 185, ../../../SASS/_common.scss */
+  /* line 187, ../../../SASS/_common.scss */
   #leadershipWrapper .leadershipCopy {
     width: 66.66667%;
   }
 
-  /* line 185, ../../../SASS/_common.scss */
+  /* line 187, ../../../SASS/_common.scss */
   .pageSectionCopy, .pageSectionRight {
     width: 100%;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 195, ../../../SASS/_common.scss */
+  /* line 197, ../../../SASS/_common.scss */
   #leadershipWrapper .leadershipLeft, #leadershipWrapper .leadershipCopy {
     width: 100%;
   }
 }
-/* line 216, ../../../SASS/_common.scss */
+/* line 218, ../../../SASS/_common.scss */
 .oEmbedWrapper {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
 }
-/* line 220, ../../../SASS/_common.scss */
+/* line 222, ../../../SASS/_common.scss */
 .oEmbedWrapper iframe {
   display: block;
   width: 100%;
@@ -277,7 +278,22 @@ a:hover {
   top: 0;
 }
 
-/* line 230, ../../../SASS/_common.scss */
+/* line 232, ../../../SASS/_common.scss */
+.locationsMap .mapplic-pin {
+  background-image: url(images/map_marker.svg);
+}
+
+/* line 235, ../../../SASS/_common.scss */
+#landmarks-countries path {
+  -webkit-transition: fill 0.25s;
+  transition: fill 0.25s;
+}
+/* line 236, ../../../SASS/_common.scss */
+#landmarks-countries path:hover, #landmarks-countries g:hover path {
+  fill: #CCCCCC;
+}
+
+/* line 239, ../../../SASS/_common.scss */
 #feedback {
   position: fixed;
   z-index: 2000;
@@ -420,13 +436,13 @@ footer a:hover {
   padding-bottom: 22px;
   margin-bottom: 22px;
   border-bottom: 1px solid #666666;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
-/* line 24, ../../../SASS/_footer.scss */
+/* line 25, ../../../SASS/_footer.scss */
 #footerNav > ul > li {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   font-size: 1.125em;
 }
 
@@ -813,7 +829,7 @@ footer a:hover {
   color: black;
 }
 /* line 36, ../../../SASS/_homepage.scss */
-#homepageServices a:hover .readmore {
+#homepageServices a:hover {
   color: #26128c;
 }
 /* line 38, ../../../SASS/_homepage.scss */
@@ -964,33 +980,34 @@ footer a:hover {
   font-size: 2.75em;
   font-weight: 300;
   margin-bottom: 1em;
+  line-height: 1.2em;
 }
-/* line 172, ../../../SASS/_homepage.scss */
+/* line 173, ../../../SASS/_homepage.scss */
 #homepageVideo p.jumplink {
   font-size: 1.5em;
 }
 
-/* line 177, ../../../SASS/_homepage.scss */
+/* line 178, ../../../SASS/_homepage.scss */
 #homepageWrapper #homepageLocations {
   margin-bottom: 0;
 }
-/* line 179, ../../../SASS/_homepage.scss */
+/* line 180, ../../../SASS/_homepage.scss */
 #homepageWrapper #homepageLocations + section {
   margin-top: -150px;
   position: relative;
   z-index: 1;
 }
 
-/* line 181, ../../../SASS/_homepage.scss */
+/* line 182, ../../../SASS/_homepage.scss */
 #homepageLocations {
   position: relative;
   z-index: 0;
 }
-/* line 184, ../../../SASS/_homepage.scss */
+/* line 185, ../../../SASS/_homepage.scss */
 #homepageLocations .mapplic-container {
   background-color: transparent;
 }
-/* line 185, ../../../SASS/_homepage.scss */
+/* line 186, ../../../SASS/_homepage.scss */
 #homepageLocations .homepageLocationCopy {
   position: absolute;
   width: 100%;
@@ -999,7 +1016,7 @@ footer a:hover {
   z-index: 10;
 }
 
-/* line 194, ../../../SASS/_homepage.scss */
+/* line 195, ../../../SASS/_homepage.scss */
 .feedback {
   position: fixed;
   z-index: 9000;
