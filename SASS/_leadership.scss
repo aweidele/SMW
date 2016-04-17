@@ -68,7 +68,7 @@
 
 .leadershipPopupContent {
   @extend %col-9;
-  background-color: rgba(#FFFFFF,0.95);
+  background-color: $beige;
   padding: $gutter + 10 $gutter $gutter 0;
   border: 1px solid $gray;
   &:last-child { padding-right: $gutter; }
@@ -83,13 +83,16 @@
   top: 0;
   left: 0;
   button {
+    @extend %glyphs;
     border: 0;
     background: transparent;
     width: 44px;
     height: 44px;
     float: right;
     cursor: pointer;
+    font-size: 20px;
+    line-height: 44px;
     span { @extend %positionOff; }
-    &:after { content: "X"; }
+    &:after { content: "\e117"; }
   }
 }

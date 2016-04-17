@@ -57,13 +57,43 @@ endwhile;endif;wp_reset_query();
   case 'grid': 
   /************************ GRID VIEW ***************************************************/
    ?>
-<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+<?php if(have_posts()) : while(have_posts()) : the_post(); 
+  $featured_projects = get_field('featured_projects');
+  $photos = get_field('photos',$featured_projects[0]->ID);
+  $ssid = uniqid();
+?>
   <section id="projects-intro">
     <div class="pageSectionContent">
       <div class="pageSectionCopy">
         <?php the_content(); ?>
       </div>
-      <div class="projectFeature">Feature</div>
+      <div class="projectFeature">
+          <div class="slideshowContainer" id="slideshow-<?php echo $ssid; ?>">
+            <div class="slideshowSlider">
+<?php foreach($photos as $key => $photo) { ?>
+              <div class="slide <?php if($key==0) { echo ' active'; } ?>"><a href="<?php echo get_permalink($featured_projects[0]->ID); ?>"><img src="<?php echo $photo['sizes']['Large Slideshow']; ?>"></a></div>
+<?php } ?>
+            </div>
+<?php if(sizeof($photos) > 1) { ?>
+            <div class="slideshowControls">
+              <ul class="prevNext" data-slideshow="slideshow-<?php echo $ssid; ?>">
+                <li><span>Previous</span></li>
+                <li><span>Next</span></li>
+              </ul>
+              <ul class="slideshowIndicators" data-slideshow="slideshow-<?php echo $ssid; ?>">
+<?php foreach($photos as $i => $photo) { ?>
+                <li<?php if($i==0) { echo ' class="active"'; } ?>><span><?php echo $i; ?></span></li>
+<?php } ?>
+              </ul>
+            </div>
+<?php } ?>
+            <div class="slideshowOverlay">
+              <div class="slideshowOverlayContainer"><h3><?php echo $featured_projects[0]->post_title; ?></h3></div>
+            </div>
+          </div>
+
+      
+      </div>
     </div>
   </section>
 <?php endwhile;endif;wp_reset_query(); ?>

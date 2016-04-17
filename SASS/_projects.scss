@@ -7,13 +7,13 @@
 }
 
 #projects-intro { 
-  @extend %fullWidth;
+  //@extend %fullWidth;
   margin-bottom: $gutter;
+  .slideshowContainer { padding: 31% 0; }
 }
 
 .projectFeature {
   @extend %col-9;
-  background-color: $gray;
 }
 
 #projectsGrid {
@@ -196,3 +196,12 @@
     li { display: inline-block; margin-right: 5px; &:last-child { margin-right: 0; } }
   }
 }
+
+#regionMap { margin-bottom: 20px; }
+#regionProjects { @extend #industryProjects;
+  h2 {
+    color: $purple;
+    font-size: em(24px);
+    margin-bottom: 20px;
+  }
+ }

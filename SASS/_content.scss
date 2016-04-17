@@ -42,13 +42,14 @@
       text-align: center;
       background-color: #FFFFFF;
       opacity: 0.8;
+      transition: left 0.5s, right 0.5s;
       &:first-child {
-        left: 0;
+        left: -30px;
         cursor: w-resize;
         &:after { content: "<"; }
       }
       &:last-child {
-        right: 0;
+        right: -30px;
         cursor: e-resize;
         &:after { content: ">"; }
       }
@@ -73,6 +74,12 @@
     }
   }
   span { @extend %positionOff; }
+  .slideshowContainer:hover & {
+    .prevNext li {
+      &:first-child { left: 0; }
+      &:last-child { right: 0; }
+    }
+  }
 }
 
 .slideshowOverlay {
@@ -104,9 +111,12 @@
     font-weight: 300;
     font-size: em(36px);
     margin-bottom: 0.5em;
+    line-height: 1.2em;
   }
-  ul { font-size: em(15px); margin-bottom: 1em; }
-  li { margin-bottom: 1em; }
+  ul {  margin-bottom: 1em;  }
+  li { margin-bottom: 0.25em; font-size: em(15px); position: relative; padding-left: 1em;
+    &:before { content: "\2022"; position: absolute; left: 0; font-size: 0.75em; }
+   }
   p,li,ul { 
     &:last-child { margin-bottom: 0; }
   }
@@ -209,6 +219,7 @@
       position: relative;
       line-height: 22px;
       height: 22px;
+      z-index: 100;
       ul { 
         display: none;
         position: absolute;

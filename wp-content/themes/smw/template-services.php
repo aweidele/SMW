@@ -22,6 +22,21 @@ endwhile;endif;wp_reset_query();
       <div class="pageSectionCopy">
         <?php the_content(); ?>
       </div>
+      <div class="pageSectionRight">
+<?php switch(get_field('additional_content')) {
+  case 'video': ?>
+        <div class="oEmbedWrapper"><?php echo get_field('additional_content_video'); ?></div>
+<?php break;
+  case 'image': 
+    $image = get_field('addition_content_image');
+  ?>
+        <div class="imageWrapper"><img src="<?php echo $image['sizes']['Large Slideshow']; ?>"></div>
+<?php break;
+  case 'text': 
+       echo get_field('additional_text');
+       break;
+} ?>
+      </div>
     </div>
   </section>
 <?php endwhile;endif;wp_reset_query(); ?>

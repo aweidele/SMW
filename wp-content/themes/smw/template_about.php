@@ -20,6 +20,12 @@ get_header();
   case 'video': ?>
         <div class="oEmbedWrapper"><?php echo get_field('additional_content_video'); ?></div>
 <?php break;
+  case 'image': ?>
+        <div class="imageWrapper"><?php echo get_field('addition_content_image'); ?></div>
+<?php break;
+  case 'text': 
+       echo get_field('additional_text');
+       break;
 } ?>
       </div>
     </div>
@@ -63,9 +69,6 @@ get_header();
     </div>
   </section>
 <?php } ?>
-
-<pre><?php print_r($post); ?></pre>
-<pre><?php print_r($childPages); ?></pre>
 </div>
 
 <?php

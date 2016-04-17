@@ -319,7 +319,7 @@ function register_post_types() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
-		'supports' => array('title','editor','thumbnail','excerpt'),
+		'supports' => array('title'),
 		'show_in_menu' => 'edit.php?post_type=projects',
 		//"menu_position" => 21
 	  ); 
@@ -392,6 +392,29 @@ function register_post_types() {
 	register_post_type( 'location' , $args );
     flush_rewrite_rules();
 }
+
+add_filter( 'manage_projects_posts_columns', 'set_custom_edit_projects_columns' );
+add_action( 'manage_projects_posts_custom_column' , 'custom_projects_column', 10, 2 );
+function set_custom_edit_projects_columns($columns) {
+    $columns['project_region'] = __( 'Region', 'your_text_domain' );
+//    $columns['publisher'] = __( 'Publisher', 'your_text_domain' );
+
+    return $columns;
+}
+
+function custom_projects_column( $column, $post_id ) {
+    switch ( $column ) {
+
+        case 'project_region' :
+            $region = get_post_meta( $post_id , 'region' , true );
+            if($region != "") {
+              echo get_the_title($region);
+            }
+            break;
+
+    }
+}
+
 
 function project_thumb($projectID,$size) {
   $thumb = get_the_post_thumbnail($projectID,$size);

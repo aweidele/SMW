@@ -229,6 +229,10 @@ $cols: 12;
   }
 }
 
+.imageWrapper {
+  img { @extend %blockImg; }
+}
+
 .locationsMap .mapplic-pin { background-image: url(images/map_marker.svg); }
 
 #landmarks-countries {
